@@ -102,7 +102,7 @@ definePageMeta({
       <p>
         We have exclusive use of the Ravenswood on Sunday through to Monday
         morning, so if you wish to stay with us, please book using our wedding
-        code <strong>RWBK040224</strong> and <a href="/">Link</a>.
+        code <strong class="code">RWBK040224</strong> and <a href="/">Link</a>.
       </p>
       <p>
         There are 33 rooms, breakfast is included. Check-in is 3pm and Check-out
