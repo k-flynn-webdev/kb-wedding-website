@@ -1,0 +1,31 @@
+{
+  "name": "app-meetup",
+  "description": "Your app description",
+  "version": "0.0.0",
+  "homepage": "",
+  "private": true,
+  "keywords": [],
+  "author": {},
+  "contributors": [],
+  "bugs": {},
+  "engines": {
+    "node": ">= 16.16.0"
+  },
+  "type": "module",
+  "scripts": {
+    "docker:dev": "docker-compose -f docker-compose.yml up -d",
+    "docker:dev:rebuild": "docker compose -f docker-compose.yml up -d --build --force-recreate",
+    "test:unit": "npm run test:api:unit && npm run test:client:unit",
+    "test:api:unit": "cd ./api && npm run test:unit",
+    "test:client:unit": "cd ./client && npm run test:unit",
+    "lint": "eslint *.js",
+    "format": "prettier --ignore-path .gitignore --write ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.7"
+  }
+}
