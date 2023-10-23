@@ -11,7 +11,7 @@ definePageMeta({
       <div class="wedding-heading">
         <p class="wedding-heading__preheading">We're getting married!</p>
 
-        <h1 class="wedding-heading__heading wedding-font">
+        <h1 class="wedding-heading__heading">
           Kevin <br />
           & <br />
           Belinda

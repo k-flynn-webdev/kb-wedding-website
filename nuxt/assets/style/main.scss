@@ -4,12 +4,20 @@ $blue: hsl(208, 23%, 47%);
 $text-color: hsl(333, 100%, 99%);
 $bg-color: $blue;
 
-@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@300&display=swap");
+
+@font-face {
+  font-family: "Olivia";
+  font-weight: 300;
+  src: url("assets//fonts/OliviaDemo.ttf") format("truetype");
+}
 
 :root {
   --b1: $bg-color;
   background-color: $bg-color;
   text-align: center;
+
+  // font-family: "Cormorant Garamond", serif;
 }
 
 // $primary: #9dd0dd;
@@ -29,6 +37,15 @@ $text-max-size: 6rem;
   font-family: "Allura", cursive;
 }
 
+.wedding-font-alt {
+  // font tbd
+  font-family: "Cormorant Garamond", serif;
+}
+.wedding-font-olivia {
+  // font tbd
+  font-family: "Olivia", serif;
+}
+
 .wedding-heading {
   $wedding-spacing: 2rem;
 
@@ -44,6 +61,7 @@ $text-max-size: 6rem;
   &__preheading,
   &__date {
     font-weight: 200;
+    @extend .wedding-font-alt;
   }
 
   &__preheading {
@@ -54,6 +72,7 @@ $text-max-size: 6rem;
     $size: 8.5rem;
     line-height: $size * 1.05;
     font-size: $size;
+    @extend .wedding-font;
   }
 
   &__date {
@@ -115,6 +134,7 @@ body {
   h4,
   h5 {
     font-weight: 300;
+    @extend .wedding-font-alt;
   }
 
   p,
