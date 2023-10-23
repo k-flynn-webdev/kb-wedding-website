@@ -7,6 +7,7 @@ $bg-color: $blue;
 :root {
   --b1: $bg-color;
   background-color: $bg-color;
+  text-align: center;
 }
 
 // $primary: #9dd0dd;
@@ -47,37 +48,48 @@ $text-max-size: 6rem;
 
 h1 {
   font-size: calc($text-max-size * 0.95);
-  line-height: calc($text-max-size * 0.95);
+  line-height: calc($text-max-size * 1);
 }
 h2 {
   font-size: calc($text-max-size * 0.75);
-  line-height: calc($text-max-size * 0.75);
+  line-height: calc($text-max-size * 0.77);
 }
 h3 {
   font-size: calc($text-max-size * 0.575);
-  line-height: calc($text-max-size * 0.575);
+  line-height: calc($text-max-size * 0.6);
 }
 h4 {
   font-size: calc($text-max-size * 0.46);
-  line-height: calc($text-max-size * 0.46);
+  line-height: calc($text-max-size * 0.49);
 }
 h5 {
   font-size: calc($text-max-size * 0.4);
-  line-height: calc($text-max-size * 0.4);
+  line-height: calc($text-max-size * 0.43);
 }
 h6 {
   font-size: calc($text-max-size * 0.3);
-  line-height: calc($text-max-size * 0.3);
+  line-height: calc($text-max-size * 0.32);
 }
-p {
+p,
+li {
   font-size: calc($text-max-size * 0.23);
-  line-height: calc($text-max-size * 0.23);
+  line-height: calc($text-max-size * 0.26);
 }
 
 html,
 body {
   color: $text-color;
   // background-color: $bg-color;
+}
+
+.info {
+  margin-bottom: 3rem;
+
+  p,
+  em,
+  strong {
+    margin-top: 0.66rem;
+  }
 }
 
 // @media (min-width: 425px) {

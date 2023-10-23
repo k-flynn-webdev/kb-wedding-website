@@ -109,7 +109,7 @@ definePageMeta({
         Prices are £145 - £175 a night.
       </p>
 
-      <strong>Pets</strong>
+      <p><strong>Pets</strong></p>
 
       <p>
         Pets are allowed at the venue <em>but</em> they aren’t allowed to stay
