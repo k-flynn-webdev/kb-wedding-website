@@ -4,6 +4,8 @@ $blue: hsl(208, 23%, 47%);
 $text-color: hsl(333, 100%, 99%);
 $bg-color: $blue;
 
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+
 :root {
   --b1: $bg-color;
   background-color: $bg-color;
@@ -22,13 +24,16 @@ $bg-color: $blue;
 
 $text-max-size: 6rem;
 
-.wedding-heading {
+.wedding-font {
   // font tbd
-  max-width: 66vw;
+  font-family: "Allura", cursive;
+}
 
-  &__preheading {
-    font-weight: 200;
-  }
+.wedding-heading {
+  $wedding-spacing: 2rem;
+
+  max-width: 66vw;
+  margin-top: 3rem;
 
   &__preheading,
   &__heading,
@@ -36,44 +41,64 @@ $text-max-size: 6rem;
     margin: 1rem;
   }
 
+  &__preheading,
   &__date {
-    margin-top: 2rem;
     font-weight: 200;
   }
 
+  &__preheading {
+  }
+
+  &__heading {
+    margin: $wedding-spacing 0;
+    $size: 8.5rem;
+    line-height: $size * 1.05;
+    font-size: $size;
+  }
+
+  &__date {
+  }
+
   &__subheading {
-    margin-top: 15rem;
+    margin-top: 5rem;
   }
 }
 
 h1 {
-  font-size: calc($text-max-size * 0.95);
-  line-height: calc($text-max-size * 1);
+  $size: 0.95;
+  font-size: calc($text-max-size * $size);
+  line-height: calc($text-max-size * ($size * 1.05));
 }
 h2 {
-  font-size: calc($text-max-size * 0.75);
-  line-height: calc($text-max-size * 0.77);
+  $size: 0.75;
+  font-size: calc($text-max-size * $size);
+  line-height: calc($text-max-size * ($size * 1.05));
 }
 h3 {
-  font-size: calc($text-max-size * 0.575);
-  line-height: calc($text-max-size * 0.6);
+  $size: 0.575;
+  font-size: calc($text-max-size * $size);
+  line-height: calc($text-max-size * ($size * 1.05));
 }
 h4 {
-  font-size: calc($text-max-size * 0.46);
-  line-height: calc($text-max-size * 0.49);
+  $size: 0.46;
+  font-size: calc($text-max-size * $size);
+  line-height: calc($text-max-size * ($size * 1.05));
 }
 h5 {
-  font-size: calc($text-max-size * 0.4);
-  line-height: calc($text-max-size * 0.43);
+  $size: 0.4;
+  font-size: calc($text-max-size * $size);
+  line-height: calc($text-max-size * ($size * 1.05));
 }
 h6 {
-  font-size: calc($text-max-size * 0.3);
-  line-height: calc($text-max-size * 0.32);
+  $size: 0.3;
+  font-size: calc($text-max-size * $size);
+  line-height: calc($text-max-size * ($size * 1.05));
 }
 p,
 li {
-  font-size: calc($text-max-size * 0.23);
-  line-height: calc($text-max-size * 0.26);
+  $size: 0.23;
+  font-size: calc($text-max-size * $size);
+  line-height: calc($text-max-size * ($size * 1.05));
 }
 
 html,
@@ -83,7 +108,14 @@ body {
 }
 
 .info {
+  max-width: 80vw;
+  margin: 0 auto;
   margin-bottom: 3rem;
+
+  h4,
+  h5 {
+    font-weight: 300;
+  }
 
   p,
   em,

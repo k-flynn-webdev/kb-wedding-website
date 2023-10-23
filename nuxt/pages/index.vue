@@ -11,13 +11,18 @@ definePageMeta({
       <div class="wedding-heading">
         <p class="wedding-heading__preheading">We're getting married!</p>
 
-        <h1 class="wedding-heading__heading">
+        <h1 class="wedding-heading__heading wedding-font">
           Kevin <br />
           & <br />
           Belinda
         </h1>
 
-        <p class="wedding-heading__date">04 - 02 - 2024</p>
+        <p
+          class="wedding-heading__date"
+          title="04 - 02 - 2024"
+        >
+          04 - 02 - 2024
+        </p>
 
         <p class="wedding-heading__subheading">
           It's time, we are getting married and we're looking forward to
@@ -26,6 +31,8 @@ definePageMeta({
       </div>
     </div>
   </div>
+
+  <div class="divider mx-20 mb-20"></div>
 
   <div class="main">
     <InfoBand heading="When">
@@ -101,7 +108,12 @@ definePageMeta({
       <p>
         We have exclusive use of the Ravenswood on Sunday through to Monday
         morning, so if you wish to stay with us, please book using our wedding
-        code <strong class="code">RWBK040224</strong> and <a href="/">Link</a>.
+        code <strong class="code">RWBK040224</strong> and
+        <a
+          class="link link-primary"
+          href="/"
+          >Link</a
+        >.
       </p>
       <p>
         There are 33 rooms, breakfast is included. Check-in is 3pm and Check-out
@@ -169,7 +181,12 @@ definePageMeta({
         If you would like to contribute to our honeymoon and new life as a
         couple in creating a family, a wishing well will be present at the venue
         on the day. Alternatively for those digitally minded, here is a
-        <a href="">link</a> to support our fund.
+        <a
+          class="link link-primary"
+          href=""
+          >link</a
+        >
+        to support our fund.
       </p>
     </InfoBand>
 
