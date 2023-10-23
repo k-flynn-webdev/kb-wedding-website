@@ -5,27 +5,37 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="hero">
-    <!-- <div class="hero-overlay"></div> -->
-    <div class="hero-content text-center">
-      <div class="wedding-hero">
-        <p class="wedding-hero__date">04 . 02 . 2024</p>
+  <div class="wedding-hero">
+    <div class="wedding-hero__heading">
+      <h1>Kevin</h1>
+      <p class="sans">AND</p>
+      <h1>Belinda</h1>
+    </div>
 
-        <div class="wedding-hero__heading">
-          <h1>Kevin</h1>
-          <p class="sans">AND</p>
-          <h1>Belinda</h1>
-        </div>
+    <p class="wedding-hero__subheading uppercase">We're getting married!</p>
+  </div>
 
-        <p class="wedding-hero__subheading uppercase">
-          It's time, we are getting married and we're looking forward to
-          celebrating our special day with all of you.
-        </p>
+  <!-- <div class="divider mx-20 mb-20"></div> -->
+
+  <div class="wedding-date uppercase">
+    <div class="row">
+      <div class="col">
+        <p class="day">Sunday</p>
+      </div>
+      <div class="col">
+        <p class="month">February</p>
+        <p class="date">0 4</p>
+        <p class="year">2024</p>
+      </div>
+      <div class="col">
+        <p class="time">At 1:00pm</p>
       </div>
     </div>
   </div>
 
-  <div class="divider mx-20 mb-20"></div>
+  <br />
+  <br />
+  <br />
 
   <div class="main">
     <InfoBand>
