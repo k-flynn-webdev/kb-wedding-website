@@ -5,31 +5,38 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="hero1">
-    <h1 class="heading">Kevin & Belinda</h1>
+  <div class="hero min-h-screen">
+    <!-- <div class="hero-overlay"></div> -->
+    <div class="hero-content text-center">
+      <div class="wedding-heading">
+        <p class="wedding-heading__preheading">We're getting married!</p>
 
-    <h4 class="subheading">
-      It's time, we are getting married and we're looking forward to celebrating
-      our special day with all of you.
-    </h4>
+        <h1 class="wedding-heading__heading">
+          Kevin <br />
+          & <br />
+          Belinda
+        </h1>
+
+        <p class="wedding-heading__date">04 - 02 - 2024</p>
+
+        <p class="wedding-heading__subheading">
+          It's time, we are getting married and we're looking forward to
+          celebrating our special day with all of you.
+        </p>
+      </div>
+    </div>
   </div>
 
   <div class="main">
-    <div class="info">
-      <strong>When</strong>
-
+    <InfoBand heading="When">
       <p>Sunday February 4th 2024, 1pm till 11:30pm</p>
-    </div>
+    </InfoBand>
 
-    <div class="info">
-      <strong>Where</strong>
-
+    <InfoBand heading="Where">
       <p>The Ravenswood. Cinder Hill, Sharpthorne, West Sussex, RH19 4HY</p>
-    </div>
+    </InfoBand>
 
-    <div class="info">
-      <strong>RSVP</strong>
-
+    <InfoBand heading="RSVP">
       <p>
         Please RSVP as soon as you can, or by Nov 26th, as we are excited to
         know whether you will be joining us :)
@@ -39,11 +46,9 @@ definePageMeta({
         planning to stay overnight Kids & Highchair? 7 available Staying
         overnight? By date ( 27th Nov)
       </p>
-    </div>
+    </InfoBand>
 
-    <div class="info">
-      <strong>Driving</strong>
-
+    <InfoBand heading="Driving">
       <em>There is plenty of on-site parking.</em>
 
       <ul>
@@ -52,11 +57,9 @@ definePageMeta({
         <li>From Bath - 2.5 hours.</li>
         <li>From Cotswolds - 2.5 hours.</li>
       </ul>
-    </div>
+    </InfoBand>
 
-    <div class="info">
-      <strong>Train</strong>
-
+    <InfoBand heading="Train">
       <em>Dont forget to book taxis to and from the station. </em>
 
       <ul>
@@ -67,11 +70,9 @@ definePageMeta({
           From Victoria to Haywards Heath - 50mins (15 mins taxi to venue).
         </li>
       </ul>
-    </div>
+    </InfoBand>
 
-    <div class="info">
-      <strong>Taxis</strong>
-
+    <InfoBand heading="Taxis">
       <ul>
         <li>East Grinstead</li>
         <ul>
@@ -94,11 +95,9 @@ definePageMeta({
           <li>Metro Cars: 01293 415415</li>
         </ul>
       </ul>
-    </div>
+    </InfoBand>
 
-    <div class="info">
-      <strong>Ravenswood Roooms</strong>
-
+    <InfoBand heading="Ravenswood Roooms">
       <p>
         We have exclusive use of the Ravenswood on Sunday through to Monday
         morning, so if you wish to stay with us, please book using our wedding
@@ -116,11 +115,9 @@ definePageMeta({
         Pets are allowed at the venue <em>but</em> they aren’t allowed to stay
         past the meal 😞.
       </p>
-    </div>
+    </InfoBand>
 
-    <div class="info">
-      <strong>Hotels</strong>
-
+    <InfoBand heading="Hotels">
       <ul>
         <li>East Grinstead: Alexander House - 01342 714914</li>
         <li>East Grinstead: Crowne Plaza Felbridge - 01342 337700</li>
@@ -132,7 +129,7 @@ definePageMeta({
           Travelodge options.
         </li>
       </ul>
-    </div>
+    </InfoBand>
 
     <div class="info">
       <strong>The Big Day</strong>
@@ -163,9 +160,7 @@ definePageMeta({
       </ul>
     </div>
 
-    <div class="info">
-      <strong>Gifts & Wishing Well</strong>
-
+    <InfoBand heading="Gifts & Wishing Well">
       <p>
         Your presence on our wedding day is our biggest gift to make this day
         beautiful.
@@ -176,11 +171,9 @@ definePageMeta({
         on the day. Alternatively for those digitally minded, here is a
         <a href="">link</a> to support our fund.
       </p>
-    </div>
+    </InfoBand>
 
-    <div class="info">
-      <strong>Don’t Bring</strong>
-
+    <InfoBand heading="Don’t Bring">
       <ul>
         <li>Alcohol - strict BYO rules</li>
         <li>Fireworks</li>
@@ -189,13 +182,13 @@ definePageMeta({
           on the big day!)
         </li>
       </ul>
+    </InfoBand>
 
-      <strong>Do</strong>
-
+    <InfoBand heading="Do">
       <p>
         Bring yourselves and the best weather, it is February after all and it
         will be a day to remember!
       </p>
-    </div>
+    </InfoBand>
   </div>
 </template>

@@ -1,50 +1,100 @@
-$primary: #9dd0dd;
-$secondary: #9be5e8;
-$accent: #45c0d8;
-$neutral: #252c3c;
-$base-10: #f3f4f6;
-$info: #9db2e1;
-$success: #22b472;
-$warning: #f8b21b;
-$error: #f0383b;
+$blush: hsl(333, 100%, 96%);
+$blue: hsl(208, 23%, 47%);
 
-$text-color: hsl(var(--bc) / var(--tw-text-opacity, 1));
+$text-color: hsl(333, 100%, 99%);
+$bg-color: $blue;
+
+:root {
+  --b1: $bg-color;
+  background-color: $bg-color;
+}
+
+// $primary: #9dd0dd;
+// $secondary: #9be5e8;
+// $accent: #45c0d8;
+// $neutral: #252c3c;
+// $base-10: #f3f4f6;
+// $info: #9db2e1;
+// $success: #22b472;
+// $warning: #f8b21b;
+// $error: #f0383b;
+
+$text-max-size: 6rem;
+
+.wedding-heading {
+  // font tbd
+  max-width: 66vw;
+
+  &__preheading {
+    font-weight: 200;
+  }
+
+  &__preheading,
+  &__heading,
+  &__date {
+    margin: 1rem;
+  }
+
+  &__date {
+    margin-top: 2rem;
+    font-weight: 200;
+  }
+
+  &__subheading {
+    margin-top: 15rem;
+  }
+}
 
 h1 {
-  font-size: 4rem;
-  line-height: 3rem;
+  font-size: calc($text-max-size * 0.95);
+  line-height: calc($text-max-size * 0.95);
 }
 h2 {
-  font-size: 3.5rem;
-  line-height: 2.6rem;
+  font-size: calc($text-max-size * 0.75);
+  line-height: calc($text-max-size * 0.75);
 }
 h3 {
-  font-size: 2.5rem;
+  font-size: calc($text-max-size * 0.575);
+  line-height: calc($text-max-size * 0.575);
 }
 h4 {
-  font-size: 2rem;
+  font-size: calc($text-max-size * 0.46);
+  line-height: calc($text-max-size * 0.46);
+}
+h5 {
+  font-size: calc($text-max-size * 0.4);
+  line-height: calc($text-max-size * 0.4);
+}
+h6 {
+  font-size: calc($text-max-size * 0.3);
+  line-height: calc($text-max-size * 0.3);
+}
+p {
+  font-size: calc($text-max-size * 0.23);
+  line-height: calc($text-max-size * 0.23);
 }
 
 html,
 body {
-  background-color: $success !important;
+  color: $text-color;
+  // background-color: $bg-color;
 }
 
-@media (min-width: 425px) {
-  .place__list .place__item {
-    width: 49%;
-  }
-}
+// @media (min-width: 425px) {
+//   .place__list .place__item {
+//     width: 49%;
+//   }
+// }
 
-@media (min-width: 675px) {
-  .place__list .place__item {
-    width: 32.5%;
-  }
-}
+// @media (min-width: 675px) {
+//   .place__list .place__item {
+//     width: 32.5%;
+//   }
+// }
 
-.progress {
-  transition: 1s;
-  height: 1rem;
-  width: 100%;
-  position: relative;
-}
+// .progress {
+//   transition: 1s;
+//   height: 1rem;
+//   width: 100%;
+//   position: relative;
+// }

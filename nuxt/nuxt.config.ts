@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   css: ["@/assets/style/main.scss"],
   app: {
     head: {
-      title: "Meetup with friends in no time",
+      title: "Kev & Bels Wedding 2024!",
     },
   },
   modules: ["@nuxtjs/tailwindcss"],
