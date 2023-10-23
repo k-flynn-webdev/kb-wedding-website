@@ -5,26 +5,19 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="hero min-h-screen">
+  <div class="hero">
     <!-- <div class="hero-overlay"></div> -->
     <div class="hero-content text-center">
-      <div class="wedding-heading">
-        <p class="wedding-heading__preheading">We're getting married!</p>
+      <div class="wedding-hero">
+        <p class="wedding-hero__date">04 . 02 . 2024</p>
 
-        <h1 class="wedding-heading__heading">
-          Kevin <br />
-          & <br />
-          Belinda
-        </h1>
+        <div class="wedding-hero__heading">
+          <h1>Kevin</h1>
+          <p class="sans">AND</p>
+          <h1>Belinda</h1>
+        </div>
 
-        <p
-          class="wedding-heading__date"
-          title="04 - 02 - 2024"
-        >
-          04 - 02 - 2024
-        </p>
-
-        <p class="wedding-heading__subheading">
+        <p class="wedding-hero__subheading uppercase">
           It's time, we are getting married and we're looking forward to
           celebrating our special day with all of you.
         </p>
@@ -35,14 +28,39 @@ definePageMeta({
   <div class="divider mx-20 mb-20"></div>
 
   <div class="main">
-    <InfoBand heading="When">
-      <p>Sunday February 4th 2024, 1pm till 11:30pm</p>
+    <InfoBand>
+      <div class="row">
+        <div class="col mb-5">
+          <h6 class="heading-tiny">When</h6>
+          <p>Sunday, February 4th 2024</p>
+          <p>1pm until 11:30pm</p>
+
+          <a
+            class="link"
+            href=""
+            >Details</a
+          >
+        </div>
+
+        <div class="col mb-5">
+          <h6 class="heading-tiny">Where</h6>
+          <p>The Ravenswood</p>
+
+          <p>
+            Cinder Hill, Sharpthorne, <br />
+            West Sussex, RH19 4HY
+          </p>
+
+          <a
+            class="link"
+            href="https://maps.app.goo.gl/hoVmCuADSdGsg4fh9"
+            >Details</a
+          >
+        </div>
+      </div>
     </InfoBand>
 
-    <InfoBand heading="Where">
-      <p>The Ravenswood. Cinder Hill, Sharpthorne, West Sussex, RH19 4HY</p>
-    </InfoBand>
-
+    <!--
     <InfoBand heading="RSVP">
       <p>
         Please RSVP as soon as you can, or by Nov 26th, as we are excited to
@@ -206,6 +224,6 @@ definePageMeta({
         Bring yourselves and the best weather, it is February after all and it
         will be a day to remember!
       </p>
-    </InfoBand>
+    </InfoBand> -->
   </div>
 </template>

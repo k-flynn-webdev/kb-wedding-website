@@ -20,6 +20,8 @@ const props = defineProps({
       <strong>{{ props.subheading }}</strong>
     </h5>
 
-    <slot></slot>
+    <div class="info-content">
+      <slot></slot>
+    </div>
   </div>
 </template>

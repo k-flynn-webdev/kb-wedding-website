@@ -1,10 +1,10 @@
-$blush: hsl(333, 100%, 96%);
-$blue: hsl(208, 23%, 47%);
+$blush: #e5c8ca;
+$blue: #1d384e;
 
 $text-color: hsl(333, 100%, 99%);
 $bg-color: $blue;
 
-@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Montserrat:wght@200&family=Sacramento&display=swap");
 
 @font-face {
   font-family: "Olivia";
@@ -16,8 +16,7 @@ $bg-color: $blue;
   --b1: $bg-color;
   background-color: $bg-color;
   text-align: center;
-
-  // font-family: "Cormorant Garamond", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 // $primary: #9dd0dd;
@@ -32,50 +31,65 @@ $bg-color: $blue;
 
 $text-max-size: 6rem;
 
-.wedding-font {
-  // font tbd
-  font-family: "Allura", cursive;
+// font-family: 'Cormorant Garamond', serif;
+.sans {
+  font-family: "Montserrat", sans-serif;
 }
 
-.wedding-font-alt {
-  // font tbd
-  font-family: "Cormorant Garamond", serif;
-}
-.wedding-font-olivia {
-  // font tbd
+.serif {
   font-family: "Olivia", serif;
+  // font-family: "Sacramento", cursive;
 }
 
-.wedding-heading {
+// .wedding-font {
+//   // font tbd
+//   font-family: "Allura", cursive;
+// }
+
+// .wedding-font-alt {
+//   // font tbd
+//   font-family: "Cormorant Garamond", serif;
+// }
+// .wedding-font-olivia {
+//   // font tbd
+//   font-family: "Olivia", serif;
+// }
+
+.hero {
+  min-height: 90vh;
+}
+.wedding-hero {
   $wedding-spacing: 2rem;
-
   max-width: 66vw;
-  margin-top: 3rem;
 
-  &__preheading,
   &__heading,
   &__date {
     margin: 1rem;
   }
 
-  &__preheading,
   &__date {
     font-weight: 200;
-    @extend .wedding-font-alt;
-  }
-
-  &__preheading {
   }
 
   &__heading {
     margin: $wedding-spacing 0;
-    $size: 8.5rem;
-    line-height: $size * 1.05;
-    font-size: $size;
-    @extend .wedding-font;
+    $size: 18rem;
+
+    h1 {
+      line-height: $size * 0.75;
+      font-size: $size;
+      @extend .serif;
+    }
+
+    .sans {
+      position: relative;
+      top: 1.5rem;
+      font-size: 1rem;
+    }
   }
 
   &__date {
+    margin-top: 5rem;
   }
 
   &__subheading {
@@ -131,10 +145,45 @@ body {
   margin: 0 auto;
   margin-bottom: 3rem;
 
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .col {
+      $size: 16rem;
+
+      flex-grow: 1;
+      width: $size;
+      min-width: $size;
+    }
+  }
+
+  .heading-tiny {
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+
+    & + p {
+      $size: 2.5rem;
+      font-weight: 200;
+
+      font-size: $size;
+      line-height: $size;
+
+      height: 4rem;
+      margin-bottom: 5rem;
+
+      & + p {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
   h4,
   h5 {
     font-weight: 300;
-    @extend .wedding-font-alt;
+    // @extend .wedding-font-alt;
   }
 
   p,
