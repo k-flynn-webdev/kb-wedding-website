@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxt/image": "^1.0.0",
     "@types/node": "^18",
     "daisyui": "^3.7.3",
     "nuxt": "^3.7.1",

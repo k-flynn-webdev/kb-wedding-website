@@ -7,8 +7,11 @@ export default defineNuxtConfig({
       title: "Kev & Bels Wedding 2024!",
     },
   },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image"],
   nitro: {
     moduleSideEffects: ["lucia/polyfill/node"],
+  },
+  image: {
+    dir: "assets/images",
   },
 });
