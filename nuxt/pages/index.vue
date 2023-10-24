@@ -17,19 +17,19 @@ definePageMeta({
 
   <div class="wedding-date uppercase">
     <div class="row">
-      <div class="col">
-        <p class="day long">Sunday</p>
-        <p class="day short">Sun</p>
+      <div class="col side">
+        <p class="day lg">Sunday</p>
+        <p class="day mb">Sun</p>
       </div>
       <div class="col">
-        <p class="month long">February</p>
-        <p class="month short">Feb</p>
+        <p class="month lg">February</p>
+        <p class="month mb">Feb</p>
         <p class="date">0 4</p>
         <p class="year">2024</p>
       </div>
-      <div class="col">
-        <p class="time long">At 1:00pm</p>
-        <p class="time short">1:00pm</p>
+      <div class="col side">
+        <p class="time lg">At 1:00pm</p>
+        <p class="time mb">1:00pm</p>
       </div>
     </div>
   </div>
