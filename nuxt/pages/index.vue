@@ -11,56 +11,37 @@ definePageMeta({
       <p class="sans">AND</p>
       <h1>Belinda</h1>
     </div>
-
-    <p class="wedding-hero__subheading uppercase">We're getting married!</p>
   </div>
 
-  <!-- <div class="divider mx-20 mb-20"></div> -->
+  <p class="wedding-strapline uppercase">We're getting married!</p>
 
   <div class="wedding-date uppercase">
     <div class="row">
       <div class="col">
-        <p class="day">Sunday</p>
+        <p class="day long">Sunday</p>
+        <p class="day short">Sun</p>
       </div>
       <div class="col">
-        <p class="month">February</p>
+        <p class="month long">February</p>
+        <p class="month short">Feb</p>
         <p class="date">0 4</p>
         <p class="year">2024</p>
       </div>
       <div class="col">
-        <p class="time">At 1:00pm</p>
+        <p class="time long">At 1:00pm</p>
+        <p class="time short">1:00pm</p>
       </div>
     </div>
   </div>
 
-  <br />
-  <br />
-  <br />
+  <div class="wedding-location">
+    <p>The Ravenswood, Cinder Hill, Sharpthorne, West Sussex, RH19 4HY</p>
+  </div>
 
-  <div class="main">
+  <!-- <div class="main">
     <InfoBand>
       <div class="row">
         <div class="col mb-5">
-          <h6 class="heading-tiny">When</h6>
-          <p>Sunday, February 4th 2024</p>
-          <p>1pm until 11:30pm</p>
-
-          <a
-            class="link"
-            href=""
-            >Details</a
-          >
-        </div>
-
-        <div class="col mb-5">
-          <h6 class="heading-tiny">Where</h6>
-          <p>The Ravenswood</p>
-
-          <p>
-            Cinder Hill, Sharpthorne, <br />
-            West Sussex, RH19 4HY
-          </p>
-
           <a
             class="link"
             href="https://maps.app.goo.gl/hoVmCuADSdGsg4fh9"
@@ -68,9 +49,9 @@ definePageMeta({
           >
         </div>
       </div>
-    </InfoBand>
+    </InfoBand> -->
 
-    <!--
+  <!--
     <InfoBand heading="RSVP">
       <p>
         Please RSVP as soon as you can, or by Nov 26th, as we are excited to
@@ -235,5 +216,5 @@ definePageMeta({
         will be a day to remember!
       </p>
     </InfoBand> -->
-  </div>
+  <!-- </div> -->
 </template>
