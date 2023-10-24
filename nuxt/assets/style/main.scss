@@ -65,6 +65,16 @@ $text-max-size: 6rem;
 
 $mobile-size: 525px;
 
+body {
+  padding: 0.5rem;
+
+  @media (min-width: $mobile-size) {
+    body {
+      padding: 1rem;
+    }
+  }
+}
+
 @media (min-width: $mobile-size) {
   .lg {
     display: block;
@@ -75,12 +85,11 @@ $mobile-size: 525px;
   }
 }
 
-$section-pad: 2.5rem;
+$section-pad: 3rem;
 
 .wedding-hero {
   margin: 0 auto;
-  margin-top: 2rem;
-  margin-bottom: $section-pad * 3.75;
+  margin-bottom: $section-pad * 1;
 
   &__heading {
     $size: 95vw;

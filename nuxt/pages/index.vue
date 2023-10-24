@@ -37,7 +37,10 @@ definePageMeta({
   </div>
 
   <div class="wedding-location">
-    <p>The Ravenswood, Cinder Hill, Sharpthorne, West Sussex, RH19 4HY</p>
+    <p>
+      The Ravenswood<br />
+      Cinder Hill, Sharpthorne, West Sussex, RH19 4HY
+    </p>
   </div>
 
   <!-- <div class="main">
