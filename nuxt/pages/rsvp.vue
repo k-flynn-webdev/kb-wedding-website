@@ -15,7 +15,22 @@ definePageMeta({
     </div>
   </div>
 
-  <NuxtLink to="/">
-    <button class="btn rsvp">Home</button>
-  </NuxtLink>
+  <div class="container">
+    <input
+      type="text"
+      placeholder="First Name"
+      class="input input-bordered input-primary w-full"
+    />
+    <input
+      type="text"
+      placeholder="Last Name"
+      class="input input-bordered input-primary w-full"
+    />
+  </div>
+
+  <div class="bottom-nav">
+    <NuxtLink to="/">
+      <button class="btn rsvp">Home</button>
+    </NuxtLink>
+  </div>
 </template>
