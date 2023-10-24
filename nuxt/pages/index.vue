@@ -48,6 +48,10 @@ definePageMeta({
     <p>Cinder Hill, Sharpthorne, West Sussex, RH19 4HY</p>
   </div>
 
+  <NuxtLink to="/rsvp">
+    <button class="btn rsvp">RSVP</button>
+  </NuxtLink>
+
   <!-- <div class="main">
     <InfoBand>
       <div class="row">
