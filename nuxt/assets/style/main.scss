@@ -4,6 +4,10 @@ $blue: #1d384e;
 $text-color: hsl(333, 100%, 99%);
 $bg-color: $blue;
 
+$section-pad: 3rem;
+$text-max-size: 6rem;
+$mobile-size: 525px;
+
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Montserrat:wght@200&family=Sacramento&display=swap");
 
 @font-face {
@@ -29,31 +33,13 @@ $bg-color: $blue;
 // $warning: #f8b21b;
 // $error: #f0383b;
 
-$text-max-size: 6rem;
-
-// font-family: 'Cormorant Garamond', serif;
 .sans {
   font-family: "Montserrat", sans-serif;
 }
 
 .serif {
   font-family: "Olivia", serif;
-  // font-family: "Sacramento", cursive;
 }
-
-// .wedding-font {
-//   // font tbd
-//   font-family: "Allura", cursive;
-// }
-
-// .wedding-font-alt {
-//   // font tbd
-//   font-family: "Cormorant Garamond", serif;
-// }
-// .wedding-font-olivia {
-//   // font tbd
-//   font-family: "Olivia", serif;
-// }
 
 .lg {
   display: none;
@@ -62,8 +48,6 @@ $text-max-size: 6rem;
 .mb {
   display: block;
 }
-
-$mobile-size: 525px;
 
 body {
   padding: 0.5rem;
@@ -84,8 +68,6 @@ body {
     display: none;
   }
 }
-
-$section-pad: 3rem;
 
 .wedding-hero {
   margin: 0 auto;
@@ -227,7 +209,6 @@ span {
 html,
 body {
   color: $text-color;
-  // background-color: $bg-color;
 }
 
 .info {
@@ -273,7 +254,6 @@ body {
   h4,
   h5 {
     font-weight: 300;
-    // @extend .wedding-font-alt;
   }
 
   p,
@@ -282,22 +262,3 @@ body {
     margin-top: 0.66rem;
   }
 }
-
-// @media (min-width: 425px) {
-//   .place__list .place__item {
-//     width: 49%;
-//   }
-// }
-
-// @media (min-width: 675px) {
-//   .place__list .place__item {
-//     width: 32.5%;
-//   }
-// }
-
-// .progress {
-//   transition: 1s;
-//   height: 1rem;
-//   width: 100%;
-//   position: relative;
-// }
