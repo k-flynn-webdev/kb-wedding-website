@@ -7,9 +7,11 @@ definePageMeta({
 <template>
   <div class="wedding-hero">
     <div class="wedding-hero__heading">
-      <h1>Kevin</h1>
-      <p class="sans">AND</p>
-      <h1>Belinda</h1>
+      <div class="transform">
+        <h1>Kevin</h1>
+        <p class="sans">AND</p>
+        <h1 class="pb-10">Belinda</h1>
+      </div>
     </div>
   </div>
 

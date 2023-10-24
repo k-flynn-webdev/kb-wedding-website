@@ -79,14 +79,21 @@ $section-pad: 2.5rem;
 
 .wedding-hero {
   margin: 0 auto;
+  margin-top: 2rem;
   margin-bottom: $section-pad * 3.75;
 
   &__heading {
-    $size: 60vw;
+    $size: 95vw;
+    overflow: hidden;
+
+    .transform {
+      position: relative;
+      top: -6vw;
+    }
 
     h1 {
-      line-height: $size * 0.6;
-      font-size: $size;
+      line-height: $size * 0.35;
+      font-size: $size * 0.6;
       @extend .serif;
     }
 
@@ -98,10 +105,15 @@ $section-pad: 2.5rem;
   }
 
   @media (min-width: $mobile-size) {
-    max-width: 66vw;
+    max-width: 35rem;
+
+    .transform {
+      position: relative;
+      top: -2rem;
+    }
 
     .wedding-hero__heading h1 {
-      $size: 18rem;
+      $size: 20rem;
       line-height: $size * 0.6;
       font-size: $size;
     }
