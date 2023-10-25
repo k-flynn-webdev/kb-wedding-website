@@ -1,78 +1,15 @@
-CREATE TABLE user (
+CREATE TABLE guests_data (
     id VARCHAR(15) PRIMARY KEY,
-    email VARCHAR(31) NOT NULL UNIQUE,
-    email_verified INTEGER NOT NULL
-);
-CREATE TABLE user_key (
-    id VARCHAR(255) PRIMARY KEY,
-    user_id VARCHAR(15) NOT NULL,
-    hashed_password VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES user(id)
-);
-CREATE TABLE user_session (
-    id VARCHAR(127) PRIMARY KEY,
-    user_id VARCHAR(15) NOT NULL,
-    active_expires BIGINT NOT NULL,
-    idle_expires BIGINT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES user(id)
-);
-CREATE TABLE email_verification_token (
-    id VARCHAR(63) PRIMARY KEY,
-    user_id VARCHAR(15) NOT NULL,
-    expires BIGINT NOT NULL
-);
-CREATE TABLE password_reset_token (
-    id VARCHAR(63) PRIMARY KEY,
-    user_id VARCHAR(15) NOT NULL,
-    expires BIGINT NOT NULL
-);
-CREATE TABLE event_data (
-    id VARCHAR(15) PRIMARY KEY,
-    user_id VARCHAR(15),
-    name VARCHAR(30),
-    description VARCHAR(200),
+    first_name VARCHAR(25),
+    last_name VARCHAR(25),
+    family_id VARCHAR(10),
+    chicken INTEGER NOT NULL,
+    lamb INTEGER NOT NULL,
+    vegetarian INTEGER NOT NULL,
+    kids_meal INTEGER NOT NULL,
+    high_chair INTEGER NOT NULL,
+    staying_night INTEGER NOT NULL,
     created_at BIGINT NOT NULL,
     updated_at BIGINT NOT NULL,
-    deleted_at BIGINT,
-    FOREIGN KEY (user_id) REFERENCES user(id)
-);
-CREATE TABLE place_data (
-    id VARCHAR(15) PRIMARY KEY,
-    user_id VARCHAR(15),
-    event_id VARCHAR(15),
-    name VARCHAR(30),
-    link VARCHAR(100),
-    created_at BIGINT NOT NULL,
-    updated_at BIGINT NOT NULL,
-    deleted_at BIGINT,
-    FOREIGN KEY (user_id) REFERENCES user(id),
-    FOREIGN KEY (event_id) REFERENCES event_data(id)
-);
-CREATE TABLE date_time_data (
-    id VARCHAR(15) PRIMARY KEY,
-    user_id VARCHAR(15),
-    event_id VARCHAR(15),
-    place_id VARCHAR(15),
-    date_time VARCHAR(16),
-    created_at BIGINT NOT NULL,
-    updated_at BIGINT NOT NULL,
-    deleted_at BIGINT,
-    FOREIGN KEY (user_id) REFERENCES user(id),
-    FOREIGN KEY (event_id) REFERENCES event_data(id),
-    FOREIGN KEY (place_id) REFERENCES place_data(id)
-);
-CREATE TABLE vote_data (
-    id VARCHAR(15) PRIMARY KEY,
-    user_id VARCHAR(15),
-    event_id VARCHAR(15),
-    place_id VARCHAR(15),
-    date_time_id VARCHAR(15),
-    vote INTEGER NOT NULL,
-    created_at BIGINT NOT NULL,
-    updated_at BIGINT NOT NULL,
-    deleted_at BIGINT,
-    FOREIGN KEY (user_id) REFERENCES user(id),
-    FOREIGN KEY (event_id) REFERENCES event_data(id),
-    FOREIGN KEY (place_id) REFERENCES place_data(id)
-    FOREIGN KEY (date_time_id) REFERENCES date_time_data(id)
+    deleted_at BIGINT
 );

@@ -17,6 +17,7 @@ const sqliteDatabaseStart = () => {
     try {
       dbFile.exec(fs.readFileSync(DB_SCHEMA, "utf8"));
     } catch (e) {
+      console.log(e);
       console.warn("DB Error / Warning: ");
       console.warn(e);
     }
@@ -36,81 +37,20 @@ export const db = new Kysely<Database>({
 });
 
 type Database = {
-  user: UserTable;
-  user_session: SessionTable;
-  user_key: KeyTable;
-  email_verification_token: VerificationTokenTable;
-  password_reset_token: VerificationTokenTable;
-  event_data: EventDataTable;
-  place_data: PlaceDataTable;
-  date_time_data: DateTimeTable;
-  vote: VoteTable;
+  guests_data: GuestTable;
 };
 
-type UserTable = {
+type GuestTable = {
   id: string;
-  email: string;
-  email_verified: number;
-};
-
-type SessionTable = {
-  id: string;
-  user_id: string;
-  idle_expires: ColumnType<bigint, number>;
-  active_expires: ColumnType<bigint, number>;
-};
-
-type KeyTable = {
-  id: string;
-  user_id: string;
-  hashed_password: null | string;
-};
-
-type VerificationTokenTable = {
-  id: string;
-  user_id: string;
-  expires: ColumnType<bigint, number>;
-};
-
-type EventDataTable = {
-  id: string;
-  user_id: null | string;
-  name: null | string;
-  description: null | string;
-  created_at: ColumnType<bigint, number>;
-  updated_at: ColumnType<bigint, number>;
-  deleted_at: null | ColumnType<bigint, number>;
-};
-
-type PlaceDataTable = {
-  id: string;
-  user_id: null | string;
-  event_id: string;
-  name: null | string;
-  link: null | string;
-  created_at: ColumnType<bigint, number>;
-  updated_at: ColumnType<bigint, number>;
-  deleted_at: null | ColumnType<bigint, number>;
-};
-
-type DateTimeTable = {
-  id: string;
-  user_id: null | string;
-  event_id: string;
-  place_id: string;
-  date_time: string;
-  created_at: ColumnType<bigint, number>;
-  updated_at: ColumnType<bigint, number>;
-  deleted_at: null | ColumnType<bigint, number>;
-};
-
-type VoteTable = {
-  id: string;
-  user_id: null | string;
-  event_id: string;
-  place_id: string;
-  date_time_id: null | string;
-  vote: number;
+  first_name: string;
+  last_name: string;
+  family_id: string;
+  chicken: boolean;
+  lamb: boolean;
+  vegetarian: boolean;
+  kids_meal: boolean;
+  high_chair: boolean;
+  staying_night: boolean;
   created_at: ColumnType<bigint, number>;
   updated_at: ColumnType<bigint, number>;
   deleted_at: null | ColumnType<bigint, number>;

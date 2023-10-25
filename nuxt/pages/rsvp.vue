@@ -7,19 +7,21 @@ const DATA = [
   {
     firstName: "kevin",
     lastName: "flynn",
+    kidsMeal: true,
   },
 ];
 
 const firstName = ref("");
 const lastName = ref("");
 
-const getDataAPI = (): string[] => {
-  console.log(firstName.value + lastName.value);
+const getDataAPI = (name: string): string[] => {
+  console.log(name);
   return [];
 };
 
 const handleSubmit = () => {
-  console.log(firstName.value + lastName.value);
+  const nameValue = firstName.value + lastName.value;
+  getDataAPI(nameValue);
 };
 </script>
 
