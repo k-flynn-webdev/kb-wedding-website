@@ -69,7 +69,12 @@ const handleSubmit = async () => {
         search
       </button>
 
-      <p class="error">{{ hasError }}</p>
+      <p
+        class="error"
+        v-if="hasError"
+      >
+        Type a first and or last name of at least 4 characters
+      </p>
     </form>
   </div>
 
