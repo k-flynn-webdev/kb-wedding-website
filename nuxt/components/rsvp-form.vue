@@ -39,7 +39,7 @@ const handleSubmit = async () => {
   <div class="form-control mt-5">
     <p class="error">{{ hasError }}</p>
 
-    <h3 class="mb-5">
+    <h3 class="mb-5 guest-name">
       {{ props.guest.first_name }} {{ props.guest.last_name }}
     </h3>
 
