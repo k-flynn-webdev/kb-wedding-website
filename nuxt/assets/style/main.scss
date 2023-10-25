@@ -254,7 +254,8 @@ h6 {
 a,
 p,
 li,
-span {
+span,
+label {
   $size: 0.23;
   font-size: calc($text-max-size * $size);
   line-height: calc($text-max-size * ($size * 1.05));
@@ -263,60 +264,4 @@ span {
 html,
 body {
   color: $text-color;
-}
-
-// body {
-//   @extend .hero-image;
-// }
-
-.info {
-  max-width: 80vw;
-  margin: 0 auto;
-  margin-bottom: 3rem;
-
-  .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    .col {
-      $size: 16rem;
-
-      flex-grow: 1;
-      width: $size;
-      min-width: $size;
-    }
-  }
-
-  .heading-tiny {
-    font-weight: 300;
-    font-size: 1.25rem;
-    margin-bottom: 3rem;
-
-    & + p {
-      $size: 2.5rem;
-      font-weight: 200;
-
-      font-size: $size;
-      line-height: $size;
-
-      height: 4rem;
-      margin-bottom: 5rem;
-
-      & + p {
-        margin-bottom: 2rem;
-      }
-    }
-  }
-
-  h4,
-  h5 {
-    font-weight: 300;
-  }
-
-  p,
-  em,
-  strong {
-    margin-top: 0.66rem;
-  }
 }

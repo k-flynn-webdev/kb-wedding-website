@@ -16,16 +16,29 @@ definePageMeta({
   </div>
 
   <div class="container">
-    <input
-      type="text"
-      placeholder="First Name"
-      class="input input-bordered input-primary w-full"
-    />
-    <input
-      type="text"
-      placeholder="Last Name"
-      class="input input-bordered input-primary w-full"
-    />
+    <div class="form-control">
+      <input
+        type="text"
+        placeholder="First Name"
+        class="input input-bordered input-primary w-full"
+      />
+      <input
+        type="text"
+        placeholder="Last Name"
+        class="input input-bordered input-primary w-full"
+      />
+
+      <div class="form-control w-52">
+        <label class="cursor-pointer label">
+          <span class="label-text">Remember me</span>
+          <input
+            type="checkbox"
+            class="toggle toggle-primary"
+            checked
+          />
+        </label>
+      </div>
+    </div>
   </div>
 
   <div class="bottom-nav">
