@@ -87,10 +87,15 @@ $padding-decoration: 0.75rem;
 }
 
 input,
-select {
+select,
+textarea {
   margin-bottom: 1rem;
   color: $blue;
   font-weight: 400;
+}
+
+textarea {
+  height: 1rem;
 }
 
 select.select {

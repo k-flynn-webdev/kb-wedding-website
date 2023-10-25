@@ -83,6 +83,15 @@ const handleSubmit = async () => {
       </div>
     </div>
 
+    <div class="row">
+      <textarea
+        class="textarea w-full"
+        placeholder="Dietary Requirements"
+        v-model="guest.note"
+        @change="handleSubmit"
+      ></textarea>
+    </div>
+
     <div class="section">
       <div
         class="tooltip"
