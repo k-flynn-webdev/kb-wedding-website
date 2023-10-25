@@ -3,7 +3,6 @@ export default defineEventHandler(async (event) => {
 
   const allowedEdit = {
     meal: body.meal,
-    kids_meal: body.kids_meal ? 1 : 0,
     high_chair: body.high_chair ? 1 : 0,
     accomodation: body.accomodation,
     note: body.note,

@@ -8,7 +8,6 @@ export default defineEventHandler(async (event) => {
     last_name: "",
     family_id: "",
     meal: "",
-    kids_meal: 0,
     high_chair: 0,
     accomodation: "",
     is_kid: 0,
@@ -24,7 +23,6 @@ export default defineEventHandler(async (event) => {
       first_name: "kevin",
       last_name: "flynn",
       family_id: "belkev",
-      kids_meal: 1,
     },
     {
       ...BASE_GUEST,

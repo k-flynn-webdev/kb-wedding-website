@@ -13,6 +13,7 @@ const guestsFound = ref([]);
 
 const handleSubmit = async () => {
   pending.value = true;
+  hasError.value = null;
 
   const { data, error } = await useFetch("/api/guests", {
     method: "POST",
@@ -24,7 +25,6 @@ const handleSubmit = async () => {
       return guestList.map((item) => ({
         ...item,
         high_chair: !!item.high_chair,
-        kids_meal: !!item.kids_meal,
       }));
     },
   });

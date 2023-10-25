@@ -49,7 +49,6 @@ type GuestTable = {
   note: string;
   accomodation: string;
   is_kid: boolean;
-  kids_meal: boolean;
   high_chair: boolean;
   created_at: ColumnType<bigint, number>;
   updated_at: ColumnType<bigint, number>;

@@ -7,8 +7,8 @@ module.exports = {
         mytheme: {
           primary: "#e5c8ca",
           secondary: "#1d384e",
-          accent: "#ffebf4",
-          neutral: "#8b9cac",
+          accent: "#1d384e",
+          neutral: "#1d384e",
           "base-100": "#f3f4f6",
           info: "#9db2e1",
           success: "#22b472",
@@ -16,7 +16,7 @@ module.exports = {
           error: "#f0383b",
         },
       },
-      // "bumblebee",
+      "bumblebee",
     ],
   },
 };
