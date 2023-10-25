@@ -3,31 +3,21 @@ definePageMeta({
   // middleware: ["protected"],
 });
 
-const DATA = [
-  {
-    firstName: "kevin",
-    lastName: "flynn",
-    kidsMeal: true,
-  },
-];
-
 const firstName = ref("");
 const lastName = ref("");
 
-const getDataAPI = (name: string): string[] => {
-  console.log(name);
-  return [];
-};
-
-const handleSubmit = () => {
-  const nameValue = firstName.value + lastName.value;
-  getDataAPI(nameValue);
+const handleSubmit = async () => {
+  const { data, error } = await useFetch("/api/guests", {
+    method: "POST",
+    body: {
+      first_name: firstName.value,
+      last_name: lastName.value,
+    },
+  });
 };
 </script>
 
 <template>
-  <HeroImage />
-
   <div class="wedding-hero">
     <div class="wedding-hero__heading">
       <div class="transform">

@@ -1,13 +1,12 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-    <Header />
+  <Header />
 
-    <div class="main">
-        <slot />
-    </div>
+  <div class="main">
+    <HeroImage />
+    <slot />
+  </div>
 
-    <Footer />
+  <Footer />
 </template>
