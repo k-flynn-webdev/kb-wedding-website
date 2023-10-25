@@ -1,4 +1,5 @@
 $blush: #e5c8ca;
+$blush-alpha: rgba(229, 200, 202, 0.75);
 $blue: #1d384e;
 
 $text-color: hsl(333, 100%, 95%);
@@ -29,6 +30,34 @@ $padding-decoration: 0.75rem;
     background:
       linear-gradient(transparent, $blue 100%),
       url(~/assets/images/wide-0#{$i}.jpg) center center;
+  }
+}
+
+.main {
+  padding-top: 3.5rem;
+}
+
+.top-navbar {
+  background-color: $blush-alpha;
+  color: $blue;
+  margin: -0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.75rem;
+  text-align: left;
+
+  transition: all 0.2s ease-in-out;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  &:hover {
+    background-color: $blush;
+  }
+
+  .link {
+    margin: 0 0.5rem;
+    font-weight: 400;
   }
 }
 

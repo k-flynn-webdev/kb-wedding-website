@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <Header />
+  <TopNavbar />
 
   <div class="main">
     <HeroImage />
