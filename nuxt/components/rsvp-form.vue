@@ -49,22 +49,16 @@ const handleSubmit = async () => {
     <div class="section">
       <div
         class="tooltip"
-        data-tip="Meal starts at 3:30PM, 7PM side buffet"
+        data-tip="Meal starts at 3:30PM, 8:30PM side buffet"
       >
         <div class="row">
-          <p class="col">Wedding Meal</p>
+          <p class="col">Preferred Meal</p>
 
           <select
             class="select col"
             v-model="props.guest.meal"
             @change="handleSubmit"
           >
-            <option
-              value=""
-              selected
-            >
-              Pick your preferred meal
-            </option>
             <option value="chicken">Chicken</option>
             <option value="salmon">Salmon</option>
             <option value="vegetarian">Vegetarian</option>
