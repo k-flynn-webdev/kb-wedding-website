@@ -1,19 +1,16 @@
 <script lang="ts" setup>
-
 const props = defineProps({
-  firstName: {
-    type: String,
-    default: ""
+  guest: {
+    type: Object,
+    required: true,
   },
-  lastName: {
-    type: String,
-    default: ""
-  }
-})
+});
 
-const localState = ref({} as GuestState)
+const localState = ref({} as GuestState);
+const hasError = ref(null as any);
 
-interface GuestState  {
+interface GuestState {
+  id?: string;
   chicken: boolean;
   lamb: boolean;
   vegetarian: boolean;
@@ -22,19 +19,24 @@ interface GuestState  {
   stayingNight: boolean;
 }
 
+const handleSubmit = async () => {
+  const { data, error } = await useFetch("/api/guests", {
+    method: "POST",
+    body: {},
+  });
 
-
-
-
-onMounted(() => {
-  if (props.firstName || props.lastName) {
-    // do API call
-  }
-}),
+  if (error.value) hasError.value = error.value;
+};
 </script>
 
 <template>
-  <div class="form-control">
+  <div class="form-control mt-5">
+    <p class="error">{{ hasError }}</p>
+
+    <h3 class="mb-3">
+      {{ props.guest.first_name }} {{ props.guest.last_name }}
+    </h3>
+
     <div class="section">
       <div
         class="tooltip"

@@ -60,6 +60,9 @@ input {
 }
 
 .form-control {
+  max-width: 40rem;
+  margin: 0 auto;
+
   label {
     margin-bottom: 0.5rem;
 

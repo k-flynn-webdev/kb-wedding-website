@@ -6,7 +6,14 @@ definePageMeta({
 const firstName = ref("");
 const lastName = ref("");
 
+const pending = ref(false);
+const hasError = ref(null as any);
+
+const guestsFound = ref([]);
+
 const handleSubmit = async () => {
+  pending.value = true;
+
   const { data, error } = await useFetch("/api/guests", {
     method: "POST",
     body: {
@@ -14,6 +21,11 @@ const handleSubmit = async () => {
       last_name: lastName.value,
     },
   });
+
+  pending.value = false;
+  if (error.value) hasError.value = error.value;
+
+  guestsFound.value = data.value;
 };
 </script>
 
@@ -45,10 +57,20 @@ const handleSubmit = async () => {
       <button
         type="submit"
         class="btn btn-primary"
+        :disabled="pending"
       >
         search
       </button>
+
+      <p class="error">{{ hasError }}</p>
     </form>
+  </div>
+
+  <div v-if="guestsFound && guestsFound.length">
+    <RsvpForm
+      v-for="guest in guestsFound"
+      :guest="guest"
+    />
   </div>
 
   <div class="bottom-nav">
