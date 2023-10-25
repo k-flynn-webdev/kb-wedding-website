@@ -45,12 +45,12 @@ type GuestTable = {
   first_name: string;
   last_name: string;
   family_id: string;
-  chicken: boolean;
-  lamb: boolean;
-  vegetarian: boolean;
+  meal: string;
+  note: string;
+  accomodation: string;
+  is_kid: boolean;
   kids_meal: boolean;
   high_chair: boolean;
-  staying_night: boolean;
   created_at: ColumnType<bigint, number>;
   updated_at: ColumnType<bigint, number>;
   deleted_at: null | ColumnType<bigint, number>;

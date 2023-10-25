@@ -53,7 +53,8 @@ $padding-decoration: 0.75rem;
   margin-top: 5rem;
 }
 
-input {
+input,
+select {
   margin-bottom: 1rem;
   color: $blue;
   font-weight: 400;
@@ -68,6 +69,12 @@ input {
 
     input {
       margin: 0;
+    }
+  }
+
+  .section {
+    .col {
+      text-align: left;
     }
   }
 }

@@ -20,6 +20,13 @@ const handleSubmit = async () => {
       first_name: firstName.value,
       last_name: lastName.value,
     },
+    transform: (guestList) => {
+      return guestList.map((item) => ({
+        ...item,
+        high_chair: !!item.high_chair,
+        kids_meal: !!item.kids_meal,
+      }));
+    },
   });
 
   pending.value = false;
@@ -66,7 +73,10 @@ const handleSubmit = async () => {
     </form>
   </div>
 
-  <div v-if="guestsFound && guestsFound.length">
+  <div
+    v-if="guestsFound && guestsFound.length"
+    class="mt-5"
+  >
     <RsvpForm
       v-for="guest in guestsFound"
       :guest="guest"

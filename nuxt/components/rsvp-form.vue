@@ -6,23 +6,29 @@ const props = defineProps({
   },
 });
 
-const localState = ref({} as GuestState);
 const hasError = ref(null as any);
 
 interface GuestState {
   id?: string;
-  chicken: boolean;
-  lamb: boolean;
-  vegetarian: boolean;
-  kidsMeal: boolean;
-  highChair: boolean;
-  stayingNight: boolean;
+  meal: string;
+  is_kid: boolean;
+  kids_meal: boolean;
+  high_chair: boolean;
+  accomodation: string;
+  note: string;
 }
 
 const handleSubmit = async () => {
-  const { data, error } = await useFetch("/api/guests", {
-    method: "POST",
-    body: {},
+  const { data, error } = await useFetch(`/api/guests/${props.guest.id}`, {
+    method: "PATCH",
+    body: { ...props.guest },
+    transform: (guestList) => {
+      return guestList.map((item) => ({
+        ...item,
+        high_chair: !!item.high_chair,
+        kids_meal: !!item.kids_meal,
+      }));
+    },
   });
 
   if (error.value) hasError.value = error.value;
@@ -33,7 +39,7 @@ const handleSubmit = async () => {
   <div class="form-control mt-5">
     <p class="error">{{ hasError }}</p>
 
-    <h3 class="mb-3">
+    <h3 class="mb-5">
       {{ props.guest.first_name }} {{ props.guest.last_name }}
     </h3>
 
@@ -42,35 +48,26 @@ const handleSubmit = async () => {
         class="tooltip"
         data-tip="Meal starts at 3:30PM, 7PM side buffet"
       >
-        <p>Wedding Meal</p>
+        <div class="row">
+          <p class="col">Wedding Meal</p>
+
+          <select
+            class="select col"
+            v-model="props.guest.meal"
+            @change="handleSubmit"
+          >
+            <option
+              disabled
+              selected
+            >
+              Pick your preferred meal
+            </option>
+            <option value="chicken">Chicken</option>
+            <option value="lamb">Lamb</option>
+            <option value="vegetarian">Vegetarian</option>
+          </select>
+        </div>
       </div>
-
-      <label class="cursor-pointer label">
-        <span class="">Chicken</span>
-        <input
-          type="checkbox"
-          class="toggle toggle-success"
-          v-model="localState.chicken"
-        />
-      </label>
-
-      <label class="cursor-pointer label">
-        <span class="">Lamb</span>
-        <input
-          type="checkbox"
-          class="toggle toggle-success"
-          v-model="localState.lamb"
-        />
-      </label>
-
-      <label class="cursor-pointer label">
-        <span class="">Vegetarian</span>
-        <input
-          type="checkbox"
-          class="toggle toggle-success"
-          v-model="localState.vegetarian"
-        />
-      </label>
 
       <div
         class="tooltip mt-5"
@@ -81,7 +78,8 @@ const handleSubmit = async () => {
           <input
             type="checkbox"
             class="toggle toggle-success"
-            v-model="localState.kidsMeal"
+            v-model="props.guest.kids_meal"
+            @change="handleSubmit"
           />
         </label>
       </div>
@@ -95,26 +93,37 @@ const handleSubmit = async () => {
           <input
             type="checkbox"
             class="toggle toggle-success"
-            v-model="localState.highChair"
+            v-model="props.guest.high_chair"
+            @change="handleSubmit"
           />
         </label>
       </div>
     </div>
 
     <div class="section">
-      <p>Accomodation</p>
       <div
         class="tooltip"
         data-tip="The venue has 33 rooms available"
       >
-        <label class="cursor-pointer label">
-          <span class="">Staying At Ravenswood</span>
-          <input
-            type="checkbox"
-            class="toggle toggle-success"
-            v-model="localState.stayingNight"
-          />
-        </label>
+        <div class="row">
+          <p class="col">Accomodation</p>
+
+          <select
+            class="select col"
+            v-model="guest.accomodation"
+            @change="handleSubmit"
+          >
+            <option
+              disabled
+              selected
+            >
+              Staying or Leaving early?
+            </option>
+            <option value="no">Not staying</option>
+            <option value="ravenswood">Staying Ravenswood</option>
+            <option value="other">Staying Another Hotel</option>
+          </select>
+        </div>
       </div>
     </div>
   </div>
