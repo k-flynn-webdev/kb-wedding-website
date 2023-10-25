@@ -7,6 +7,7 @@ const firstName = ref("");
 const lastName = ref("");
 
 const pending = ref(false);
+const noResults = ref(false);
 const hasError = ref(null as any);
 
 const guestsFound = ref([]);
@@ -14,6 +15,7 @@ const guestsFound = ref([]);
 const handleSubmit = async () => {
   pending.value = true;
   hasError.value = null;
+  noResults.value = false;
 
   const { data, error } = await useFetch("/api/guests", {
     method: "POST",
@@ -33,12 +35,21 @@ const handleSubmit = async () => {
   if (error.value) hasError.value = error.value;
 
   guestsFound.value = data.value;
+
+  if (
+    !error.value &&
+    !data.value?.length &&
+    firstName.value &&
+    lastName.value
+  ) {
+    noResults.value = true;
+  }
 };
 </script>
 
 <template>
   <div class="wedding-hero">
-    <div class="wedding-hero__heading">
+    <div class="wedding-hero__heading extra">
       <div class="transform">
         <h1>RSVP</h1>
       </div>
@@ -73,7 +84,14 @@ const handleSubmit = async () => {
         class="error"
         v-if="hasError"
       >
-        Type a first and or last name of at least 4 characters
+        Type a first and last name of at least 3 characters
+      </p>
+
+      <p
+        class="error"
+        v-if="noResults"
+      >
+        No guests found
       </p>
     </form>
   </div>
@@ -86,11 +104,5 @@ const handleSubmit = async () => {
       v-for="guest in guestsFound"
       :guest="guest"
     />
-  </div>
-
-  <div class="bottom-nav">
-    <NuxtLink to="/">
-      <button class="btn rsvp">Home</button>
-    </NuxtLink>
   </div>
 </template>

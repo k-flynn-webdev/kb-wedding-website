@@ -1,11 +1,11 @@
 $blush: #e5c8ca;
-$blush-alpha: rgba(229, 200, 202, 0.75);
+$blush-alpha: rgba(229, 200, 202, 0.8);
 $blue: #1d384e;
 
 $text-color: hsl(333, 100%, 95%);
 $bg-color: $blue;
 
-$section-pad: 3rem;
+$section-pad: 2.5rem;
 $text-max-size: 6rem;
 $mobile-size: 525px;
 $padding-decoration: 0.75rem;
@@ -34,7 +34,7 @@ $padding-decoration: 0.75rem;
 }
 
 .main {
-  padding-top: 3.5rem;
+  padding-top: 2rem;
 }
 
 .top-navbar {
@@ -83,7 +83,7 @@ $padding-decoration: 0.75rem;
 }
 
 .bottom-nav {
-  margin-top: 5rem;
+  margin-top: $section-pad;
 }
 
 input,
@@ -198,6 +198,10 @@ body {
   &__heading {
     $size: 95vw;
     overflow: hidden;
+
+    &.extra {
+      padding-bottom: 3rem;
+    }
 
     .transform {
       position: relative;

@@ -30,8 +30,8 @@ definePageMeta({
         <p class="year">2024</p>
       </div>
       <div class="col side">
-        <p class="time lg">At 1:00pm</p>
-        <p class="time mb">1:00pm</p>
+        <p class="time lg">At 1pm</p>
+        <p class="time mb">1pm</p>
       </div>
     </div>
   </div>
