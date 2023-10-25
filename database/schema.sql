@@ -5,7 +5,6 @@ CREATE TABLE guests_data (
     family_id VARCHAR(10),
     meal VARCHAR(10),
     is_kid INTEGER NOT NULL,
-    kids_meal INTEGER NOT NULL,
     high_chair INTEGER NOT NULL,
     accomodation VARCHAR(30),
     note VARCHAR(30),

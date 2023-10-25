@@ -68,7 +68,7 @@ const handleSubmit = async () => {
             <option value="chicken">Chicken</option>
             <option value="salmon">Salmon</option>
             <option value="vegetarian">Vegetarian</option>
-            <option value="kids">Kids</option>
+            <option value="kids_meal">Kids</option>
           </select>
         </div>
       </div>

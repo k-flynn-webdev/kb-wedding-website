@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
     const result_single = await db
       .selectFrom("guests_data")
       .selectAll()
-      .where("first_name", "like", body.first_name)
+      .where("first_name", "like", body.first_name.trim())
       .where("last_name", "like", body.last_name)
       .executeTakeFirst();
 
@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
     return await db
       .selectFrom("guests_data")
       .selectAll()
-      .where("family_id", "=", result_single.family_id)
+      .where("family_id", "=", result_single.family_id.trim())
       .execute();
   } catch (e) {
     throw createError({
