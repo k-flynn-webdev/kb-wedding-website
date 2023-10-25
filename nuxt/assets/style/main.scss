@@ -94,7 +94,11 @@ select {
 }
 
 select.select {
-  max-width: 8rem;
+  max-width: 10rem;
+
+  @media (min-width: $mobile-size) {
+    max-width: 15rem;
+  }
 }
 
 .guest-name {
