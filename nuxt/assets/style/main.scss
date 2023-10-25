@@ -24,10 +24,15 @@ $padding-decoration: 0.75rem;
   font-family: "Montserrat", sans-serif;
 }
 
+@for $i from 1 through 9 {
+  .image-0#{$i} {
+    background:
+      linear-gradient(transparent, $blue 100%),
+      url(~/assets/images/wide-0#{$i}.jpg) center center;
+  }
+}
+
 .hero-image {
-  background:
-    linear-gradient(transparent, $blue 100%),
-    url(~/assets/images/wide-01.jpg) center center;
   height: 70vh;
   width: 100%;
   background-position: center center;

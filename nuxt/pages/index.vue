@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="hero-image"></div>
+  <HeroImage />
 
   <div class="wedding-hero">
     <div class="wedding-hero__heading">
