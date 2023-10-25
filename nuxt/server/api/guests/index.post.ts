@@ -5,8 +5,8 @@ export default defineEventHandler(async (event) => {
     const result_single = await db
       .selectFrom("guests_data")
       .selectAll()
-      .where("first_name", "like", body.first_name.trim())
-      .where("last_name", "like", body.last_name)
+      .where("first_name", "like", "%" + body.first_name + "%")
+      .where("last_name", "like", "%" + body.last_name + "%")
       .executeTakeFirst();
 
     if (!result_single) throw "no result";
