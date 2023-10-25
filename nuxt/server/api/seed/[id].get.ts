@@ -109,12 +109,16 @@ export default defineEventHandler(async (event) => {
     },
   ];
 
+  const createId = (idx: string) => {
+    return (parseInt(idx) + Date.now()).toString();
+  };
+
   try {
     for (let i = 0, max = DATA.length; i < max; i++) {
       console.log(DATA[i]);
       await db
         .insertInto("guests_data")
-        .values({ id: parseInt(i).toString(), ...DATA[i] })
+        .values({ id: createId(i), ...DATA[i] })
         .executeTakeFirst();
     }
 
