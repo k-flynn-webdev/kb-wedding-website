@@ -7,8 +7,11 @@ const logKeys = [
 ];
 
 const logFunction = (data) => {
+  console.log('\n')
+  console.log(`ID: ${data.id}`)
+  console.log(`Name: ${data.first_name} ${data.last_name}`)
   logKeys.forEach((key) => {
-    console.log(key, ": ", data[key])
+    console.log(`${key}: ${data[key]}`)
   })
   console.log('\n')
 }
@@ -26,8 +29,7 @@ export default defineEventHandler(async (event) => {
   };
 
 
-  console.log('UPDATE: ', event?.context?.params?.id)
-  logFunction(allowedEdit)
+  logFunction({ id: event?.context?.params?.id, ...body, ...allowedEdit })
 
   try {
     const result = await db
