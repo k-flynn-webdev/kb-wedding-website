@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import { preDebounceAction } from "@/composables/utils";
+import { inputDelay } from "@/consts";
+
 const props = defineProps({
   guest: {
     type: Object,
@@ -36,6 +39,12 @@ const handleSubmit = async () => {
   pending.value = false;
   if (error.value) hasError.value = error.value;
 };
+
+const performUpdate = preDebounceAction(
+  () => (pending.value = true),
+  handleSubmit,
+  inputDelay
+);
 </script>
 
 <template>
@@ -88,7 +97,7 @@ const handleSubmit = async () => {
         class="textarea w-full"
         placeholder="Dietary Requirements"
         v-model="guest.note"
-        @change="handleSubmit"
+        @input="performUpdate"
       ></textarea>
     </div>
 
