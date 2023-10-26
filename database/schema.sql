@@ -7,7 +7,7 @@ CREATE TABLE guests_data (
     is_kid INTEGER NOT NULL,
     high_chair INTEGER NOT NULL,
     accomodation VARCHAR(30),
-    note VARCHAR(30),
+    note VARCHAR(100),
     created_at BIGINT NOT NULL,
     updated_at BIGINT NOT NULL,
     deleted_at BIGINT

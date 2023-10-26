@@ -1,21 +1,15 @@
-const logKeys = [
-"meal",
-"high_chair",
-"accomodation",
-"note",
-"updated_at",
-];
+const logKeys = ["meal", "high_chair", "accomodation", "note", "updated_at"];
+
+const NEW_LINE = "********************************************************";
 
 const logFunction = (data) => {
-  console.log('\n')
-  console.log(`ID: ${data.id}`)
-  console.log(`Name: ${data.first_name} ${data.last_name}`)
+  console.log(NEW_LINE);
+  console.log(`ID: ${data.id}`);
+  console.log(`Name: ${data.first_name} ${data.last_name}`);
   logKeys.forEach((key) => {
-    console.log(`${key}: ${data[key]}`)
-  })
-  console.log('\n')
-}
-
+    console.log(`${key}: ${data[key]}`);
+  });
+};
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
@@ -28,8 +22,7 @@ export default defineEventHandler(async (event) => {
     updated_at: Date.now(),
   };
 
-
-  logFunction({ id: event?.context?.params?.id, ...body, ...allowedEdit })
+  logFunction({ id: event?.context?.params?.id, ...body, ...allowedEdit });
 
   try {
     const result = await db
