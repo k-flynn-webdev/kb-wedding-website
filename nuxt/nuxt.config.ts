@@ -7,11 +7,15 @@ export default defineNuxtConfig({
       title: "Kev & Bels Wedding 2024!",
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image"],
+  modules: ["nuxt3-winston-log", "@nuxtjs/tailwindcss", "@nuxt/image"],
   nitro: {
     moduleSideEffects: ["lucia/polyfill/node"],
   },
   image: {
     dir: "assets/images",
+  },
+  nuxt3WinstonLog: {
+    maxSize: "2048m",
+    maxFiles: "30d",
   },
 });
