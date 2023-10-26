@@ -1,6 +1,11 @@
 version: "3"
 
 services:
+  am-log-folder:
+    build: ./log_folder
+    volumes:
+      - logdata:/usr/app/log_folder
+
   am-database:
     build: ./database
     volumes:
@@ -18,6 +23,7 @@ services:
     tmpfs:
       - /tmp
     volumes:
+      - logdata:/usr/app/log_folder
       - dbdata:/usr/app/database
       - ./nuxt/composables:/usr/app/nuxt/composables
       - ./nuxt/middleware:/usr/app/nuxt/middleware
@@ -55,6 +61,7 @@ services:
 #   Link: http://0.0.0.0:8023/?pgsql=dl-database%3A5432&username=dbuser&db=dbname&ns=public&select=user
 
 volumes:
+  logdata:
   dbdata:
 
 networks:
