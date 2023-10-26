@@ -15,6 +15,6 @@ export default defineNuxtConfig({
   nuxt3WinstonLog: {
     maxSize: "2048m",
     maxFiles: "30d",
-    infoLogPath: "./logs",
+    infoLogPath: "../log_folder",
   },
 });
