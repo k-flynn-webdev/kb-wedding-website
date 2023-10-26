@@ -8,14 +8,13 @@ export default defineNuxtConfig({
     },
   },
   modules: ["nuxt3-winston-log", "@nuxtjs/tailwindcss", "@nuxt/image"],
-  nitro: {
-    moduleSideEffects: ["lucia/polyfill/node"],
-  },
+  nitro: {},
   image: {
     dir: "assets/images",
   },
   nuxt3WinstonLog: {
     maxSize: "2048m",
     maxFiles: "30d",
+    infoLogPath: "./logs",
   },
 });

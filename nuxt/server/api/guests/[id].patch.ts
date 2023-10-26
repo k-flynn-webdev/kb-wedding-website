@@ -1,3 +1,19 @@
+const logKeys = [
+"meal",
+"high_chair",
+"accomodation",
+"note",
+"updated_at",
+];
+
+const logFunction = (data) => {
+  logKeys.forEach((key) => {
+    console.log(key, ": ", data[key])
+  })
+  console.log('\n')
+}
+
+
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
 
@@ -8,6 +24,10 @@ export default defineEventHandler(async (event) => {
     note: body.note,
     updated_at: Date.now(),
   };
+
+
+  console.log('UPDATE: ', event?.context?.params?.id)
+  logFunction(allowedEdit)
 
   try {
     const result = await db
@@ -24,7 +44,7 @@ export default defineEventHandler(async (event) => {
       .where("id", "=", event?.context?.params?.id)
       .execute();
   } catch (e) {
-    console.log(e);
+    console.error(e);
     throw createError({
       status: 400,
       message: "Guest Error",

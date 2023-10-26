@@ -124,7 +124,7 @@ export default defineEventHandler(async (event) => {
 
     return await db.selectFrom("guests_data").selectAll().execute();
   } catch (e) {
-    console.log(e);
+    console.error(e);
     throw createError({
       status: 400,
       message: "Guest Error",

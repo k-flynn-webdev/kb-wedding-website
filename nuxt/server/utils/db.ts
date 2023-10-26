@@ -17,7 +17,7 @@ const sqliteDatabaseStart = () => {
     try {
       dbFile.exec(fs.readFileSync(DB_SCHEMA, "utf8"));
     } catch (e) {
-      console.log(e);
+      console.error(e);
       console.warn("DB Error / Warning: ");
       console.warn(e);
     }
