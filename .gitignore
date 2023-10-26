@@ -16,6 +16,8 @@ node_modules
 logs
 *.log
 
+log_folder/*.json
+
 # Misc
 .DS_Store
 .fleet
