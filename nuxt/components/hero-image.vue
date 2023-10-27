@@ -1,14 +1,13 @@
 <script lang="ts" setup>
-function randomIntFromInterval(min: number, max: number): number {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+import { randomIntFromInterval } from "@/helpers/math";
 
-const backgroundImg = ref(`image-0${randomIntFromInterval(1, 9)}`);
+const randomNum = randomIntFromInterval(1, 17);
+const randomImageName = `image-${randomNum < 10 ? "0" : ""}${randomNum}`;
 </script>
 
 <template>
   <div
     class="hero-image"
-    :class="backgroundImg"
+    :class="randomImageName"
   ></div>
 </template>

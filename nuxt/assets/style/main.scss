@@ -32,6 +32,13 @@ $padding-decoration: 0.75rem;
       url(~/assets/images/wide-0#{$i}.jpg) center center;
   }
 }
+@for $i from 10 through 17 {
+  .image-#{$i} {
+    background:
+      linear-gradient(transparent, $blue 100%),
+      url(~/assets/images/wide-#{$i}.jpg) center center;
+  }
+}
 
 .main {
   padding-top: 2rem;
