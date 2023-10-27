@@ -306,6 +306,7 @@ body {
   }
 }
 
+.info-section,
 .wedding-location {
   margin: 0 auto;
   max-width: 30rem;
@@ -314,6 +315,10 @@ body {
   .link {
     display: inline-block;
   }
+}
+
+.info-section {
+  max-width: 47.5rem;
 }
 
 h1 {
@@ -359,4 +364,22 @@ label {
 html,
 body {
   color: $text-color;
+}
+
+.geting-there {
+  margin-bottom: 5rem;
+
+  h3 {
+    margin: 1rem 0;
+    margin-top: 1.5rem;
+  }
+
+  p {
+    line-height: 1.8rem;
+  }
+
+  ul {
+    margin: auto 0;
+    text-align: left;
+  }
 }
