@@ -2,7 +2,7 @@ const logKeys = ["meal", "high_chair", "accomodation", "note", "updated_at"];
 
 const NEW_LINE = "********************************************************";
 
-const logFunction = (data) => {
+const logFunction = (data: any) => {
   console.log(NEW_LINE);
   console.log(`ID: ${data.id}`);
   console.log(`Name: ${data.first_name} ${data.last_name}`);
@@ -11,10 +11,10 @@ const logFunction = (data) => {
   });
 };
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async (event: any) => {
   const body = await readBody(event);
 
-  const allowedEdit = {
+  const allowedEdit: any = {
     meal: body.meal,
     high_chair: body.high_chair ? 1 : 0,
     accomodation: body.accomodation,
