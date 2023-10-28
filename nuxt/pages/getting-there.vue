@@ -97,7 +97,7 @@ definePageMeta({
         Prices are £145 - £175 a night.
       </p>
 
-      <h6><strong>Pets</strong></h6>
+      <h6 class="mt-5"><strong>Pets</strong></h6>
 
       <p>
         Pets are allowed at the venue <em>but</em> they aren’t allowed to stay
@@ -109,16 +109,30 @@ definePageMeta({
       <h3>Hotels</h3>
 
       <ul>
-        <li>East Grinstead: Alexander House - 01342 714914</li>
-        <li>East Grinstead: Crowne Plaza Felbridge - 01342 337700</li>
-        <li>Forest Row: The Brambletye Hotel - 01342 810821</li>
-        <li>Forest Row: Roebuck Hotel- 01342 823811</li>
-        <li>West Hoathly: The Cat Inn - 01342 810369</li>
         <li>
-          East Grinstead and Haywards Heath also offer Premier Inn and
-          Travelodge options.
+          East Grinstead
+          <ul>
+            <li>Alexander House - 01342 714914</li>
+            <li>Crowne Plaza Felbridge - 01342 337700</li>
+          </ul>
+        </li>
+        <li>Forest Row</li>
+        <ul>
+          <li>he Brambletye Hotel - 01342 810821</li>
+          <li>Roebuck Hotel- 01342 823811</li>
+        </ul>
+        <li>
+          West Hoathly
+          <ul>
+            <li>The Cat Inn - 01342 810369</li>
+          </ul>
         </li>
       </ul>
+
+      <em>
+        East Grinstead and Haywards Heath also offer Premier Inn and Travelodge
+        options.
+      </em>
     </div>
 
     <div class="info-section">
