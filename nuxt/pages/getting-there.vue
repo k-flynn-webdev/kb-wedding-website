@@ -118,7 +118,7 @@ definePageMeta({
         </li>
         <li>Forest Row</li>
         <ul>
-          <li>he Brambletye Hotel - 01342 810821</li>
+          <li>The Brambletye Hotel - 01342 810821</li>
           <li>Roebuck Hotel- 01342 823811</li>
         </ul>
         <li>
