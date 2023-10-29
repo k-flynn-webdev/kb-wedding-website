@@ -1,6 +1,6 @@
+$blue: #1d384e;
 $blush: #e5c8ca;
 $blush-alpha: rgba(229, 200, 202, 0.8);
-$blue: #1d384e;
 
 $text-color: hsl(333, 100%, 95%);
 $bg-color: $blue;
@@ -42,6 +42,19 @@ $padding-decoration: 0.75rem;
 
 .main {
   padding-top: 2rem;
+}
+
+.table-holder {
+  max-width: 100vw;
+  overflow: scroll;
+
+  table {
+    .note,
+    .meal,
+    .accomodation {
+      min-width: 7rem;
+    }
+  }
 }
 
 .top-navbar {
