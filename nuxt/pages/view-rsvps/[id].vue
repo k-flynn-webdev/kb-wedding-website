@@ -10,6 +10,10 @@ const hasError = ref(null as any);
 const guestsFound = ref([] as any);
 const row_keys = ref([] as any);
 
+const getDate = (input) => {
+  return new Date(input).toLocaleString();
+};
+
 const getAllRVPS = async () => {
   pending.value = true;
   hasError.value = null;
@@ -20,6 +24,8 @@ const getAllRVPS = async () => {
       return guestList.map((item) => ({
         ...item,
         high_chair: !!item.high_chair,
+        created_at: getDate(item.created_at),
+        updated_at: getDate(item.updated_at),
       }));
     },
   });

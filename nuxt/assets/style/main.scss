@@ -49,10 +49,19 @@ $padding-decoration: 0.75rem;
   overflow: scroll;
 
   table {
+    td {
+      min-width: 5rem;
+    }
+
     .note,
     .meal,
     .accomodation {
       min-width: 7rem;
+    }
+
+    .created_at,
+    .updated_at {
+      min-width: 10rem;
     }
   }
 }
