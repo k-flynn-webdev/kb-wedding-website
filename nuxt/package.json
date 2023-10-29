@@ -24,6 +24,7 @@
     "@nuxtjs/tailwindcss": "^6.8.0",
     "better-sqlite3": "^8.4.0",
     "kysely": "^0.25.0",
-    "lucia": "latest"
+    "lucia": "latest",
+    "vue-json-csv": "^2.1.0"
   }
 }

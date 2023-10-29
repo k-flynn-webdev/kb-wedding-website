@@ -3158,6 +3158,11 @@
     "node-domexception" "^1.0.0"
     "web-streams-polyfill" "^3.0.3"
 
+"file-saver@^2.0.5":
+  "integrity" "sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA=="
+  "resolved" "https://registry.npmjs.org/file-saver/-/file-saver-2.0.5.tgz"
+  "version" "2.0.5"
+
 "file-stream-rotator@^0.6.1":
   "integrity" "sha512-u+dBid4PvZw17PmDeRcNOtCP9CCK/9lRN2w+r1xIS7yOL9JFrIBKTvrYsxT4P0pGtThYTn++QS5ChHaUov3+zQ=="
   "resolved" "https://registry.npmjs.org/file-stream-rotator/-/file-stream-rotator-0.6.1.tgz"
@@ -4363,6 +4368,11 @@
   "resolved" "https://registry.npmjs.org/lodash.isarguments/-/lodash.isarguments-3.1.0.tgz"
   "version" "3.1.0"
 
+"lodash.mapkeys@^4.6.0":
+  "integrity" "sha512-0Al+hxpYvONWtg+ZqHpa/GaVzxuN3V7Xeo2p+bY06EaK/n+Y9R7nBePPN2o1LxmL0TWQSwP8LYZ008/hc9JzhA=="
+  "resolved" "https://registry.npmjs.org/lodash.mapkeys/-/lodash.mapkeys-4.6.0.tgz"
+  "version" "4.6.0"
+
 "lodash.memoize@^4.1.2":
   "integrity" "sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag=="
   "resolved" "https://registry.npmjs.org/lodash.memoize/-/lodash.memoize-4.1.2.tgz"
@@ -4372,6 +4382,11 @@
   "integrity" "sha512-hXt6Ul/5yWjfklSGvLQl8vM//l3FtyHZeuelpzK6mm99pNvN9yTDruNZPEJZD1oWrqo+izBmB7oUfWgcCX7s4Q=="
   "resolved" "https://registry.npmjs.org/lodash.pick/-/lodash.pick-4.4.0.tgz"
   "version" "4.4.0"
+
+"lodash.pickby@^4.6.0":
+  "integrity" "sha512-AZV+GsS/6ckvPOVQPXSiFFacKvKB4kOQu6ynt9wz0F3LO4R9Ij4K1ddYsIytDpSgLz88JHd9P+oaLeej5/Sl7Q=="
+  "resolved" "https://registry.npmjs.org/lodash.pickby/-/lodash.pickby-4.6.0.tgz"
+  "version" "4.6.0"
 
 "lodash.uniq@^4.5.0":
   "integrity" "sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ=="
@@ -5327,6 +5342,11 @@
     "sigstore" "^2.0.0"
     "ssri" "^10.0.0"
     "tar" "^6.1.11"
+
+"papaparse@^5.3.2":
+  "integrity" "sha512-HipMsgJkZu8br23pW15uvo6sib6wne/4woLZPlFf3rpDyMe9ywEXUsuD7+6K9PRkJlVT51j/sCOYDKGGS3ZJrw=="
+  "resolved" "https://registry.npmjs.org/papaparse/-/papaparse-5.4.1.tgz"
+  "version" "5.4.1"
 
 "parent-module@^1.0.0":
   "integrity" "sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g=="
@@ -7258,6 +7278,18 @@
   "resolved" "https://registry.npmjs.org/vue-devtools-stub/-/vue-devtools-stub-0.1.0.tgz"
   "version" "0.1.0"
 
+"vue-json-csv@^2.1.0":
+  "integrity" "sha512-JCHtHViiIIFgrJR9csLWq/d3X7sHVc8kDnPl5FgrVeCslYkaV/asacKyxKKZok8jVMPeFNWPAlwDbtUC1p/J/w=="
+  "resolved" "https://registry.npmjs.org/vue-json-csv/-/vue-json-csv-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "file-saver" "^2.0.5"
+    "lodash.mapkeys" "^4.6.0"
+    "lodash.pick" "^4.4.0"
+    "lodash.pickby" "^4.6.0"
+    "papaparse" "^5.3.2"
+    "vue" "^3.2"
+
 "vue-router@^4.1.0", "vue-router@^4.2.4":
   "integrity" "sha512-9PISkmaCO02OzPVOMq2w82ilty6+xJmQrarYZDkjZBfl4RvYAlt4PKnEX21oW4KTtWfa9OuO/b3qk1Od3AEdCQ=="
   "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-4.2.4.tgz"
@@ -7265,7 +7297,7 @@
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-"vue@^2.7.0 || ^3.2.25", "vue@^3.0.0", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.3.4", "vue@>=2.7 || >=3", "vue@3.3.4":
+"vue@^2.7.0 || ^3.2.25", "vue@^3.0.0", "vue@^3.2", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.3.4", "vue@>=2.7 || >=3", "vue@3.3.4":
   "integrity" "sha512-VTyEYn3yvIeY1Py0WaYGZsXnz3y5UnGi62GjVEqvEGPl6nxbOrCXbVOTQWBEJUqAyTUk2uJ5JLVnYJ6ZzGbrSw=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-3.3.4.tgz"
   "version" "3.3.4"

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import JsonCSV from "vue-json-csv";
+
 definePageMeta({
   // middleware: ["protected"],
 });
@@ -10,8 +12,12 @@ const hasError = ref(null as any);
 const guestsFound = ref([] as any);
 const row_keys = ref([] as any);
 
-const getDate = (input) => {
+const getDate = (input: Date) => {
   return new Date(input).toLocaleString();
+};
+
+const getHeaders = () => {
+  return row_keys.value.length ? Object.keys(row_keys.value[0]) : [];
 };
 
 const getAllRVPS = async () => {
@@ -33,11 +39,8 @@ const getAllRVPS = async () => {
   pending.value = false;
   if (error.value) hasError.value = error.value;
 
-  if (data.value?.length > 0) {
-    row_keys.value = Object.keys(data.value[0]);
-  }
-
   guestsFound.value = data.value;
+  row_keys.value = getHeaders();
 };
 
 onBeforeMount(async () => {
@@ -54,6 +57,14 @@ onBeforeMount(async () => {
       </div>
     </div>
   </div>
+
+  <JsonCSV
+    class="btn"
+    :data="guestsFound"
+    :labels="getHeaders()"
+  >
+    Download CSV file
+  </JsonCSV>
 
   <div class="table-holder">
     <table
