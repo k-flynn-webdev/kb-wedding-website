@@ -1,7 +1,6 @@
 #!/bin/bash
 source .env
 
-URL = $URL
 
 script_location=$(dirname $0)
 echo $script_location
