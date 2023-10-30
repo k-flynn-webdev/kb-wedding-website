@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Kev & Bels Wedding 2024!",
+      link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
     },
   },
   modules: ["nuxt3-winston-log", "@nuxtjs/tailwindcss", "@nuxt/image"],
