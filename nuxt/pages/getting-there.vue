@@ -87,7 +87,7 @@ definePageMeta({
         code <strong class="code">RWBK040224</strong> and
         <a
           class="link link-primary"
-          href="/"
+          href="https://app.thebookingfactory.com/the-ravenswood1/book/040224-belinda-kevin#/"
           >Link</a
         >.
       </p>
