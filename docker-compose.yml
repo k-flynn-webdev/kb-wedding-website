@@ -11,28 +11,6 @@ services:
     volumes:
       - dbdata:/usr/app/database
 
-  am-nuxt:
-    build: ./nuxt/Dockerfile.dev
-    networks:
-      - shared-network
-    depends_on:
-      - am-database
-    tmpfs:
-      - /tmp
-    volumes:
-      - logdata:/usr/app/log_folder
-      - dbdata:/usr/app/database
-      - ./nuxt/composables:/usr/app/nuxt/composables
-      - ./nuxt/middleware:/usr/app/nuxt/middleware
-      - ./nuxt/pages:/usr/app/nuxt/pages
-      - ./nuxt/public:/usr/app/nuxt/public
-      - ./nuxt/server:/usr/app/nuxt/server
-      - ./nuxt/app.vue:/usr/app/nuxt/app.vue
-      - ./nuxt/nuxt.config.ts:/usr/app/nuxt/nuxt.config.ts
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-      - NUXT_PORT=3000
-
 volumes:
   logdata:
   dbdata:
