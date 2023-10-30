@@ -171,8 +171,8 @@ definePageMeta({
         <li>Alcohol - strict BYO rules</li>
         <li>Fireworks</li>
         <li>
-          Paper Confetti (our beautiful flower girls will hand out confetti out
-          on the big day!)
+          Paper Confetti (our beautiful flower girls will hand confetti out on
+          the big day!)
         </li>
       </ul>
     </div>
