@@ -12,14 +12,11 @@ services:
       - dbdata:/usr/app/database
 
   am-nuxt:
-    build: ./nuxt
+    build: ./nuxt/Dockerfile.dev
     networks:
       - shared-network
     depends_on:
       - am-database
-    ports:
-      - "${APP_PORT}:3000"
-      - 24678:24678
     tmpfs:
       - /tmp
     volumes:
