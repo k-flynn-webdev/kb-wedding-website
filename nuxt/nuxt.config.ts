@@ -32,11 +32,11 @@ export default defineNuxtConfig({
   },
   routeRules: {
     // Homepage pre-rendered at build time
-    "/": { prerender: true },
-    rsvp: { prerender: true },
-    "getting-there": { prerender: true },
+    "/": { ssr: true },
+    rsvp: { ssr: true },
+    "getting-there": { ssr: true },
     // Admin dashboard renders only on client-side
-    "/view-rsvps/**": { ssr: false },
+    "/view-rsvps/**": {},
     // Add cors headers on API routes
     "/api/**": { cors: true },
   },
