@@ -34,7 +34,7 @@ services:
       - ./nuxt/nuxt.config.ts:/usr/app/nuxt/nuxt.config.ts
     environment:
       - CHOKIDAR_USEPOLLING=true
-      - NUXT_HOST=${APP_HOST}
+      - NUXT_HOST=localhost
       - NUXT_PORT=3000
 
   # REMOVE making things too complicated
