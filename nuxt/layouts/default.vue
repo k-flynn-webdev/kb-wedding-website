@@ -7,4 +7,6 @@
     <HeroImage />
     <slot />
   </div>
+
+  <Footer />
 </template>
