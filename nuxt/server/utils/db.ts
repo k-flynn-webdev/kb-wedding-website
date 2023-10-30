@@ -5,7 +5,6 @@ import { Kysely, SqliteDialect } from "kysely";
 import type { ColumnType } from "kysely";
 
 const config = useRuntimeConfig();
-console.log("Runtime config:", config);
 
 const DB_SCHEMA = config.isDev
   ? "../database/schema.sql"
