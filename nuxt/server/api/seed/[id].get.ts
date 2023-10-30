@@ -114,6 +114,8 @@ export default defineEventHandler(async (event) => {
   };
 
   try {
+    await db.deleteFrom("guests_data").execute();
+
     for (let i = 0, max = DATA.length; i < max; i++) {
       console.log(DATA[i]);
       await db
