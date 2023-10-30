@@ -41,14 +41,13 @@ $padding-decoration: 0.75rem;
 }
 
 .main {
-  padding-top: 2rem;
 }
 
 .foot {
   color: white;
   padding: 0.5rem 0;
 
-  margin: 5rem -0.5rem -0.5rem -0.5rem;
+  margin-top: 1.5rem;
   background-color: black;
   text-align: center;
 
@@ -95,7 +94,6 @@ $padding-decoration: 0.75rem;
 .top-navbar {
   background-color: $blush-alpha;
   color: $blue;
-  margin: -0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.75rem;
   text-align: left;
@@ -239,13 +237,12 @@ a {
   display: block;
 }
 
-body {
+.main-inner {
   padding: 0.5rem;
+  min-height: calc(100vh - 6rem);
 
   @media (min-width: $mobile-size) {
-    body {
-      padding: 1rem;
-    }
+    padding: 1rem;
   }
 }
 

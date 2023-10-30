@@ -1,12 +1,15 @@
 <script setup></script>
 
 <template>
-  <TopNavbar />
-
   <div class="main">
-    <HeroImage />
-    <slot />
-  </div>
+    <TopNavbar />
 
-  <Footer />
+    <HeroImage />
+
+    <div class="main-inner">
+      <slot />
+    </div>
+
+    <Footer />
+  </div>
 </template>
