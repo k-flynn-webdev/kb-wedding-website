@@ -24,7 +24,7 @@ definePageMeta({
     <a
       rel="noreferrer"
       target="_blank"
-      class="pl-2 link"
+      class="link"
       href="https://github.com/k-flynn-webdev"
     >
       k-flynn-webdev
