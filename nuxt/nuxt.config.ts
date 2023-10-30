@@ -30,4 +30,14 @@ export default defineNuxtConfig({
       // apiBase: process.env.NUXT_PUBLIC_API_BASE ?? "default value",
     },
   },
+  routeRules: {
+    // Homepage pre-rendered at build time
+    "/": { prerender: true },
+    rsvp: { prerender: true },
+    "getting-there": { prerender: true },
+    // Admin dashboard renders only on client-side
+    "/view-rsvps/**": { ssr: false },
+    // Add cors headers on API routes
+    "/api/**": { cors: true },
+  },
 });
