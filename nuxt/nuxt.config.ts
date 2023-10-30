@@ -8,7 +8,9 @@ export default defineNuxtConfig({
     },
   },
   modules: ["nuxt3-winston-log", "@nuxtjs/tailwindcss", "@nuxt/image"],
-  nitro: {},
+  nitro: {
+    compressPublicAssets: true,
+  },
   image: {
     dir: "assets/images",
   },
