@@ -1,2 +1,3 @@
 add favicon
 when rsvp users name should be first from group
+CORS: https://stackoverflow.com/questions/76198151/nuxt-3-how-to-implement-cors
