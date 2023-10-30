@@ -1,10 +1,11 @@
 #!/bin/bash
-source .env
+# source .env
 
 
-script_location=$(dirname $0)
-echo $script_location
-pwd
+# script_location=$(dirname $0)
+# echo $script_location
+# pwd
 
-ln -s ${script_location}/nginx/${URL} /etc/nginx/sites-available/
-ln -s ${script_location}/nginx/${URL} /etc/nginx/sites-enabled/
+# COMMANDS TO RUN
+ln -s ~/kb-wedding-website/nginx/${URL} /etc/nginx/sites-available/
+ln -s ~/kb-wedding-website/nginx/${URL} /etc/nginx/sites-enabled/

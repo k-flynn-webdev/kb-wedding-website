@@ -2,6 +2,7 @@ server {
         listen 80;
         listen [::]:80;
 
+        access_log /var/log/nginx/bel-kev.access.log;
         server_name bel-kev.co.uk www.bel-kev.co.uk;
 
         location / {
