@@ -1,10 +1,14 @@
 <script lang="ts" setup>
+import { useRoute } from "#vue-router";
+
 definePageMeta({
   // middleware: ["protected"],
 });
 
-const firstName = ref("");
-const lastName = ref("");
+const route = useRoute();
+
+const firstName = ref(route?.query?.firstName || "");
+const lastName = ref(route?.query?.lastName || "");
 
 const pending = ref(false);
 const noResults = ref(false);
@@ -45,6 +49,14 @@ const handleSubmit = async () => {
     noResults.value = true;
   }
 };
+
+onMounted(async () => {
+  if (route?.query?.firstName && route?.query?.lastName) {
+    await setTimeout(() => {
+      handleSubmit();
+    }, 1000);
+  }
+});
 </script>
 
 <template>
