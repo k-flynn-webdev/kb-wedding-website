@@ -1,2 +1,1 @@
 add favicon
-add db exporter to csv
