@@ -11,6 +11,24 @@ services:
     volumes:
       - dbdata:/usr/app/database
 
+  am-nuxt:
+    build:
+      context: ./nuxt
+      dockerfile: ./Dockerfile
+    ports:
+      - "${APP_PORT}:3000"
+    networks:
+      - shared-network
+    depends_on:
+      - am-database
+    tmpfs:
+      - /tmp
+    volumes:
+      - logdata:/app/log_folder
+      - dbdata:/app/database
+    environment:
+      - NUXT_PORT=3000
+
 volumes:
   logdata:
   dbdata:

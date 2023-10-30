@@ -4,8 +4,15 @@ import { Kysely, SqliteDialect } from "kysely";
 
 import type { ColumnType } from "kysely";
 
-const DB_SCHEMA = "../database/schema.sql";
-const DB_FILE_PATH = "../database/db.sqlite";
+const config = useRuntimeConfig();
+console.log("Runtime config:", config);
+
+const DB_SCHEMA = config.isDev
+  ? "../database/schema.sql"
+  : "/app/database/schema.sql";
+const DB_FILE_PATH = config.isDev
+  ? "../database/db.sqlite"
+  : "/app/database/db.sqlite";
 
 const sqliteDatabaseStart = () => {
   const hasDBFile = fs.existsSync(DB_FILE_PATH);

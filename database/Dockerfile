@@ -1,9 +1,9 @@
-FROM node:16-alpine
+FROM node:18-alpine3.17
 
-RUN mkdir -p /usr/app/database/ && chown -R node:node /usr/app/database/
+RUN apk update && apk upgrade
 
-USER node
+RUN mkdir -p /app/database/
 
-WORKDIR /usr/app/database
+WORKDIR /app/database
 
-COPY  . .
+COPY . .

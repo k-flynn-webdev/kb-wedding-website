@@ -1,24 +1,40 @@
-FROM node:16-alpine
+ARG NODE_VERSION=node:16.14.2
 
-RUN mkdir -p /usr/app/nuxt/ && chown -R node:node /usr/app/nuxt/
+FROM $NODE_VERSION AS dependency-base
 
-WORKDIR /usr/app/nuxt/
+# create destination directory
+RUN mkdir -p /app
+WORKDIR /app
 
-# update and install dependency
-RUN apk update && apk upgrade
-RUN apk add git
+# copy the app, note .dockerignore
+COPY package.json .
+COPY package-lock.json .
+RUN npm ci
 
-USER node
+FROM dependency-base AS production-base
 
-COPY package.json yarn.lock ./
-
-RUN yarn install --pure-lockfile
-
+# build will also take care of building
+# if necessary
 COPY . .
+RUN npm run build
 
-EXPOSE 3000
-EXPOSE 24678
+FROM $NODE_VERSION AS production
 
-CMD [ "yarn", "run", "dev" ]
+COPY --from=production-base /app/.output /app/.output
 
-# ENTRYPOINT ["node", ".output/server/index.mjs"]
+# Service hostname
+ENV NUXT_HOST=0.0.0.0
+
+# Service version
+ARG NUXT_APP_VERSION
+ENV NUXT_APP_VERSION=${NUXT_APP_VERSION}
+
+ENV DATABASE_URL=file:./db.sqlite
+
+# Run in production mode
+ENV NODE_ENV=production
+ENV NUXT_IS_DEV=false
+ENV NUXT_IS_PROD=true
+
+# start the app
+CMD [ "node", "/app/.output/server/index.mjs" ]

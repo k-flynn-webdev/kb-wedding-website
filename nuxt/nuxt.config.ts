@@ -17,4 +17,10 @@ export default defineNuxtConfig({
     maxFiles: "30d",
     infoLogPath: "../log_folder",
   },
+  runtimeConfig: {
+    isDev: process.env.NUXT_IS_DEV ?? true,
+    public: {
+      // apiBase: process.env.NUXT_PUBLIC_API_BASE ?? "default value",
+    },
+  },
 });

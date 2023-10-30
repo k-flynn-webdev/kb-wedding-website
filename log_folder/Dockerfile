@@ -1,9 +1,9 @@
-FROM node:16-alpine
+FROM node:18-alpine3.17
 
-RUN mkdir -p /usr/app/log_folder/ && chown -R node:node /usr/app/log_folder/
+RUN apk update && apk upgrade
 
-USER node
+RUN mkdir -p /app/log_folder/
 
-WORKDIR /usr/app/log_folder
+WORKDIR /app/log_folder
 
-COPY  . .
+COPY . .

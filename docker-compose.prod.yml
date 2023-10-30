@@ -2,7 +2,24 @@ version: "3"
 
 services:
   am-nuxt:
-    build: ./nuxt/Dockerfile.prod
-
+    build: ./nuxt/Dockerfile
     ports:
       - "${APP_PORT}:3000"
+    networks:
+      - shared-network
+    depends_on:
+      - am-database
+    tmpfs:
+      - /tmp
+    volumes:
+      - logdata:/usr/app/log_folder
+      - dbdata:/usr/app/database
+      - ./nuxt/composables:/usr/app/nuxt/composables
+      - ./nuxt/middleware:/usr/app/nuxt/middleware
+      - ./nuxt/pages:/usr/app/nuxt/pages
+      - ./nuxt/public:/usr/app/nuxt/public
+      - ./nuxt/server:/usr/app/nuxt/server
+      - ./nuxt/app.vue:/usr/app/nuxt/app.vue
+      - ./nuxt/nuxt.config.ts:/usr/app/nuxt/nuxt.config.ts
+    environment:
+      - NUXT_PORT=3000
