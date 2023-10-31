@@ -194,6 +194,11 @@ a {
   }
 }
 
+.router-link-active {
+  text-underline-offset: $padding-decoration * 0.25;
+  text-decoration: 5px solid underline;
+}
+
 .container {
   margin: 0 auto;
   max-width: 35rem;
