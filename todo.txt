@@ -2,3 +2,4 @@ CORS: https://stackoverflow.com/questions/76198151/nuxt-3-how-to-implement-cors
 add fmaily relation hit?
 add show family members????
 add gift link?
+highlight page links with actiive page
