@@ -37,12 +37,13 @@ definePageMeta({
   </div>
 
   <div class="wedding-location">
-    <a
+    <NuxtLink
+      target="_blank"
       class="link"
-      href="https://maps.app.goo.gl/hoVmCuADSdGsg4fh9"
+      to="https://maps.app.goo.gl/hoVmCuADSdGsg4fh9"
     >
       The Ravenswood
-    </a>
+    </NuxtLink>
     <p>Cinder Hill, Sharpthorne, West Sussex, RH19 4HY</p>
   </div>
 

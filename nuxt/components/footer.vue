@@ -21,13 +21,11 @@ definePageMeta({
       />
     </svg>
     <span> by </span>
-    <a
-      rel="noreferrer"
-      target="_blank"
+    <NuxtLink
       class="link"
-      href="https://wwww.kubedev.co.uk"
+      to="https://wwww.kubedev.co.uk"
     >
       Kubedev
-    </a>
+    </NuxtLink>
   </div>
 </template>
