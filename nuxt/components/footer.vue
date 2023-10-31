@@ -22,6 +22,7 @@ definePageMeta({
     </svg>
     <span> by </span>
     <NuxtLink
+      target="_blank"
       class="link"
       to="https://wwww.kubedev.co.uk"
     >
