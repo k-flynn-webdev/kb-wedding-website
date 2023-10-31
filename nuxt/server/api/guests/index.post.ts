@@ -22,7 +22,11 @@ export default defineEventHandler(async (event) => {
     const resultFamily = await db
       .selectFrom("guests_data")
       .selectAll()
-      .where("id", "!=", result[0].id)
+      .where(
+        "id",
+        "not in",
+        result.map((item) => item.id)
+      )
       .where(
         "family_id",
         "in",
