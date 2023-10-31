@@ -25,9 +25,9 @@ definePageMeta({
       rel="noreferrer"
       target="_blank"
       class="link"
-      href="https://github.com/k-flynn-webdev"
+      href="https://wwww.kubedev.co.uk"
     >
-      k-flynn-webdev
+      Kubedev
     </a>
   </div>
 </template>
