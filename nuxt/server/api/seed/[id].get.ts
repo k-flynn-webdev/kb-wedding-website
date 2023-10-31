@@ -1,5 +1,7 @@
 export default defineEventHandler(async (event) => {
-  if (!event?.context?.params?.id === 4897) {
+  const config = useRuntimeConfig();
+
+  if (event?.context?.params?.id !== config.secretId) {
     throw createError("DENIED");
   }
 

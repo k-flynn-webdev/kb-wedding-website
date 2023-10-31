@@ -28,6 +28,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     isDev: process.env.NUXT_IS_DEV ?? true,
     dbPath: "",
+    secretId: "4897",
     public: {
       // apiBase: process.env.NUXT_PUBLIC_API_BASE ?? "default value",
     },
