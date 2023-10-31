@@ -19,15 +19,18 @@ export default defineEventHandler(async (event) => {
 
     if (!result) throw "no result";
 
-    return await db
+    const resultFamily = await db
       .selectFrom("guests_data")
       .selectAll()
+      .where("id", "!=", result[0].id)
       .where(
         "family_id",
         "in",
         result.map((item) => item.family_id)
       )
       .execute();
+
+    return [...result, ...resultFamily];
   } catch (e) {
     throw createError({
       status: 400,
