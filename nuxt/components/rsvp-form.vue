@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { preDebounceAction } from "@/composables/utils";
 import { inputDelay } from "@/consts";
+import { type GuestData } from "@/interfaces";
 
 const props = defineProps({
   guest: {
@@ -11,15 +12,6 @@ const props = defineProps({
 
 const pending = ref(false);
 const hasError = ref(null as any);
-
-interface GuestState {
-  id?: string;
-  meal: string;
-  is_kid: boolean;
-  high_chair: boolean;
-  accomodation: string;
-  note: string;
-}
 
 const handleSubmit = async () => {
   pending.value = true;
@@ -68,6 +60,13 @@ const performUpdate = preDebounceAction(
             v-model="props.guest.meal"
             @change="handleSubmit"
           >
+            <option
+              value=""
+              disabled
+              selected
+            >
+              Please select
+            </option>
             <option value="chicken">Chicken</option>
             <option value="salmon">Salmon</option>
             <option value="vegetarian">Vegetarian</option>
@@ -118,7 +117,9 @@ const performUpdate = preDebounceAction(
               value=""
               disabled
               selected
-            ></option>
+            >
+              Please select
+            </option>
             <option value="no">Not staying</option>
             <option value="ravenswood">Staying Ravenswood</option>
             <option value="other">Staying Another Hotel</option>

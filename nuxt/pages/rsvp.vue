@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useRoute, useRouter } from "#vue-router";
+import { type GuestData } from "@/interfaces";
 
 definePageMeta({
   // middleware: ["protected"],
@@ -15,7 +16,7 @@ const pending = ref(false);
 const noResults = ref(false);
 const hasError = ref(null as any);
 
-const guestsFound = ref([]);
+const guestsFound = ref([] as GuestData[]);
 
 watch(firstName, (firstName) => {
   router.push({
@@ -65,13 +66,7 @@ const handleSubmit = async () => {
   }
 };
 
-onMounted(async () => {
-  if (route?.query?.firstName && route?.query?.lastName) {
-    await setTimeout(() => {
-      handleSubmit();
-    }, 1000);
-  }
-});
+if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
 </script>
 
 <template>

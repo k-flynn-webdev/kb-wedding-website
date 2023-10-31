@@ -2,7 +2,7 @@ import sqlite from "better-sqlite3";
 import fs from "fs";
 import { Kysely, SqliteDialect } from "kysely";
 
-import type { ColumnType } from "kysely";
+import { type GuestData } from "@/interfaces";
 
 const config = useRuntimeConfig();
 
@@ -43,20 +43,5 @@ export const db = new Kysely<Database>({
 });
 
 type Database = {
-  guests_data: GuestTable;
-};
-
-type GuestTable = {
-  id: string;
-  first_name: string;
-  last_name: string;
-  family_id: string;
-  meal: string;
-  note: string;
-  accomodation: string;
-  is_kid: boolean;
-  high_chair: boolean;
-  created_at: ColumnType<bigint, number>;
-  updated_at: ColumnType<bigint, number>;
-  deleted_at: null | ColumnType<bigint, number>;
+  guests_data: GuestData;
 };
