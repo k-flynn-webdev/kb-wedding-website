@@ -27,6 +27,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     isDev: process.env.NUXT_IS_DEV ?? true,
+    dbPath: "",
     public: {
       // apiBase: process.env.NUXT_PUBLIC_API_BASE ?? "default value",
     },
@@ -37,7 +38,7 @@ export default defineNuxtConfig({
     rsvp: { ssr: true },
     "getting-there": { ssr: true },
     // Admin dashboard renders only on client-side
-    "/view-rsvps/**": {},
+    "/view-rsvps/**": { ssr: false },
     // Add cors headers on API routes
     "/api/**": { cors: true },
   },
