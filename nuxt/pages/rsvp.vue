@@ -1,11 +1,12 @@
 <script lang="ts" setup>
-import { useRoute } from "#vue-router";
+import { useRoute, useRouter } from "#vue-router";
 
 definePageMeta({
   // middleware: ["protected"],
 });
 
 const route = useRoute();
+const router = useRouter();
 
 const firstName = ref(route?.query?.firstName || "");
 const lastName = ref(route?.query?.lastName || "");
@@ -15,6 +16,20 @@ const noResults = ref(false);
 const hasError = ref(null as any);
 
 const guestsFound = ref([]);
+
+watch(firstName, (firstName) => {
+  router.push({
+    path: "/rsvp",
+    query: { ...route?.query, firstName },
+  });
+});
+
+watch(lastName, (lastName) => {
+  router.push({
+    path: "/rsvp",
+    query: { ...route?.query, lastName },
+  });
+});
 
 const handleSubmit = async () => {
   pending.value = true;
