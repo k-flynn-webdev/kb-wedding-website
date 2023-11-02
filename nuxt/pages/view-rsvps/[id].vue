@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import JsonCSV from "vue-json-csv";
+import { transformGuestAPI } from "@/helpers/transforms";
 
 definePageMeta({
   // middleware: ["protected"],
@@ -26,14 +27,7 @@ const getAllRVPS = async () => {
 
   const { data, error } = await useFetch("/api/guests", {
     method: "GET",
-    transform: (guestList) => {
-      return guestList.map((item) => ({
-        ...item,
-        high_chair: !!item.high_chair,
-        created_at: getDate(item.created_at),
-        updated_at: getDate(item.updated_at),
-      }));
-    },
+    transform: transformGuestAPI,
   });
 
   pending.value = false;

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useRoute, useRouter } from "#vue-router";
+import { transformGuestAPI } from "@/helpers/transforms";
 import { type GuestData } from "@/interfaces";
 
 definePageMeta({
@@ -45,12 +46,7 @@ const handleSubmit = async () => {
       first_name: firstName.value,
       last_name: lastName.value,
     },
-    transform: (guestList) => {
-      return guestList.map((item) => ({
-        ...item,
-        high_chair: !!item.high_chair,
-      }));
-    },
+    transform: transformGuestAPI,
   });
 
   pending.value = false;

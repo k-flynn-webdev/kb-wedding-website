@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { preDebounceAction } from "@/composables/utils";
 import { inputDelay } from "@/consts";
+import { transformGuestAPI } from "@/helpers/transforms";
 import { type GuestData } from "@/interfaces";
 
 const props = defineProps({
@@ -20,12 +21,7 @@ const handleSubmit = async () => {
   const { data, error } = await useFetch(`/api/guests/${props.guest.id}`, {
     method: "PATCH",
     body: { ...props.guest },
-    transform: (guestList) => {
-      return guestList.map((item) => ({
-        ...item,
-        high_chair: !!item.high_chair,
-      }));
-    },
+    transform: transformGuestAPI,
   });
 
   pending.value = false;
@@ -47,86 +43,112 @@ const performUpdate = preDebounceAction(
       {{ props.guest.first_name }} {{ props.guest.last_name }}
     </h3>
 
-    <div class="section">
-      <div
-        class="tooltip"
-        data-tip="Meal starts at 3:30PM, 8:30PM side buffet"
-      >
-        <div class="row">
-          <p class="col">Preferred Meal</p>
+    <div>
+      <label class="cursor-pointer label">
+        <span class="">Attending?</span>
+        <input
+          type="checkbox"
+          class="toggle toggle-success"
+          v-model="props.guest.attending"
+          @change="handleSubmit"
+        />
+      </label>
+    </div>
 
-          <select
-            class="select col"
-            v-model="props.guest.meal"
-            @change="handleSubmit"
-          >
-            <option
-              value=""
-              disabled
-              selected
+    <div v-if="props.guest.attending">
+      <div class="section">
+        <div
+          class="tooltip"
+          data-tip="Meal starts at 3:30PM, 8:30PM side buffet"
+        >
+          <div class="row">
+            <p class="col">Preferred Meal</p>
+
+            <select
+              class="select col"
+              v-model="props.guest.meal"
+              @change="handleSubmit"
             >
-              Please select
-            </option>
-            <option value="chicken">Chicken</option>
-            <option value="salmon">Salmon</option>
-            <option value="vegetarian">Vegetarian</option>
-            <option value="kids_meal">Kids</option>
-          </select>
+              <option
+                value=""
+                disabled
+                selected
+              >
+                Please select
+              </option>
+              <option value="chicken">Chicken</option>
+              <option value="salmon">Salmon</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="kids_meal">Kids</option>
+            </select>
+          </div>
+        </div>
+
+        <div
+          class="tooltip"
+          data-tip="The venue has 7 high chairs available"
+        >
+          <label class="cursor-pointer label">
+            <span class="">Require High Chair</span>
+            <input
+              type="checkbox"
+              class="toggle toggle-success"
+              v-model="props.guest.high_chair"
+              @change="handleSubmit"
+            />
+          </label>
         </div>
       </div>
 
-      <div
-        class="tooltip"
-        data-tip="The venue has 7 high chairs available"
-      >
-        <label class="cursor-pointer label">
-          <span class="">Require High Chair</span>
-          <input
-            type="checkbox"
-            class="toggle toggle-success"
-            v-model="props.guest.high_chair"
-            @change="handleSubmit"
-          />
-        </label>
+      <div class="row">
+        <textarea
+          class="textarea w-full"
+          placeholder="Dietary Requirements"
+          v-model="guest.note"
+          @input="performUpdate"
+        ></textarea>
+      </div>
+
+      <div class="section">
+        <div
+          class="tooltip"
+          data-tip="The venue has 33 rooms available"
+        >
+          <div class="row">
+            <p class="col">Staying the night?</p>
+
+            <select
+              class="select col"
+              v-model="guest.accomodation"
+              @change="handleSubmit"
+            >
+              <option
+                value=""
+                disabled
+                selected
+              >
+                Please select
+              </option>
+              <option value="no">Not staying</option>
+              <option value="ravenswood">Staying Ravenswood</option>
+              <option value="other">Staying Another Hotel</option>
+              <option value="undecided">Undecided</option>
+            </select>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="row">
+    <div
+      v-else
+      class="row"
+    >
       <textarea
         class="textarea w-full"
-        placeholder="Dietary Requirements"
+        placeholder="A note for the couple"
         v-model="guest.note"
         @input="performUpdate"
       ></textarea>
-    </div>
-
-    <div class="section">
-      <div
-        class="tooltip"
-        data-tip="The venue has 33 rooms available"
-      >
-        <div class="row">
-          <p class="col">Staying the night?</p>
-
-          <select
-            class="select col"
-            v-model="guest.accomodation"
-            @change="handleSubmit"
-          >
-            <option
-              value=""
-              disabled
-              selected
-            >
-              Please select
-            </option>
-            <option value="no">Not staying</option>
-            <option value="ravenswood">Staying Ravenswood</option>
-            <option value="other">Staying Another Hotel</option>
-            <option value="undecided">Undecided</option>
-          </select>
-        </div>
-      </div>
     </div>
   </div>
 </template>

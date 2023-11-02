@@ -1,4 +1,11 @@
-const logKeys = ["meal", "high_chair", "accomodation", "note", "updated_at"];
+const logKeys = [
+  "attending",
+  "meal",
+  "high_chair",
+  "accomodation",
+  "note",
+  "updated_at",
+];
 
 const NEW_LINE = "********************************************************";
 
@@ -15,6 +22,7 @@ export default defineEventHandler(async (event: any) => {
   const body = await readBody(event);
 
   const allowedEdit: any = {
+    attending: body.attending ? 1 : 0,
     meal: body.meal,
     high_chair: body.high_chair ? 1 : 0,
     accomodation: body.accomodation,

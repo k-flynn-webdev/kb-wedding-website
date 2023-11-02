@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
   }
 
   const BASE_GUEST = {
-    attending: false,
+    attending: 0,
     first_name: "",
     last_name: "",
     family_id: "",
@@ -339,7 +339,7 @@ export default defineEventHandler(async (event) => {
       first_name: "Harrison",
       last_name: "Nguyen",
       family_id: "vinmag",
-      hight_chair: 1,
+      high_chair: 1,
       is_kid: 1,
     },
 
