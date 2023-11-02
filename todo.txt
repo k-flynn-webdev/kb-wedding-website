@@ -2,3 +2,5 @@ CORS: https://stackoverflow.com/questions/76198151/nuxt-3-how-to-implement-cors
 add fmaily relation hit?
 add show family members????
 add gift link?
+add external link icon to links
+nginx needs to serve static assets!! not the app!!
