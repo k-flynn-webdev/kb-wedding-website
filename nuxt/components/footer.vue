@@ -24,7 +24,7 @@ definePageMeta({
     <NuxtLink
       target="_blank"
       class="link"
-      to="https://wwww.kubedev.co.uk"
+      to="https://www.kubedev.co.uk"
     >
       Kubedev
     </NuxtLink>

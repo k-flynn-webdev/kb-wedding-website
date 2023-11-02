@@ -44,7 +44,10 @@ definePageMeta({
     >
       The Ravenswood
     </NuxtLink>
-    <p>Cinder Hill, Sharpthorne, West Sussex, RH19 4HY</p>
+    <p>
+      Cinder Hill, Sharpthorne, West Sussex,
+      <span class="postcode">RH19 4HY</span>
+    </p>
   </div>
 
   <div class="bottom-nav">

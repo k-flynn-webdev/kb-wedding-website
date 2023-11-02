@@ -265,6 +265,10 @@ a {
   }
 }
 
+.postcode {
+  display: inline-block;
+}
+
 .wedding-hero {
   margin: 0 auto;
   margin-bottom: $section-pad * 1;
@@ -398,7 +402,7 @@ h2 {
   line-height: calc($text-max-size * ($size * 1.05));
 }
 h3 {
-  $size: 0.575;
+  $size: 0.3;
   font-size: calc($text-max-size * $size);
   line-height: calc($text-max-size * ($size * 1.05));
 }
@@ -422,7 +426,7 @@ p,
 li,
 span,
 label {
-  $size: 0.23;
+  $size: 0.17;
   font-size: calc($text-max-size * $size);
   line-height: calc($text-max-size * ($size * 1.05));
 }

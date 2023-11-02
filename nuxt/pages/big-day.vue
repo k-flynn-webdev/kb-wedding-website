@@ -72,14 +72,8 @@ definePageMeta({
       <p>
         If you would like to contribute to our honeymoon and new life as a
         couple in creating a family, a wishing well will be present at the venue
-        on the day. Alternatively for those digitally minded, here is a
-        <NuxtLink
-          target="_blank"
-          class="link mb-0"
-          to=""
-          >link</NuxtLink
-        >
-        to support our fund.
+        on the day. Alternatively for those digitally minded, check back later
+        for a link.
       </p>
     </div>
   </div>

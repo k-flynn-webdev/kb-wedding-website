@@ -21,10 +21,13 @@ definePageMeta({
         class="link"
         to="https://maps.app.goo.gl/hoVmCuADSdGsg4fh9"
       >
-        <h3 class="lg">The Ravenswood <IconExternal /></h3>
-        <h4 class="mb">The Ravenswood <IconExternal /></h4>
+        <h3 class="lg">The Ravenswood</h3>
+        <h4 class="mb">The Ravenswood</h4>
       </NuxtLink>
-      <p>Cinder Hill, Sharpthorne, West Sussex, RH19 4HY</p>
+      <p>
+        Cinder Hill, Sharpthorne, West Sussex,
+        <span class="postcode">RH19 4HY</span>
+      </p>
     </div>
 
     <div class="info-section">
@@ -94,7 +97,7 @@ definePageMeta({
           target="_blank"
           class="link mb-0"
           to="https://app.thebookingfactory.com/the-ravenswood1/book/040224-belinda-kevin#/"
-          >Link</NuxtLink
+          >Link </NuxtLink
         >.
       </p>
       <p>

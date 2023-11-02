@@ -31,13 +31,13 @@ definePageMeta({
 
     <NuxtLink
       to="/accomodation"
-      class="link mb"
+      class="link"
       >Accomodation
     </NuxtLink>
 
     <NuxtLink
       to="/big-day"
-      class="link mb"
+      class="link"
       >big day
     </NuxtLink>
   </div>

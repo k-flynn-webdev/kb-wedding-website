@@ -317,8 +317,8 @@ export default defineEventHandler(async (event) => {
     },
     {
       ...BASE_GUEST,
-      first_name: "Esther",
-      last_name: "XXXX",
+      first_name: "Eszter",
+      last_name: "Kulcsar",
       family_id: "tomlam",
     },
 
