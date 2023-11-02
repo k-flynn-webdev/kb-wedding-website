@@ -142,13 +142,13 @@ export default defineEventHandler(async (event) => {
 
     {
       ...BASE_GUEST,
-      first_name: "Michael",
+      first_name: "Mike",
       last_name: "Singleton",
       family_id: "mikeelly",
     },
     {
       ...BASE_GUEST,
-      first_name: "Eleanor",
+      first_name: "Elly",
       last_name: "Tyler",
       family_id: "mikeelly",
     },
