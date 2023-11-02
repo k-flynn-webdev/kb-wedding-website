@@ -315,6 +315,17 @@ a {
 .row {
   display: flex;
   flex-direction: row;
+
+  &.search {
+    align-items: flex-end;
+    justify-content: center;
+
+    .form-control {
+      max-width: 15rem;
+      margin: 0;
+      margin-left: 1rem;
+    }
+  }
 }
 
 .col {

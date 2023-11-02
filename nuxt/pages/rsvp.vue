@@ -14,9 +14,11 @@ const lastName = ref(route?.query?.lastName || "");
 
 const pending = ref(false);
 const noResults = ref(false);
+const showRelated = ref(false);
 const hasError = ref(null as any);
 
-const guestsFound = ref([] as GuestData[]);
+const personData = ref({} as GuestData[]);
+const relatedData = ref([] as GuestData[]);
 
 watch(firstName, (firstName) => {
   router.push({
@@ -54,7 +56,10 @@ const handleSubmit = async () => {
   pending.value = false;
   if (error.value) hasError.value = error.value;
 
-  guestsFound.value = data.value;
+  if (data?.value?.length) {
+    personData.value = data.value[0];
+    relatedData.value = data.value.slice(1);
+  }
 
   if (
     !error.value &&
@@ -94,13 +99,27 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
           v-model="lastName"
         />
       </div>
-      <button
-        type="submit"
-        class="btn btn-primary"
-        :disabled="pending"
-      >
-        search
-      </button>
+
+      <div class="row search">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          :disabled="pending"
+        >
+          search
+        </button>
+
+        <div class="form-control max-w-50">
+          <label class="cursor-pointer label">
+            <span class="mr-2">Show related</span>
+            <input
+              type="checkbox"
+              class="checkbox checkbox-info"
+              v-model="showRelated"
+            />
+          </label>
+        </div>
+      </div>
 
       <p
         class="error"
@@ -118,12 +137,15 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
     </form>
   </div>
 
-  <div
-    v-if="guestsFound && guestsFound.length"
-    class="mt-5"
-  >
+  <div class="mt-5">
     <RsvpForm
-      v-for="guest in guestsFound"
+      v-if="personData"
+      :guest="personData"
+    />
+
+    <RsvpForm
+      v-if="showRelated && relatedData.length"
+      v-for="guest in relatedData"
       :guest="guest"
     />
   </div>
