@@ -1,5 +1,6 @@
 CREATE TABLE guests_data (
     id VARCHAR(15) PRIMARY KEY,
+    attending INTEGER NOT NULL,
     first_name VARCHAR(25),
     last_name VARCHAR(25),
     family_id VARCHAR(10),

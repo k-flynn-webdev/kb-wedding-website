@@ -8,6 +8,7 @@ export interface defaultCreateUpdateDelete {
 
 export interface GuestData extends defaultCreateUpdateDelete {
   id: string;
+  attending: boolean;
   first_name: string;
   last_name: string;
   family_id: string;
