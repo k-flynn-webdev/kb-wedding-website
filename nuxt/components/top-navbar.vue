@@ -11,11 +11,13 @@ definePageMeta({
       class="link"
       >Home
     </NuxtLink>
+
     <NuxtLink
       to="/rsvp"
       class="link"
       >RSVP
     </NuxtLink>
+
     <NuxtLink
       to="/getting-there"
       class="link lg"
@@ -25,6 +27,18 @@ definePageMeta({
       to="/getting-there"
       class="link mb"
       >Directions
+    </NuxtLink>
+
+    <NuxtLink
+      to="/accomodation"
+      class="link mb"
+      >Accomodation
+    </NuxtLink>
+
+    <NuxtLink
+      to="/big-day"
+      class="link mb"
+      >big day
     </NuxtLink>
   </div>
 </template>
