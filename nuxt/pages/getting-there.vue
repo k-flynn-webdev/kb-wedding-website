@@ -21,8 +21,8 @@ definePageMeta({
         class="link"
         to="https://maps.app.goo.gl/hoVmCuADSdGsg4fh9"
       >
-        <h3 class="lg">The Ravenswood</h3>
-        <h4 class="mb">The Ravenswood</h4>
+        <h3 class="lg">The Ravenswood <IconExternal /></h3>
+        <h4 class="mb">The Ravenswood <IconExternal /></h4>
       </NuxtLink>
       <p>Cinder Hill, Sharpthorne, West Sussex, RH19 4HY</p>
     </div>
@@ -86,13 +86,13 @@ definePageMeta({
       <h3 class="lg">Accomodation</h3>
       <h5 class="mb">Accomodation</h5>
 
-      <p class="mt-6">
+      <p class="mt-6 mb-4">
         We have exclusive use of the Ravenswood on Sunday through to Monday
         morning, so if you wish to stay with us, please book using our wedding
         code <strong class="code">RWBK040224</strong> and
         <NuxtLink
           target="_blank"
-          class="link"
+          class="link mb-0"
           to="https://app.thebookingfactory.com/the-ravenswood1/book/040224-belinda-kevin#/"
           >Link</NuxtLink
         >.
@@ -147,7 +147,7 @@ definePageMeta({
       <p class="mb-6">
         The venue opens at 12:00 PM for guests, if you want to get a start
         early, there is a bar on site. Please arrive dressed for the wedding,
-        (wedding casual) Have a big breakfast as canapes will be served after
+        (wedding casual). Have a big breakfast as canapes will be served after
         the ceremony at 2pm.
       </p>
 
@@ -204,7 +204,7 @@ definePageMeta({
         on the day. Alternatively for those digitally minded, here is a
         <NuxtLink
           target="_blank"
-          class="link"
+          class="link mb-0"
           to=""
           >link</NuxtLink
         >

@@ -2,7 +2,7 @@ $blue: #1d384e;
 $blush: #e5c8ca;
 $blush-alpha: rgba(229, 200, 202, 0.8);
 
-$text-color: hsl(333, 100%, 95%);
+$text-color: #ffe5f1;
 $bg-color: $blue;
 
 $section-pad: 2.5rem;
@@ -38,6 +38,10 @@ $padding-decoration: 0.75rem;
       linear-gradient(transparent, $blue 100%),
       url(~/assets/images/wide-#{$i}.jpg) center center;
   }
+}
+
+.icon {
+  display: inline-block;
 }
 
 .main {
@@ -267,6 +271,7 @@ a {
 
   &__heading {
     $size: 95vw;
+    padding-top: 0.75rem;
     overflow: hidden;
 
     &.extra {
