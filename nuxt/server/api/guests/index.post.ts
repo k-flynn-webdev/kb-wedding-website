@@ -5,16 +5,16 @@ export default defineEventHandler(async (event) => {
 
   try {
     if (
-      body.first_name.length < MIN_LENGTH ||
-      body.last_name.length < MIN_LENGTH
+      body.first_name.trim().length < MIN_LENGTH ||
+      body.last_name.trim().length < MIN_LENGTH
     )
       throw "Denied";
 
     const result = await db
       .selectFrom("guests_data")
       .selectAll()
-      .where("first_name", "like", "%" + body.first_name + "%")
-      .where("last_name", "like", "%" + body.last_name + "%")
+      .where("first_name", "like", "%" + body.first_name.trim() + "%")
+      .where("last_name", "like", "%" + body.last_name.trim() + "%")
       .execute();
 
     if (!result) throw "no result";
