@@ -15,10 +15,10 @@ const lastName = ref(route?.query?.lastName || "");
 
 const pending = ref(false);
 const noResults = ref(false);
-const showRelated = ref(false);
+const showRelated = ref(true);
 const hasError = ref(null as any);
 
-const personData = ref({} as GuestData[]);
+const personData = ref([] as GuestData[]);
 const relatedData = ref([] as GuestData[]);
 
 watch(firstName, (firstName) => {
@@ -39,6 +39,8 @@ const handleSubmit = async () => {
   pending.value = true;
   hasError.value = null;
   noResults.value = false;
+  personData.value = [] as GuestData[];
+  relatedData.value = [] as GuestData[];
 
   const { data, error } = await useFetch("/api/guests", {
     method: "POST",
@@ -53,7 +55,7 @@ const handleSubmit = async () => {
   if (error.value) hasError.value = error.value;
 
   if (data?.value?.length) {
-    personData.value = data.value[0];
+    personData.value = data.value.slice(0, 1);
     relatedData.value = data.value.slice(1);
   }
 
@@ -135,8 +137,8 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
 
   <div class="mt-5">
     <RsvpForm
-      v-if="personData"
-      :guest="personData"
+      v-if="personData.length"
+      :guest="personData[0]"
     />
 
     <RsvpForm
