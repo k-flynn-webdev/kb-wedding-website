@@ -9,7 +9,7 @@ services:
   bk-database:
     build: ./database
     volumes:
-      - dbdata:/usr/app/database
+      - dbdata-01:/usr/app/database
 
   bk-nuxt:
     build:
@@ -25,13 +25,13 @@ services:
       - /tmp
     volumes:
       - logdata:/app/log_folder
-      - dbdata:/app/database
+      - dbdata-01:/app/database
     environment:
       - NUXT_PORT=3000
 
 volumes:
   logdata:
-  dbdata:
+  dbdata-01:
 
 networks:
   shared-network:

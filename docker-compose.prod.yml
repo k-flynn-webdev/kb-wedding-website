@@ -13,7 +13,7 @@ services:
       - /tmp
     volumes:
       - logdata:/usr/app/log_folder
-      - dbdata:/usr/app/database
+      - dbdata-01:/usr/app/database
       - ./nuxt/composables:/usr/app/nuxt/composables
       - ./nuxt/middleware:/usr/app/nuxt/middleware
       - ./nuxt/pages:/usr/app/nuxt/pages

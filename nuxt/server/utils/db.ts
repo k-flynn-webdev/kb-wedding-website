@@ -6,7 +6,7 @@ import { type GuestData } from "@/interfaces";
 
 const config = useRuntimeConfig();
 
-const fileName = "db-02.sqlite";
+const fileName = "db.sqlite";
 
 const DB_SCHEMA = config.isDev
   ? "../database/schema.sql"
@@ -17,11 +17,22 @@ const DB_FILE_PATH = config.isDev
 
 const sqliteDatabaseStart = () => {
   const hasDBFile = fs.existsSync(DB_FILE_PATH);
+  const hasDBSchema = fs.existsSync(DB_SCHEMA);
 
   console.log(hasDBFile ? "DB FILE EXISTS" : "DB FILE CREATED");
   console.log(DB_FILE_PATH);
 
-  const dbFile = sqlite(DB_FILE_PATH);
+  console.log("hasDBSchema", hasDBSchema);
+
+  let dbFile = null;
+
+  try {
+    dbFile = sqlite(DB_FILE_PATH);
+    console.log(dbFile);
+  } catch (e) {
+    console.log(e);
+  }
+
   if (!hasDBFile) {
     try {
       dbFile.exec(fs.readFileSync(DB_SCHEMA, "utf8"));
