@@ -1,4 +1,4 @@
 const config = useRuntimeConfig();
 
-console.info(":: Server config ::");
-console.info(config);
+console.log(":: Server config ::");
+console.log(config);

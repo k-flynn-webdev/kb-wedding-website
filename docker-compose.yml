@@ -4,12 +4,12 @@ services:
   bk-log-folder:
     build: ./log_folder
     volumes:
-      - logdata:/usr/app/log_folder
+      - logdata:/app/log_folder
 
   bk-database:
     build: ./database
     volumes:
-      - dbdata-01:/usr/app/database
+      - dbdata:/app/database
 
   bk-nuxt:
     build:
@@ -19,19 +19,19 @@ services:
       - "${APP_PORT}:3000"
     networks:
       - shared-network
-    depends_on:
-      - bk-database
     tmpfs:
       - /tmp
     volumes:
       - logdata:/app/log_folder
-      - dbdata-01:/app/database
+      - dbdata:/app/database
     environment:
       - NUXT_PORT=3000
+    depends_on:
+      - bk-database
 
 volumes:
   logdata:
-  dbdata-01:
+  dbdata:
 
 networks:
   shared-network:

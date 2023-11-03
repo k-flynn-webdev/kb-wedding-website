@@ -4,6 +4,7 @@ RUN apk update && apk upgrade
 
 RUN mkdir -p /app/database/
 
+VOLUME /app/database
 WORKDIR /app/database
 
 COPY . .
