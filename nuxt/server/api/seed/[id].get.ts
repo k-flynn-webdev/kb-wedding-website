@@ -279,7 +279,7 @@ export default defineEventHandler(async (event) => {
     },
     {
       ...BASE_GUEST,
-      first_name: "Steve",
+      first_name: "Stevie",
       last_name: "Gee",
       family_id: "steveg",
     },
@@ -422,7 +422,7 @@ export default defineEventHandler(async (event) => {
     },
     {
       ...BASE_GUEST,
-      first_name: "Nikolas",
+      first_name: "Nickolas",
       last_name: "Cheung",
       family_id: "ovidjulia",
     },
