@@ -1,12 +1,12 @@
 version: "3"
 
 services:
-  am-nuxt:
+  bk-nuxt:
     build: ./nuxt/Dockerfile
     networks:
       - shared-network
     depends_on:
-      - am-database
+      - bk-database
     tmpfs:
       - /tmp
     volumes:

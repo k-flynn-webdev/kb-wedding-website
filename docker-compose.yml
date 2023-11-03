@@ -1,17 +1,17 @@
 version: "3"
 
 services:
-  am-log-folder:
+  bk-log-folder:
     build: ./log_folder
     volumes:
       - logdata:/usr/app/log_folder
 
-  am-database:
+  bk-database:
     build: ./database
     volumes:
       - dbdata:/usr/app/database
 
-  am-nuxt:
+  bk-nuxt:
     build:
       context: ./nuxt
       dockerfile: ./Dockerfile
@@ -20,7 +20,7 @@ services:
     networks:
       - shared-network
     depends_on:
-      - am-database
+      - bk-database
     tmpfs:
       - /tmp
     volumes:
