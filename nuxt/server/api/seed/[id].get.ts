@@ -158,7 +158,7 @@ export default defineEventHandler(async (event) => {
     {
       ...BASE_GUEST,
       first_name: "Nadia",
-      last_name: "Ahkhtar",
+      last_name: "Akhtar",
       family_id: "robnadia",
     },
     {
@@ -178,7 +178,6 @@ export default defineEventHandler(async (event) => {
       first_name: "Margot",
       last_name: "Dyer",
       family_id: "gemmapete",
-      high_chair: 1,
       is_kid: 1,
     },
     {
@@ -186,7 +185,6 @@ export default defineEventHandler(async (event) => {
       first_name: "Arthur",
       last_name: "Dyer",
       family_id: "gemmapete",
-      high_chair: 1,
       is_kid: 1,
     },
     {
@@ -212,7 +210,6 @@ export default defineEventHandler(async (event) => {
       first_name: "Rory",
       last_name: "Wescott",
       family_id: "alexandrew",
-      high_chair: 1,
       is_kid: 1,
     },
   ];
@@ -220,8 +217,8 @@ export default defineEventHandler(async (event) => {
   const DATA_BEL = [
     {
       ...BASE_GUEST,
-      first_name: "Eva",
-      last_name: "Brohde Leung",
+      first_name: "Eva Brohde",
+      last_name: "Leung",
       family_id: "eva",
     },
     {
@@ -253,7 +250,6 @@ export default defineEventHandler(async (event) => {
       first_name: "Natalie",
       last_name: "Jaimes",
       family_id: "brookpollo",
-      high_chair: 1,
       is_kid: 1,
     },
     {
@@ -261,7 +257,6 @@ export default defineEventHandler(async (event) => {
       first_name: "Theodore",
       last_name: "Jaimes",
       family_id: "brookpollo",
-      high_chair: 1,
       is_kid: 1,
     },
     {
@@ -323,7 +318,6 @@ export default defineEventHandler(async (event) => {
       first_name: "Harrison",
       last_name: "Nguyen",
       family_id: "vinmag",
-      high_chair: 1,
       is_kid: 1,
     },
     {
