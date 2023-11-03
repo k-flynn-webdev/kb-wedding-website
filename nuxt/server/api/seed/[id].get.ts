@@ -33,7 +33,6 @@ export default defineEventHandler(async (event) => {
       last_name: "Tang",
       family_id: "belkev",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Wendy",
@@ -74,7 +73,6 @@ export default defineEventHandler(async (event) => {
       family_id: "wendyryan",
       is_kid: 1,
     },
-
     {
       ...BASE_GUEST,
       first_name: "Paul",
@@ -87,7 +85,6 @@ export default defineEventHandler(async (event) => {
       last_name: "Flynn",
       family_id: "paulsandra",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Gemma",
@@ -100,7 +97,6 @@ export default defineEventHandler(async (event) => {
       last_name: "Dawson",
       family_id: "gemmar",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Wendy Senior",
@@ -139,7 +135,6 @@ export default defineEventHandler(async (event) => {
       family_id: "marksue",
       is_kid: 1,
     },
-
     {
       ...BASE_GUEST,
       first_name: "Mike",
@@ -152,7 +147,6 @@ export default defineEventHandler(async (event) => {
       last_name: "Tyler",
       family_id: "mikeelly",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Robert",
@@ -165,7 +159,6 @@ export default defineEventHandler(async (event) => {
       last_name: "Ahkhtar",
       family_id: "robnadia",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Peter",
@@ -194,14 +187,12 @@ export default defineEventHandler(async (event) => {
       high_chair: 1,
       is_kid: 1,
     },
-
     {
       ...BASE_GUEST,
       first_name: "Sylvie",
       last_name: "Haffner",
       family_id: "sylvie",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Alex",
@@ -231,7 +222,6 @@ export default defineEventHandler(async (event) => {
       last_name: "Brohde Leung",
       family_id: "eva",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Dianne",
@@ -244,10 +234,9 @@ export default defineEventHandler(async (event) => {
       last_name: "Molinaro",
       family_id: "dandg",
     },
-
     {
       ...BASE_GUEST,
-      first_name: "Paul-André",
+      first_name: "Paul-Andre",
       last_name: "Jaimes",
       family_id: "brookpollo",
     },
@@ -273,42 +262,36 @@ export default defineEventHandler(async (event) => {
       high_chair: 1,
       is_kid: 1,
     },
-
     {
       ...BASE_GUEST,
       first_name: "Noppadol",
       last_name: "Wattanaumphaipong",
       family_id: "nop",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Chun",
       last_name: "Yik Lim",
       family_id: "chun",
     },
-
     {
       ...BASE_GUEST,
       first_name: "James",
       last_name: "Huynh",
       family_id: "james",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Steve",
       last_name: "Gee",
       family_id: "steveg",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Joanna",
       last_name: "Leung",
       family_id: "joleung",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Thomas",
@@ -321,7 +304,6 @@ export default defineEventHandler(async (event) => {
       last_name: "Kulcsar",
       family_id: "tomlam",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Vinh",
@@ -342,7 +324,6 @@ export default defineEventHandler(async (event) => {
       high_chair: 1,
       is_kid: 1,
     },
-
     {
       ...BASE_GUEST,
       first_name: "Stephen",
@@ -352,10 +333,9 @@ export default defineEventHandler(async (event) => {
     {
       ...BASE_GUEST,
       first_name: "Anna",
-      last_name: "Jurajdová",
+      last_name: "Jurajdova",
       family_id: "steanna",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Tom",
@@ -368,7 +348,6 @@ export default defineEventHandler(async (event) => {
       last_name: "Tang",
       family_id: "tommolly",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Steve",
@@ -395,7 +374,6 @@ export default defineEventHandler(async (event) => {
       family_id: "stevetang",
       is_kid: 1,
     },
-
     {
       ...BASE_GUEST,
       first_name: "Anthony",
@@ -422,7 +400,6 @@ export default defineEventHandler(async (event) => {
       family_id: "antheva",
       is_kid: 1,
     },
-
     {
       ...BASE_GUEST,
       first_name: "Robert",
@@ -435,7 +412,6 @@ export default defineEventHandler(async (event) => {
       last_name: "Sun",
       family_id: "robnina",
     },
-
     {
       ...BASE_GUEST,
       first_name: "Ovid",
