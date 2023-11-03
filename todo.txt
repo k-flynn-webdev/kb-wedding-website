@@ -1,4 +1,3 @@
 CORS: https://stackoverflow.com/questions/76198151/nuxt-3-how-to-implement-cors
-add fmaily relation hit?
 add gift link? - future
 nginx needs to serve static assets!! not the app!!

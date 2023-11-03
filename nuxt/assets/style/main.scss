@@ -480,3 +480,24 @@ body {
     }
   }
 }
+
+em {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+table {
+  &.ul-row {
+    margin: 0 auto;
+    text-align: left;
+
+    .ul-row-data {
+      padding-left: 1rem;
+    }
+  }
+}
+
+.titles {
+  text-align: left;
+  margin-left: 8rem;
+}
