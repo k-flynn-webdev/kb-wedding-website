@@ -62,7 +62,7 @@ definePageMeta({
       />
     </div>
 
-    <div class="info-section">
+    <div class="info-section taxis">
       <h3>Taxis</h3>
 
       <p class="titles">East Grinstead</p>

@@ -497,7 +497,15 @@ table {
   }
 }
 
+.info-section.taxis {
+  max-width: 20rem;
+}
+
 .titles {
   text-align: left;
-  margin-left: 8rem;
+  margin: 0.5rem 0;
+
+  $size: 0.2;
+  font-size: calc($text-max-size * $size);
+  line-height: calc($text-max-size * ($size * 1.05));
 }
