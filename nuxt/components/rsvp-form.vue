@@ -37,23 +37,28 @@ const performUpdate = preDebounceAction(
 
 <template>
   <div class="form-control mt-5">
-    <p class="error">{{ hasError }}</p>
+    <p
+      v-if="hasError?.length"
+      class="error"
+    >
+      {{ hasError }}
+    </p>
 
-    <h3 class="mb-5 guest-name">
+    <h3 class="mb-2 guest-name">
       {{ props.guest.first_name }} {{ props.guest.last_name }}
     </h3>
 
-    <div>
+    <div class="section">
       <label class="cursor-pointer label short-w">
-        <span class="">Attending?</span>
+        <span class="label-title">Attending?</span>
 
-        <div>
+        <span class="desc">
           {{
             props.guest.attending
               ? "Yes, love to be there"
               : "No I cant make it"
           }}
-        </div>
+        </span>
         <input
           type="checkbox"
           class="toggle toggle-success"
@@ -61,43 +66,44 @@ const performUpdate = preDebounceAction(
           @change="handleSubmit"
         />
       </label>
-    </div>
 
-    <div v-if="props.guest.attending">
-      <div class="section">
-        <div
-          class="tooltip"
-          data-tip="Meal starts at 3:30PM, 8:30PM side buffet"
-        >
-          <div class="row">
-            <p class="col">Preferred Meal</p>
+      <div
+        v-if="props.guest.attending"
+        class="tooltip tooltip-info"
+        data-tip="Meal starts at 3:30PM, 8:30PM side buffet"
+      >
+        <div class="row">
+          <p class="col">Preferred Meal</p>
 
-            <select
-              class="select col"
-              v-model="props.guest.meal"
-              @change="handleSubmit"
+          <select
+            class="select col"
+            v-model="props.guest.meal"
+            @change="handleSubmit"
+          >
+            <option
+              value=""
+              disabled
+              selected
             >
-              <option
-                value=""
-                disabled
-                selected
-              >
-                Please select
-              </option>
-              <option value="chicken">Chicken</option>
-              <option value="salmon">Salmon</option>
-              <option value="vegetarian">Vegetarian</option>
-              <option value="kids_meal">Kids</option>
-            </select>
-          </div>
+              Please select
+            </option>
+            <option value="chicken">Chicken</option>
+            <option value="salmon">Salmon</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="kids_meal">Kids</option>
+            <option value="no">No meal</option>
+          </select>
         </div>
 
         <div
-          class="tooltip"
+          class="tooltip tooltip-info"
           data-tip="The venue has 7 high chairs available"
         >
-          <label class="cursor-pointer label">
-            <span class="">Require High Chair</span>
+          <label class="cursor-pointer label short-w">
+            <span class="label-title">Require High Chair</span>
+            <span class="desc">
+              {{ props.guest.high_chair ? "Yes" : "No" }}
+            </span>
             <input
               type="checkbox"
               class="toggle toggle-success"
@@ -106,20 +112,19 @@ const performUpdate = preDebounceAction(
             />
           </label>
         </div>
-      </div>
 
-      <div class="row">
-        <textarea
-          class="textarea w-full"
-          placeholder="Dietary Requirements"
-          v-model="guest.note"
-          @input="performUpdate"
-        ></textarea>
-      </div>
+        <div class="row">
+          <textarea
+            class="textarea w-full"
+            placeholder="Dietary Requirements"
+            v-model="guest.note"
+            @input="performUpdate"
+          ></textarea>
+        </div>
+        <!-- </div> -->
 
-      <div class="section">
         <div
-          class="tooltip"
+          class="tooltip tooltip-info"
           data-tip="The venue has 33 rooms available"
         >
           <div class="row">
@@ -145,18 +150,18 @@ const performUpdate = preDebounceAction(
           </div>
         </div>
       </div>
-    </div>
 
-    <div
-      v-else
-      class="row"
-    >
-      <textarea
-        class="textarea w-full"
-        placeholder="A note for the couple"
-        v-model="guest.note"
-        @input="performUpdate"
-      ></textarea>
+      <div
+        v-else
+        class="row"
+      >
+        <textarea
+          class="textarea w-full"
+          placeholder="A note for the couple"
+          v-model="guest.note"
+          @input="performUpdate"
+        ></textarea>
+      </div>
     </div>
   </div>
 </template>

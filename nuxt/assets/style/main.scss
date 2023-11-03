@@ -44,8 +44,24 @@ $padding-decoration: 0.75rem;
   display: inline-block;
 }
 
-.short-w {
-  max-width: 20rem;
+.label {
+  &.short-w {
+    margin-left: 0;
+    padding-left: 0;
+
+    max-width: 25rem;
+
+    .label-title {
+      text-align: left;
+      flex-grow: 2;
+    }
+
+    .desc {
+      text-align: left;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
 }
 
 .main {
@@ -174,6 +190,7 @@ select.select {
 .form-control {
   max-width: 40rem;
   margin: 0 auto;
+  margin-top: 1rem;
 
   label {
     margin-bottom: 0.5rem;
@@ -184,8 +201,17 @@ select.select {
   }
 
   .section {
+    margin-bottom: 0.75rem;
+    .tooltip {
+      width: 100%;
+    }
+
     .col {
       text-align: left;
+    }
+
+    .select {
+      margin-bottom: 0;
     }
   }
 }
@@ -210,18 +236,6 @@ a {
 .container {
   margin: 0 auto;
   max-width: 35rem;
-}
-
-.form-control {
-  margin-top: 1rem;
-
-  .section {
-    margin-bottom: 2rem;
-
-    .tooltip {
-      width: 100%;
-    }
-  }
 }
 
 // $primary: #9dd0dd;
