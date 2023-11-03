@@ -420,6 +420,18 @@ export default defineEventHandler(async (event) => {
       last_name: "Cheung",
       family_id: "ovidjulia",
     },
+    {
+      ...BASE_GUEST,
+      first_name: "Nikolas",
+      last_name: "Cheung",
+      family_id: "ovidjulia",
+    },
+    {
+      ...BASE_GUEST,
+      first_name: "Sophia",
+      last_name: "Cheung",
+      family_id: "ovidjulia",
+    },
   ];
 
   const createId = (idx: string) => {
