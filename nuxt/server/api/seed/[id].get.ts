@@ -5,6 +5,8 @@ export default defineEventHandler(async (event) => {
     throw createError("DENIED");
   }
 
+  console.log(config);
+
   const BASE_GUEST = {
     attending: 0,
     first_name: "",
@@ -215,7 +217,7 @@ export default defineEventHandler(async (event) => {
     },
   ];
 
-  const DATA_BEl = [
+  const DATA_BEL = [
     {
       ...BASE_GUEST,
       first_name: "Eva",
@@ -430,7 +432,7 @@ export default defineEventHandler(async (event) => {
     return (parseInt(idx) + Date.now()).toString();
   };
 
-  const DATA = [...DATA_KEV, ...DATA_BEl];
+  const DATA = [...DATA_KEV, ...DATA_BEL];
 
   try {
     await db.deleteFrom("guests_data").execute();
