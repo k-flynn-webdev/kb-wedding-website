@@ -40,29 +40,29 @@ definePageMeta({
       </p>
     </div>
 
-    <div class="info-section">
+    <div class="info-section accom">
       <h3>Hotels</h3>
 
-      <ul>
-        <li>
-          East Grinstead
-          <ul>
-            <li>Alexander House - 01342 714914</li>
-            <li>Crowne Plaza Felbridge - 01342 337700</li>
-          </ul>
-        </li>
-        <li>Forest Row</li>
-        <ul>
-          <li>The Brambletye Hotel - 01342 810821</li>
-          <li>Roebuck Hotel- 01342 823811</li>
-        </ul>
-        <li>
-          West Hoathly
-          <ul>
-            <li>The Cat Inn - 01342 810369</li>
-          </ul>
-        </li>
-      </ul>
+      <p class="titles">East Grinstead</p>
+
+      <ListData
+        :headings="['Alexander House', 'Crowne Plaza Felbridge']"
+        :values="['01342 714914', '01342 337700']"
+      />
+
+      <p class="titles">Forest Row</p>
+
+      <ListData
+        :headings="['The Brambletye Hotel', 'Roebuck Hotel']"
+        :values="['01342 810821', '01342 823811']"
+      />
+
+      <p class="titles">West Hoathly</p>
+
+      <ListData
+        :headings="['The Cat Inn']"
+        :values="['01342 810369']"
+      />
 
       <em>
         East Grinstead and Haywards Heath also offer Premier Inn and Travelodge

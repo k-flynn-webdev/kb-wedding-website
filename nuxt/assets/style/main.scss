@@ -470,15 +470,6 @@ body {
   p {
     line-height: 1.8rem;
   }
-
-  ul {
-    margin: auto 0;
-    text-align: left;
-
-    ul {
-      margin: 1rem;
-    }
-  }
 }
 
 em {
@@ -497,7 +488,8 @@ table {
   }
 }
 
-.info-section.taxis {
+.info-section.taxis,
+.info-section.accom {
   max-width: 20rem;
 }
 
@@ -508,4 +500,18 @@ table {
   $size: 0.2;
   font-size: calc($text-max-size * $size);
   line-height: calc($text-max-size * ($size * 1.05));
+}
+
+.accomodation {
+  .wedding-hero h1 {
+    $size: 1.25;
+    font-size: calc($text-max-size * $size);
+    line-height: calc($text-max-size * ($size * 1.05));
+
+    @media (min-width: $mobile-size) {
+      $size: 1.9;
+      font-size: calc($text-max-size * $size);
+      line-height: calc($text-max-size * ($size * 1.05));
+    }
+  }
 }
