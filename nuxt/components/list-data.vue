@@ -12,7 +12,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <table class="ul-row">
+  <table class="list-data">
     <tr
       class="ul-row"
       :key="idx"

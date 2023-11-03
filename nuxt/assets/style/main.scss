@@ -1,5 +1,5 @@
 $blue: #1d384e;
-$blush: #e5c8ca;
+$blush: #e5c8c9;
 $blush-alpha: rgba(229, 200, 202, 0.8);
 
 $text-color: #ffe5f1;
@@ -477,10 +477,27 @@ em {
   margin-bottom: 0.5rem;
 }
 
-table {
-  &.ul-row {
-    margin: 0 auto;
-    text-align: left;
+table.list-data {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  text-align: left;
+
+  .ul-row {
+    border-bottom: 1px solid rgb(229, 200, 201, 0.25);
+  }
+
+  .ul-row-heading {
+    min-width: unset;
+  }
+
+  .ul-row-data {
+    padding-left: 0.2rem;
+  }
+
+  @media (min-width: $mobile-size) {
+    .ul-row-heading {
+      min-width: 10rem;
+    }
 
     .ul-row-data {
       padding-left: 1rem;
@@ -504,7 +521,7 @@ table {
 
 .accomodation {
   .wedding-hero h1 {
-    $size: 1.25;
+    $size: 1;
     font-size: calc($text-max-size * $size);
     line-height: calc($text-max-size * ($size * 1.05));
 
