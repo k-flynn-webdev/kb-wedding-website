@@ -2,6 +2,7 @@
 import JsonCSV from "vue-json-csv";
 import { useRoute } from "#vue-router";
 import { transformGuestAPI } from "@/helpers/transforms";
+import { type GuestData } from "@/interfaces";
 
 definePageMeta({
   // middleware: ["protected"],
@@ -13,16 +14,15 @@ const pending = ref(false);
 
 const hasError = ref(null as any);
 
-const guestsFound = ref([] as any);
-const row_keys = ref([] as any);
+const guestsFound = ref([] as GuestData[]);
 
 const getDate = (input: Date) => {
   return new Date(input).toLocaleString();
 };
 
-const getHeaders = () => {
-  return row_keys.value.length ? Object.keys(row_keys.value[0]) : [];
-};
+const tableLabels = computed(() => {
+  return guestsFound.value.length ? Object.keys(guestsFound.value[0]) : [];
+});
 
 const getAllRVPS = async () => {
   pending.value = true;
@@ -34,10 +34,10 @@ const getAllRVPS = async () => {
   });
 
   pending.value = false;
+
   if (error.value) hasError.value = error.value;
 
   guestsFound.value = data.value;
-  row_keys.value = getHeaders();
 };
 
 onBeforeMount(async () => {
@@ -58,7 +58,7 @@ onBeforeMount(async () => {
   <JsonCSV
     class="btn"
     :data="guestsFound"
-    :labels="getHeaders()"
+    :labels="tableLabels"
   >
     Download CSV file
   </JsonCSV>
@@ -72,18 +72,21 @@ onBeforeMount(async () => {
         <th
           :key="head"
           :class="head"
-          v-for="head in row_keys"
+          v-for="head in tableLabels"
         >
           {{ head }}
         </th>
       </tr>
+
       <template v-for="guest in guestsFound">
         <tr>
           <td
             :key="idx"
             v-for="(data, idx) in guest"
           >
-            {{ data }}
+            {{
+              ["created_at", "updated_at"].includes(idx) ? getDate(data) : data
+            }}
           </td>
         </tr>
       </template>
