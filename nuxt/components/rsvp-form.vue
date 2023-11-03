@@ -121,7 +121,6 @@ const performUpdate = preDebounceAction(
             @input="performUpdate"
           ></textarea>
         </div>
-        <!-- </div> -->
 
         <div
           class="tooltip tooltip-info"
