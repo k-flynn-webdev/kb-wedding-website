@@ -10,8 +10,8 @@ const DB_SCHEMA = config.isDev
   ? "../database/schema.sql"
   : "/app/database/schema.sql";
 const DB_FILE_PATH = config.isDev
-  ? "../database/db.sqlite-01"
-  : "/app/database/db.sqlite-01";
+  ? "../database/db-01.sqlite"
+  : "/app/database/db-01.sqlite";
 
 const sqliteDatabaseStart = () => {
   const hasDBFile = fs.existsSync(DB_FILE_PATH);

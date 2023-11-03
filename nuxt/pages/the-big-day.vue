@@ -9,7 +9,7 @@ definePageMeta({
     <div class="wedding-hero">
       <div class="wedding-hero__heading">
         <div class="transform">
-          <h1>Big Day</h1>
+          <h1>The Big Day</h1>
         </div>
       </div>
     </div>
@@ -22,36 +22,40 @@ definePageMeta({
         the ceremony at 2pm.
       </p>
 
-      <ul>
-        <li><span class="time">12:00 PM</span> - Doors Open</li>
-        <li><span class="time">1:00 PM</span> - Ceremony</li>
-        <li>
-          <span class="time">1:30 PM</span> - Group Photos, Drinks Reception &
-          Canapes
-        </li>
-        <li><span class="time">3:00 PM</span> - Check in & Free time</li>
-        <li><span class="time">3:30 PM</span> - Wedding Breakfast</li>
-        <li>
-          <span class="time">6:00 PM</span> - Coats on for Sparklers outside,
-          Drinks & more Photos
-        </li>
-        <li><span class="time">7:00 PM</span> - First Dance</li>
-        <li><span class="time">8.30 PM</span> - Evening Buffet</li>
-        <li><span class="time">11:30 PM</span> - Lights on & Taxi Time!</li>
-      </ul>
+      <div class="ul-holder">
+        <ul>
+          <li><span class="time">12:00 PM</span> - Doors Open</li>
+          <li><span class="time">1:00 PM</span> - Ceremony</li>
+          <li>
+            <span class="time">1:30 PM</span> - Group Photos, Drinks Reception &
+            Canapes
+          </li>
+          <li><span class="time">3:00 PM</span> - Check in & Free time</li>
+          <li><span class="time">3:30 PM</span> - Wedding Breakfast</li>
+          <li>
+            <span class="time">6:00 PM</span> - Coats on for Sparklers outside,
+            Drinks & more Photos
+          </li>
+          <li><span class="time">7:00 PM</span> - First Dance</li>
+          <li><span class="time">8.30 PM</span> - Evening Buffet</li>
+          <li><span class="time">11:30 PM</span> - Lights on & Taxi Time!</li>
+        </ul>
+      </div>
     </div>
 
     <div class="info-section">
       <h3>Dont Bring</h3>
 
-      <ul>
-        <li>Alcohol - strict BYO rules</li>
-        <li>Fireworks</li>
-        <li>
-          Paper Confetti (our beautiful flower girls will hand confetti out on
-          the big day!)
-        </li>
-      </ul>
+      <div class="ul-holder">
+        <ul>
+          <li>Alcohol - strict BYO rules</li>
+          <li>Fireworks</li>
+          <li>
+            Paper Confetti (our beautiful flower girls will hand confetti out on
+            the big day!)
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div class="info-section">

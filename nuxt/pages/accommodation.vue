@@ -9,7 +9,7 @@ definePageMeta({
     <div class="wedding-hero">
       <div class="wedding-hero__heading">
         <div class="transform">
-          <h1>Accomodation</h1>
+          <h1>Accommodation</h1>
         </div>
       </div>
     </div>

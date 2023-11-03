@@ -44,8 +44,16 @@ const performUpdate = preDebounceAction(
     </h3>
 
     <div>
-      <label class="cursor-pointer label">
+      <label class="cursor-pointer label short-w">
         <span class="">Attending?</span>
+
+        <div>
+          {{
+            props.guest.attending
+              ? "Yes, love to be there"
+              : "No I cant make it"
+          }}
+        </div>
         <input
           type="checkbox"
           class="toggle toggle-success"

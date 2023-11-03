@@ -44,6 +44,10 @@ $padding-decoration: 0.75rem;
   display: inline-block;
 }
 
+.short-w {
+  max-width: 20rem;
+}
+
 .main {
 }
 
@@ -247,7 +251,7 @@ a {
 }
 
 .main-inner {
-  padding: 0.5rem;
+  padding: 0.66rem;
   min-height: calc(100vh - 6rem);
 
   @media (min-width: $mobile-size) {
@@ -388,7 +392,12 @@ a {
 }
 
 .info-section {
-  max-width: 47.5rem;
+  max-width: 35rem;
+
+  .ul-holder {
+    max-width: 20rem;
+    margin: 0 auto;
+  }
 }
 
 h1 {
