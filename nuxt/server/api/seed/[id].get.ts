@@ -38,7 +38,7 @@ export default defineEventHandler(async (event) => {
     {
       ...BASE_GUEST,
       first_name: "Wendy",
-      last_name: "McElroy",
+      last_name: "McElroy (junior)",
       family_id: "wendyryan",
     },
     {
@@ -101,8 +101,8 @@ export default defineEventHandler(async (event) => {
     },
     {
       ...BASE_GUEST,
-      first_name: "Wendy Senior",
-      last_name: "McElroy",
+      first_name: "Wendy",
+      last_name: "McElroy (senior)",
       family_id: "polly",
     },
     {
@@ -126,7 +126,7 @@ export default defineEventHandler(async (event) => {
     },
     {
       ...BASE_GUEST,
-      first_name: "Lilly",
+      first_name: "Lily",
       last_name: "McElroy",
       family_id: "marksue",
     },
@@ -272,8 +272,8 @@ export default defineEventHandler(async (event) => {
     },
     {
       ...BASE_GUEST,
-      first_name: "Chun",
-      last_name: "Yik Lim",
+      first_name: "Chun Yik",
+      last_name: "Lim",
       family_id: "chun",
     },
     {
