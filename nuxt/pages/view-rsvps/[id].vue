@@ -1,10 +1,13 @@
 <script lang="ts" setup>
 import JsonCSV from "vue-json-csv";
+import { useRoute } from "#vue-router";
 import { transformGuestAPI } from "@/helpers/transforms";
 
 definePageMeta({
   // middleware: ["protected"],
 });
+
+const route = useRoute();
 
 const pending = ref(false);
 
@@ -25,7 +28,7 @@ const getAllRVPS = async () => {
   pending.value = true;
   hasError.value = null;
 
-  const { data, error } = await useFetch("/api/guests", {
+  const { data, error } = await useFetch(`/api/guests/${route?.params?.id}`, {
     method: "GET",
     transform: transformGuestAPI,
   });
