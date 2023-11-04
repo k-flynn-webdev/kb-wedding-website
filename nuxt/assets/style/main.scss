@@ -470,8 +470,8 @@ table.list-data {
 }
 
 .top-navbar {
-  background-color: $blush-alpha;
   color: $blue;
+  background-color: $blush-alpha;
   padding-top: 0.25rem;
   padding-bottom: 0.75rem;
   text-align: left;
@@ -494,8 +494,9 @@ table.list-data {
 
 .mobile-nav-button {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  $position: 1.25rem;
+  top: $position;
+  right: $position;
   z-index: 999;
 }
 
@@ -513,6 +514,7 @@ table.list-data {
   top: 0;
   left: 0;
   width: 100%;
+  padding-top: 2.75rem;
   padding-bottom: 5rem;
 
   z-index: 10;
@@ -525,7 +527,7 @@ table.list-data {
     display: block;
 
     text-decoration: none;
-    border-bottom: 1px solid rgb(229, 200, 201, 0.25);
+    border-bottom: 2px solid rgb(229, 200, 201, 0.25);
     margin: 0;
   }
 
