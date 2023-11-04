@@ -514,7 +514,10 @@ table.list-data {
   height: 2rem;
   border-radius: 0.33rem;
   border: 3px solid #e5c8c9;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.shadow {
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.3);
 }
 
 .mobile-nav-content {
