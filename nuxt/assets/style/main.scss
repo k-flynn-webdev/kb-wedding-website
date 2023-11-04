@@ -1,5 +1,6 @@
 $blue: #1d384e;
 $blush: #e5c8c9;
+$blush-tint: hsl(358, 36%, 96%);
 $blush-alpha: rgba(229, 200, 202, 0.8);
 
 $text-color: #ffe5f1;
@@ -54,6 +55,10 @@ $midpoint: 30%;
   margin: 2rem 0;
 }
 
+.link {
+  font-weight: 400;
+}
+
 .hero-image {
   height: 70vh;
   width: 100%;
@@ -104,6 +109,10 @@ select.select {
 
 .tooltip {
   display: block;
+}
+
+.main-inner .link {
+  color: $blush-tint;
 }
 
 a {
@@ -489,7 +498,6 @@ table.list-data {
 
   .link {
     margin: 0 0.5rem;
-    font-weight: 400;
   }
 }
 
