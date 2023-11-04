@@ -45,25 +45,22 @@ definePageMeta({
       />
     </div>
 
-    <div class="max-35">
+    <div class="max-25">
       <h3>Train</h3>
 
       <em>Dont forget to book taxis to and from the station. </em>
 
+      <p class="titles">London Victoria</p>
+
       <ListData
-        :headings="[
-          'Victoria to Haywards Heath',
-          'Victoria to Crawley',
-          'Victoria to East Grinstead',
-        ]"
+        :headings="['Haywards Heath', 'Crawley', 'East Grinstead']"
         :values="['50mins', '1 hour', '1 hour']"
       />
 
+      <p class="titles">London Bridge</p>
+
       <ListData
-        :headings="[
-          'London Bridge to Haywards Heath',
-          'London Bridge to Crawley',
-        ]"
+        :headings="['Haywards Heath', 'Crawley']"
         :values="['50mins', '1 hour']"
       />
     </div>

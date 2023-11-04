@@ -42,8 +42,8 @@ definePageMeta({
             'Group Photos, Drinks Reception & Canapes',
             'Check in & Free time',
             'Wedding Breakfast',
-            'Coats on for Sparklers outside, Drinks & more Photos',
-            'First Dance',
+            'Sparklers Outside',
+            'Dance Time',
             'Evening Buffet',
             'Lights on & Taxi Time!',
           ]"
@@ -55,9 +55,10 @@ definePageMeta({
       <h3>Dont Bring</h3>
 
       <ListData
+        class="heading-no-break-large"
         :headings="['Alcohol', 'Fireworks', 'Paper Confetti']"
         :values="[
-          'strict BYO rules',
+          'No BYO',
           '',
           '(our beautiful flower girls will hand confetti out on the big day!)',
         ]"

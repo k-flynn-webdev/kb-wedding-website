@@ -31,6 +31,10 @@ definePageMeta({
         is 10:30am with a continental and hot buffet breakfast served 8-10am.
         Prices are £145 - £175 a night.
       </p>
+      <p class="mt-2">
+        Most rooms accommodate a z-bed or cot please call to confirm 01342 810
+        216 after making your booking.
+      </p>
 
       <p class="mt-5"><strong>Pets</strong></p>
 
@@ -40,14 +44,24 @@ definePageMeta({
       </p>
     </div>
 
-    <div class="max-20">
+    <div class="max-25">
       <h3>Hotels</h3>
 
       <p class="titles">East Grinstead</p>
 
       <ListData
-        :headings="['Alexander House', 'Crowne Plaza Felbridge']"
-        :values="['01342 714914', '01342 337700']"
+        :headings="[
+          'Alexander House',
+          'Crowne Plaza Felbridge',
+          'Premier Inn',
+          'TravelLodge',
+        ]"
+        :values="[
+          '01342 714914',
+          '01342 337700',
+          '0333 777 4674',
+          ' 0871 559 1884',
+        ]"
       />
 
       <p class="titles">Forest Row</p>
@@ -64,10 +78,12 @@ definePageMeta({
         :values="['01342 810369']"
       />
 
-      <em>
-        East Grinstead and Haywards Heath also offer Premier Inn and Travelodge
-        options.
-      </em>
+      <p class="titles">Haywards Heath</p>
+
+      <ListData
+        :headings="['Premier Inn']"
+        :values="['0871 527 8000']"
+      />
     </div>
   </div>
 </template>
