@@ -16,7 +16,7 @@ const handleClick = () => {
       class="mobile-nav-button"
       @click="handleClick"
     >
-      <div class="mobile-nav-icon">
+      <div class="mobile-nav-icon shadow">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="100%"
@@ -67,7 +67,7 @@ const handleClick = () => {
     </button>
 
     <div
-      class="mobile-nav-content"
+      class="mobile-nav-content shadow"
       :class="{ 'mobile-nav-content-display': isOpen }"
       @click="handleClick"
     >
