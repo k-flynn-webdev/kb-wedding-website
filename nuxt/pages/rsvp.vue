@@ -181,23 +181,18 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
       class="mt-10"
       v-if="personData.length"
     >
-      <div
-        v-if="message.length"
-        class="toast toast-center"
-      >
-        <div class="alert alert-success">
-          <span
-            ><strong>{{ message }}</strong></span
-          >
-        </div>
-      </div>
-
       <button
-        class="btn btn-success save"
+        class="btn btn-success save mb-10"
         @click="handleSave"
       >
         <strong>Save</strong>
       </button>
+    </div>
+
+    <div v-if="message.length">
+      <p>
+        <strong>{{ message }}</strong>
+      </p>
     </div>
   </div>
 </template>
