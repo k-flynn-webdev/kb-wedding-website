@@ -43,7 +43,7 @@ const displayMessage = async () => {
   await setTimeout(() => {
     message.value = "";
     userHasSaved.value = false;
-  }, 1200);
+  }, 1700);
 };
 
 const handleSave = async () => {
@@ -172,7 +172,9 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
         class="toast toast-center"
       >
         <div class="alert alert-success">
-          <span>{{ message }}</span>
+          <span
+            ><strong>{{ message }}</strong></span
+          >
         </div>
       </div>
 
@@ -180,7 +182,7 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
         class="btn btn-success save"
         @click="handleSave"
       >
-        Save
+        <strong>Save</strong>
       </button>
     </div>
   </div>
