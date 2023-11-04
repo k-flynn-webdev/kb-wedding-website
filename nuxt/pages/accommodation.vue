@@ -32,7 +32,7 @@ definePageMeta({
         Prices are £145 - £175 a night.
       </p>
 
-      <h6 class="mt-5"><strong>Pets</strong></h6>
+      <p class="mt-5"><strong>Pets</strong></p>
 
       <p>
         Pets are allowed at the venue <em>but</em> they aren’t allowed to stay
@@ -40,7 +40,7 @@ definePageMeta({
       </p>
     </div>
 
-    <div class="info-section accom">
+    <div class="info-section max-20">
       <h3>Hotels</h3>
 
       <p class="titles">East Grinstead</p>

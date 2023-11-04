@@ -15,7 +15,7 @@ definePageMeta({
       </div>
     </div>
 
-    <div class="wedding-location info-section">
+    <div class="info-section">
       <NuxtLink
         target="_blank"
         class="link"
@@ -62,7 +62,7 @@ definePageMeta({
       />
     </div>
 
-    <div class="info-section taxis">
+    <div class="info-section max-20">
       <h3>Taxis</h3>
 
       <p class="titles">East Grinstead</p>

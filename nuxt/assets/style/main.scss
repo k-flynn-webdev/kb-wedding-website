@@ -394,8 +394,7 @@ a {
   }
 }
 
-.info-section,
-.wedding-location {
+.info-section {
   margin: 0 auto;
   max-width: 30rem;
   margin-bottom: $section-pad;
@@ -430,17 +429,17 @@ h3 {
   line-height: calc($text-max-size * ($size * 1.05));
 }
 h4 {
-  $size: 0.46;
+  $size: 0.25;
   font-size: calc($text-max-size * $size);
   line-height: calc($text-max-size * ($size * 1.05));
 }
 h5 {
-  $size: 0.4;
+  $size: 0.22;
   font-size: calc($text-max-size * $size);
   line-height: calc($text-max-size * ($size * 1.05));
 }
 h6 {
-  $size: 0.3;
+  $size: 0.2;
   font-size: calc($text-max-size * $size);
   line-height: calc($text-max-size * ($size * 1.05));
 }
@@ -454,27 +453,24 @@ label {
   line-height: calc($text-max-size * ($size * 1.05));
 }
 
-html,
-body {
-  color: $text-color;
+p {
+  $size: 0.17;
+  line-height: calc($text-max-size * ($size * 1.2));
 }
 
-.geting-there {
-  margin-bottom: 5rem;
-
-  h3 {
-    margin: 1rem 0;
-    margin-top: 1.5rem;
-  }
-
-  p {
-    line-height: 1.8rem;
-  }
+h3 {
+  margin: 1rem 0;
+  margin-top: 1.5rem;
 }
 
 em {
   display: inline-block;
   margin-bottom: 0.5rem;
+}
+
+html,
+body {
+  color: $text-color;
 }
 
 table.list-data {
@@ -505,8 +501,7 @@ table.list-data {
   }
 }
 
-.info-section.taxis,
-.info-section.accom {
+.max-20 {
   max-width: 20rem;
 }
 
