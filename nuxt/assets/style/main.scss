@@ -492,6 +492,52 @@ table.list-data {
   }
 }
 
+.mobile-nav-button {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 999;
+}
+
+.mobile-nav-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.33rem;
+  border: 3px solid #e5c8c9;
+}
+
+.mobile-nav-content {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 5rem;
+
+  z-index: 10;
+  background-color: #1d384e;
+  pointer-events: visible;
+
+  .link {
+    width: 100%;
+    padding: 1rem;
+    display: block;
+
+    text-decoration: none;
+    border-bottom: 1px solid rgb(229, 200, 201, 0.25);
+    margin: 0;
+  }
+
+  .router-link-active {
+    background-color: rgba(256, 256, 256, 0.2);
+  }
+}
+
+.mobile-nav-content-display {
+  display: block;
+}
+
 .bottom-nav {
   margin-top: $section-pad;
 }

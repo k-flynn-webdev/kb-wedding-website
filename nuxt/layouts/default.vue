@@ -2,6 +2,7 @@
 
 <template>
   <div class="main">
+    <MobileNav />
     <TopNavbar />
 
     <HeroImage />
