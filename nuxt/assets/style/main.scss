@@ -303,7 +303,7 @@ table.list-data {
 
 .main-inner {
   padding: 0.66rem;
-  min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 4rem);
 
   @media (min-width: $mobile-size) {
     padding: 1rem;
@@ -580,5 +580,11 @@ table.list-data {
     top: -0.25rem;
     max-width: 1.5rem;
     max-height: 1.5rem;
+  }
+}
+
+.heading-no-break.list-data {
+  .ul-row-heading {
+    min-width: 4.5rem;
   }
 }
