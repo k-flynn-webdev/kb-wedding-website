@@ -20,9 +20,17 @@ const getDate = (input: Date) => {
   return new Date(input).toLocaleString();
 };
 
-const tableLabels = computed(() => {
-  return guestsFound.value.length ? Object.keys(guestsFound.value[0]) : [];
-});
+const tableLabels = [
+  "updated_at",
+  "first_name",
+  "last_name",
+  "attending",
+  "meal",
+  "accomodation",
+  "high_chair",
+  "note",
+  "id",
+];
 
 const getAllRVPS = async () => {
   pending.value = true;
@@ -37,7 +45,9 @@ const getAllRVPS = async () => {
 
   if (error.value) hasError.value = error.value;
 
-  guestsFound.value = data.value;
+  guestsFound.value = data.value?.sort(function (a, b) {
+    return b.updated_at - a.updated_at;
+  });
 };
 
 onBeforeMount(async () => {
@@ -81,11 +91,13 @@ onBeforeMount(async () => {
       <template v-for="guest in guestsFound">
         <tr>
           <td
-            :key="idx"
-            v-for="(data, idx) in guest"
+            :key="label"
+            v-for="label in tableLabels"
           >
             {{
-              ["created_at", "updated_at"].includes(idx) ? getDate(data) : data
+              ["created_at", "updated_at"].includes(label)
+                ? getDate(guest[label])
+                : guest[label]
             }}
           </td>
         </tr>
