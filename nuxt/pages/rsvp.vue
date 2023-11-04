@@ -17,6 +17,8 @@ const pending = ref(false);
 const noResults = ref(false);
 const showRelated = ref(true);
 const hasError = ref(null as any);
+const message = ref("" as string);
+const userHasSaved = ref(false);
 
 const personData = ref([] as GuestData[]);
 const relatedData = ref([] as GuestData[]);
@@ -34,6 +36,20 @@ watch(lastName, (lastName) => {
     query: { ...route?.query, lastName },
   });
 });
+
+const displayMessage = async () => {
+  message.value = "Thank you so much for responding.";
+
+  await setTimeout(() => {
+    message.value = "";
+    userHasSaved.value = false;
+  }, 1200);
+};
+
+const handleSave = async () => {
+  userHasSaved.value = true;
+  displayMessage();
+};
 
 const handleSubmit = async () => {
   pending.value = true;
@@ -137,12 +153,32 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
     <RsvpForm
       v-if="personData.length"
       :guest="personData[0]"
+      :save="userHasSaved"
     />
 
     <RsvpForm
       v-if="showRelated && relatedData.length"
       v-for="guest in relatedData"
       :guest="guest"
+      :save="userHasSaved"
     />
+
+    <div class="mt-10">
+      <div
+        v-if="message.length"
+        class="toast toast-center"
+      >
+        <div class="alert alert-success">
+          <span>{{ message }}</span>
+        </div>
+      </div>
+
+      <button
+        class="btn btn-success save"
+        @click="handleSave"
+      >
+        Save
+      </button>
+    </div>
   </div>
 </template>

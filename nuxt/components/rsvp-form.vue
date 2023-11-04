@@ -9,10 +9,23 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  save: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const pending = ref(false);
 const hasError = ref(null as any);
+
+watch(
+  () => props.save,
+  (saved) => {
+    if (saved) {
+      handleSubmit();
+    }
+  }
+);
 
 const handleSubmit = async () => {
   pending.value = true;
