@@ -177,6 +177,12 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
       :save="userHasSaved"
     />
 
+    <div v-if="message.length">
+      <p>
+        <strong>{{ message }}</strong>
+      </p>
+    </div>
+
     <div
       class="mt-10"
       v-if="personData.length"
@@ -187,12 +193,6 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
       >
         <strong>Save</strong>
       </button>
-    </div>
-
-    <div v-if="message.length">
-      <p>
-        <strong>{{ message }}</strong>
-      </p>
     </div>
   </div>
 </template>
