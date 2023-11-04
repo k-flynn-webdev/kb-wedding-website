@@ -14,7 +14,7 @@ definePageMeta({
       </div>
     </div>
 
-    <div class="info-section">
+    <div class="max-25">
       <p class="mt-6 mb-4">
         We have exclusive use of the Ravenswood on Sunday through to Monday
         morning, so if you wish to stay with us, please book using our wedding
@@ -40,7 +40,7 @@ definePageMeta({
       </p>
     </div>
 
-    <div class="info-section max-20">
+    <div class="max-20">
       <h3>Hotels</h3>
 
       <p class="titles">East Grinstead</p>

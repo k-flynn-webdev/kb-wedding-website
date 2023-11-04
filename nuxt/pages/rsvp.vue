@@ -81,7 +81,7 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
     </div>
   </div>
 
-  <div class="container">
+  <div class="max-35">
     <form @submit.prevent="handleSubmit">
       <div class="form-control">
         <input
@@ -98,7 +98,7 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
         />
       </div>
 
-      <div class="row search">
+      <div class="row show-related-form">
         <button
           type="submit"
           class="btn btn-primary"
@@ -107,16 +107,14 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
           search
         </button>
 
-        <div class="form-control max-w-50">
-          <label class="cursor-pointer label">
-            <span class="mr-2">Show related</span>
-            <input
-              type="checkbox"
-              class="checkbox checkbox-info"
-              v-model="showRelated"
-            />
-          </label>
-        </div>
+        <label class="cursor-pointer label">
+          <span class="mr-2">Show related</span>
+          <input
+            type="checkbox"
+            class="checkbox checkbox-info"
+            v-model="showRelated"
+          />
+        </label>
       </div>
 
       <p

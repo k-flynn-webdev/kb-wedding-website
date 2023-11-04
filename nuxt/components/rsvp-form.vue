@@ -36,7 +36,7 @@ const performUpdate = preDebounceAction(
 </script>
 
 <template>
-  <div class="form-control mt-5">
+  <div class="form-control mt-5 max-30">
     <p
       v-if="hasError?.length"
       class="error"
@@ -44,15 +44,15 @@ const performUpdate = preDebounceAction(
       {{ hasError }}
     </p>
 
-    <h3 class="mb-2 guest-name">
+    <h3 class="mb-2 text-left">
       {{ props.guest.first_name }} {{ props.guest.last_name }}
     </h3>
 
-    <div class="section">
-      <label class="cursor-pointer label short-w">
-        <span class="label-title">Attending?</span>
+    <div class="section1">
+      <label class="cursor-pointer label row p-0 mb-4">
+        <span>Attending?</span>
 
-        <span class="desc">
+        <span class="grow text-right mr-1">
           {{
             props.guest.attending
               ? "Yes, love to be there"
@@ -67,16 +67,15 @@ const performUpdate = preDebounceAction(
         />
       </label>
 
-      <div
-        v-if="props.guest.attending"
-        class="tooltip tooltip-info"
-        data-tip="Meal starts at 3:30PM, 8:30PM side buffet"
-      >
-        <div class="row">
-          <p class="col">Preferred Meal</p>
+      <div v-if="props.guest.attending">
+        <div
+          class="tooltip tooltip-info row items-center mb-4"
+          data-tip="Meal starts at 3:30PM, 8:30PM side buffet"
+        >
+          <p class="col text-left">Preferred Meal</p>
 
           <select
-            class="select col"
+            class="select col mb-0"
             v-model="props.guest.meal"
             @change="handleSubmit"
           >
@@ -96,12 +95,12 @@ const performUpdate = preDebounceAction(
         </div>
 
         <div
-          class="tooltip tooltip-info"
+          class="tooltip tooltip-info mb-4"
           data-tip="The venue has 7 high chairs available"
         >
-          <label class="cursor-pointer label short-w">
-            <span class="label-title">Require High Chair</span>
-            <span class="desc">
+          <label class="cursor-pointer label row p-0 mb-4">
+            <span class="">Require High Chair</span>
+            <span class="grow text-right mr-1">
               {{ props.guest.high_chair ? "Yes" : "No" }}
             </span>
             <input
@@ -123,30 +122,28 @@ const performUpdate = preDebounceAction(
         </div>
 
         <div
-          class="tooltip tooltip-info"
+          class="tooltip tooltip-info row items-center mb-4"
           data-tip="The venue has 33 rooms available"
         >
-          <div class="row">
-            <p class="col">Staying the night?</p>
+          <p class="col text-left">Staying the night?</p>
 
-            <select
-              class="select col"
-              v-model="guest.accomodation"
-              @change="handleSubmit"
+          <select
+            class="select col mb-0"
+            v-model="guest.accomodation"
+            @change="handleSubmit"
+          >
+            <option
+              value=""
+              disabled
+              selected
             >
-              <option
-                value=""
-                disabled
-                selected
-              >
-                Please select
-              </option>
-              <option value="no">Not staying</option>
-              <option value="ravenswood">Staying Ravenswood</option>
-              <option value="other">Staying Another Hotel</option>
-              <option value="undecided">Undecided</option>
-            </select>
-          </div>
+              Please select
+            </option>
+            <option value="no">Not staying</option>
+            <option value="ravenswood">Staying Ravenswood</option>
+            <option value="other">Staying Another Hotel</option>
+            <option value="undecided">Undecided</option>
+          </select>
         </div>
       </div>
 

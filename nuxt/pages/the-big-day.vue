@@ -14,7 +14,7 @@ definePageMeta({
       </div>
     </div>
 
-    <div class="info-section">
+    <div class="max-35">
       <p class="mb-6">
         The venue opens at 12:00 PM for guests, if you want to get a start
         early, there is a bar on site. Please arrive dressed for the wedding,
@@ -22,7 +22,7 @@ definePageMeta({
         the ceremony at 2pm.
       </p>
 
-      <div class="ul-holder">
+      <div class="max-20">
         <ul>
           <li><span class="time">12:00 PM</span> - Doors Open</li>
           <li><span class="time">1:00 PM</span> - Ceremony</li>
@@ -43,10 +43,10 @@ definePageMeta({
       </div>
     </div>
 
-    <div class="info-section">
+    <div class="max-35">
       <h3>Dont Bring</h3>
 
-      <div class="ul-holder">
+      <div class="max-20">
         <ul>
           <li>Alcohol - strict BYO rules</li>
           <li>Fireworks</li>
@@ -58,7 +58,7 @@ definePageMeta({
       </div>
     </div>
 
-    <div class="info-section">
+    <div class="max-35">
       <h3>Do Bring</h3>
 
       <p>
@@ -67,7 +67,7 @@ definePageMeta({
       </p>
     </div>
 
-    <div class="info-section">
+    <div class="max-35">
       <h3>Gifts</h3>
       <p>
         Your presence on our wedding day is our biggest gift to make this day

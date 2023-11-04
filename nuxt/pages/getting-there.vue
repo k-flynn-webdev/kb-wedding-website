@@ -15,7 +15,7 @@ definePageMeta({
       </div>
     </div>
 
-    <div class="info-section">
+    <div class="max-35">
       <NuxtLink
         target="_blank"
         class="link"
@@ -29,7 +29,7 @@ definePageMeta({
       </p>
     </div>
 
-    <div class="info-section">
+    <div class="max-35">
       <h3>Driving</h3>
 
       <em>There is plenty of on-site parking.</em>
@@ -45,7 +45,7 @@ definePageMeta({
       />
     </div>
 
-    <div class="info-section">
+    <div class="max-35">
       <h3>Train</h3>
 
       <em>Dont forget to book taxis to and from the station. </em>
@@ -62,7 +62,7 @@ definePageMeta({
       />
     </div>
 
-    <div class="info-section max-20">
+    <div class="max-20">
       <h3>Taxis</h3>
 
       <p class="titles">East Grinstead</p>
