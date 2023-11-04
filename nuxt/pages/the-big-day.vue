@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="geting-there">
+  <div class="the-big-day">
     <div class="wedding-hero">
       <div class="wedding-hero__heading">
         <div class="transform">
@@ -23,39 +23,44 @@ definePageMeta({
       </p>
 
       <div class="max-20">
-        <ul>
-          <li><span class="time">12:00 PM</span> - Doors Open</li>
-          <li><span class="time">1:00 PM</span> - Ceremony</li>
-          <li>
-            <span class="time">1:30 PM</span> - Group Photos, Drinks Reception &
-            Canapes
-          </li>
-          <li><span class="time">3:00 PM</span> - Check in & Free time</li>
-          <li><span class="time">3:30 PM</span> - Wedding Breakfast</li>
-          <li>
-            <span class="time">6:00 PM</span> - Coats on for Sparklers outside,
-            Drinks & more Photos
-          </li>
-          <li><span class="time">7:00 PM</span> - First Dance</li>
-          <li><span class="time">8.30 PM</span> - Evening Buffet</li>
-          <li><span class="time">11:30 PM</span> - Lights on & Taxi Time!</li>
-        </ul>
+        <ListData
+          :headings="[
+            '12:00 PM',
+            '1:00 PM',
+            '1:30 PM',
+            '3:00 PM',
+            '3:30 PM',
+            '6:00 PM',
+            '7:00 PM',
+            '8:30 PM',
+            '11:30 PM',
+          ]"
+          :values="[
+            'Doors Open',
+            'Ceremony',
+            'Group Photos, Drinks Reception & Canapes',
+            'Check in & Free time',
+            'Wedding Breakfast',
+            'Coats on for Sparklers outside, Drinks & more Photos',
+            'First Dance',
+            'Evening Buffet',
+            'Lights on & Taxi Time!',
+          ]"
+        />
       </div>
     </div>
 
-    <div class="max-35">
+    <div class="max-20">
       <h3>Dont Bring</h3>
 
-      <div class="max-20">
-        <ul>
-          <li>Alcohol - strict BYO rules</li>
-          <li>Fireworks</li>
-          <li>
-            Paper Confetti (our beautiful flower girls will hand confetti out on
-            the big day!)
-          </li>
-        </ul>
-      </div>
+      <ListData
+        :headings="['Alcohol', 'Fireworks', 'Paper Confetti']"
+        :values="[
+          'strict BYO rules',
+          '',
+          '(our beautiful flower girls will hand confetti out on the big day!)',
+        ]"
+      />
     </div>
 
     <div class="max-35">

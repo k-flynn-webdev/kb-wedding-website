@@ -295,20 +295,6 @@ table.list-data {
   line-height: calc($text-max-size * ($size * 1.05));
 }
 
-.accomodation {
-  .wedding-hero h1 {
-    $size: 1;
-    font-size: calc($text-max-size * $size);
-    line-height: calc($text-max-size * ($size * 1.05));
-
-    @media (min-width: $mobile-size) {
-      $size: 1.9;
-      font-size: calc($text-max-size * $size);
-      line-height: calc($text-max-size * ($size * 1.05));
-    }
-  }
-}
-
 .main-inner {
   padding: 0.66rem;
   min-height: calc(100vh - 6rem);
@@ -365,6 +351,34 @@ table.list-data {
       $size: 20rem;
       line-height: $size * 0.6;
       font-size: $size;
+    }
+  }
+}
+
+.accomodation {
+  .wedding-hero h1 {
+    $size: 1;
+    font-size: calc($text-max-size * $size);
+    line-height: calc($text-max-size * ($size * 1.05));
+
+    @media (min-width: $mobile-size) {
+      $size: 1.9;
+      font-size: calc($text-max-size * $size);
+      line-height: calc($text-max-size * ($size * 1.05));
+    }
+  }
+}
+
+.the-big-day {
+  .wedding-hero h1 {
+    $size: 1;
+    font-size: calc($text-max-size * $size);
+    line-height: calc($text-max-size * ($size * 1.05));
+
+    @media (min-width: $mobile-size) {
+      $size: 1.9;
+      font-size: calc($text-max-size * $size);
+      line-height: calc($text-max-size * ($size * 1.05));
     }
   }
 }

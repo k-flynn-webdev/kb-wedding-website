@@ -63,7 +63,7 @@ onBeforeMount(async () => {
     Download CSV file
   </JsonCSV>
 
-  <div class="table-holder">
+  <div class="view-rsvps-table">
     <table
       v-if="guestsFound && guestsFound.length"
       class="mt-5"
