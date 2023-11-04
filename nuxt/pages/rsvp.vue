@@ -163,7 +163,10 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
       :save="userHasSaved"
     />
 
-    <div class="mt-10">
+    <div
+      class="mt-10"
+      v-if="personData.length"
+    >
       <div
         v-if="message.length"
         class="toast toast-center"
