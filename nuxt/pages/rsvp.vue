@@ -97,6 +97,20 @@ if (route?.query?.firstName && route?.query?.lastName) await handleSubmit();
     </div>
   </div>
 
+  <div class="max-35 mt-10">
+    <p class="mb-2">Let us know if you can celebrate with us on the day :)</p>
+    <p class="mb-2">
+      We have yet to decide on the main wedding meal but please let us know any
+      preferences, allergies and any other dietary requirements.
+    </p>
+    <p class="mb-2">
+      If you are planning to stay overnight at the venue, we'll also keep an eye
+      out on the booking, as special requests cannot be made directly on the
+      website.
+    </p>
+    <br />
+  </div>
+
   <div class="max-35">
     <form @submit.prevent="handleSubmit">
       <div class="form-control">
