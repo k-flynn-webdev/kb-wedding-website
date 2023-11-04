@@ -46,25 +46,9 @@ $midpoint: 30%;
   display: inline-block;
 }
 
-// .label {
-//   &.short-w {
-//     margin-left: 0;
-//     padding-left: 0;
-
-//     max-width: 25rem;
-
-//     .label-title {
-//       text-align: left;
-//       flex-grow: 2;
-//     }
-
-//     .desc {
-//       text-align: left;
-//       margin-left: 0.5rem;
-//       margin-right: 0.5rem;
-//     }
-//   }
-// }
+.toast {
+  z-index: 1;
+}
 
 .error {
   margin: 2rem 0;
