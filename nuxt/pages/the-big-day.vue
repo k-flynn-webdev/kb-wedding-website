@@ -22,7 +22,7 @@ definePageMeta({
         the ceremony at 2pm.
       </p>
 
-      <div class="max-20">
+      <div class="max-30">
         <ListData
           :headings="[
             '12:00 PM',
@@ -50,7 +50,7 @@ definePageMeta({
       </div>
     </div>
 
-    <div class="max-20">
+    <div class="max-30">
       <h3>Dont Bring</h3>
 
       <ListData
