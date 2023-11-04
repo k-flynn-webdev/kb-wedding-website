@@ -52,38 +52,44 @@ definePageMeta({
 
       <ListData
         :headings="[
-          'From London Bridge to Wivelsfield',
-          'From Victoria to Haywards Heath',
+          'Victoria to Haywards Heath',
+          'Victoria to Crawley',
+          'Victoria to East Grinstead',
         ]"
-        :values="[
-          '1 hour (20 mins taxi to venue)',
-          '50mins (15 mins taxi to venue)',
+        :values="['50mins', '1 hour', '1 hour']"
+      />
+
+      <ListData
+        :headings="[
+          'London Bridge to Haywards Heath',
+          'London Bridge to Crawley',
         ]"
+        :values="['50mins', '1 hour']"
       />
     </div>
 
-    <div class="max-20">
+    <div class="max-25">
       <h3>Taxis</h3>
 
-      <p class="titles">East Grinstead</p>
-
-      <ListData
-        :headings="['Western Cars', 'Evo Cars']"
-        :values="['01342 300000', '01342 324444']"
-      />
-
-      <p class="titles">Haywards Heath</p>
+      <p class="titles">Haywards Heath (15 mins to venue)</p>
 
       <ListData
         :headings="['Evo Cars', 'Smith Taxis']"
         :values="['01444 443 300', '01444 304304']"
       />
 
-      <p class="titles">Crawley</p>
+      <p class="titles">Crawley (20 mins to venue)</p>
 
       <ListData
         :headings="['Alpha Cars', 'United Cars', 'Metro Cars']"
         :values="['01293 400600', '01293 429429', '01293 415415']"
+      />
+
+      <p class="titles">East Grinstead (15 mins to venue)</p>
+
+      <ListData
+        :headings="['Western Cars', 'Evo Cars']"
+        :values="['01342 300000', '01342 324444']"
       />
     </div>
   </div>
