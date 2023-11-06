@@ -492,6 +492,12 @@ table.list-data {
   flex-direction: row;
   justify-content: space-around;
 
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+
   &:hover {
     background-color: $blush;
   }
