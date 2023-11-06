@@ -13,7 +13,12 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
     },
   },
-  modules: ["nuxt3-winston-log", "@nuxtjs/tailwindcss", "@nuxt/image"],
+  modules: [
+    "nuxt-security",
+    "nuxt3-winston-log",
+    "@nuxtjs/tailwindcss",
+    "@nuxt/image",
+  ],
   nitro: {
     compressPublicAssets: true,
   },
