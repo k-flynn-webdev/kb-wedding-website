@@ -38,7 +38,6 @@ const getAllRVPS = async () => {
 
   const { data, error } = await useFetch(`/api/guests/${route?.params?.id}`, {
     method: "GET",
-    transform: transformGuestAPI,
   });
 
   pending.value = false;

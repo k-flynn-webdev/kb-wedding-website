@@ -24,7 +24,7 @@ definePageMeta({
 
       <div class="max-30">
         <ListData
-          class="heading-no-break"
+          class="heading-no-break heading-justify"
           :headings="[
             '12:00 PM',
             '1:00 PM',

@@ -586,11 +586,18 @@ table.list-data {
 .heading-no-break.list-data {
   .ul-row-heading {
     min-width: 4.5rem;
+    text-align-last: justify;
   }
 }
 
 .heading-no-break-large.list-data {
   .ul-row-heading {
     min-width: 8.5rem;
+  }
+}
+
+.heading-justify.list-data {
+  .ul-row-heading {
+    text-align-last: justify;
   }
 }
