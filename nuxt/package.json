@@ -28,5 +28,10 @@
     "kysely": "^0.25.0",
     "lucia": "latest",
     "vue-json-csv": "^2.1.0"
+  },
+  "overrides": {
+    "vite-plugin-vsharp": {
+      "vite": "^4"
+    }
   }
 }
