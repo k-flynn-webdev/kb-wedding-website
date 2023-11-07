@@ -1,11 +1,14 @@
+import { customAlphabet } from "nanoid";
+const CUSTOM_ALPHA = "1234567890abcdefghjkmnpqrstuvwxyz";
+
+const nanoid = customAlphabet(CUSTOM_ALPHA, 8);
+
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
 
   if (event?.context?.params?.id !== config.secretId) {
     throw createError("DENIED");
   }
-
-  console.log(config);
 
   const BASE_GUEST = {
     attending: 0,
@@ -434,9 +437,9 @@ export default defineEventHandler(async (event) => {
     },
   ];
 
-  const createId = (idx: string) => {
-    return (parseInt(idx) + Date.now()).toString();
-  };
+  // const createId = (idx: string) => {
+  //   return (parseInt(idx) + Date.now()).toString();
+  // };
 
   const DATA = [...DATA_KEV, ...DATA_BEL];
 
@@ -448,7 +451,7 @@ export default defineEventHandler(async (event) => {
 
       await db
         .insertInto("guests_data")
-        .values({ id: createId(i), ...DATA[i] })
+        .values({ id: nanoid(), ...DATA[i] })
         .executeTakeFirst();
     }
 
