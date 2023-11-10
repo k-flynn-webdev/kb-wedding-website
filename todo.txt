@@ -1,3 +1,4 @@
 CORS: https://stackoverflow.com/questions/76198151/nuxt-3-how-to-implement-cors
 add gift link? - future
 nginx needs to serve static assets!! not the app!!
+better sqlite3 has abuilt in backup function! use it!
