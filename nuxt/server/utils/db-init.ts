@@ -2,6 +2,7 @@ import { Kysely, SqliteDialect } from "kysely";
 import sqlite from "better-sqlite3";
 import fs from "fs";
 import { type GuestData } from "@/interfaces";
+import { migrateDatabase } from "@/server/utils/db-migrate";
 
 const config = useRuntimeConfig();
 
@@ -29,7 +30,7 @@ const sqliteDatabaseStart = () => {
   );
 
   const dbFile = sqlite(DB_FILE_PATH);
-  console.log("dbFile", dbFile);
+  // dbFile.pragma("journal_mode = WAL");
 
   if (!hasDBFile) {
     try {
@@ -57,3 +58,5 @@ export const db = new Kysely<Database>({
 type Database = {
   guests_data: GuestData;
 };
+
+migrateDatabase(sqliteDatabase)();

@@ -1,0 +1,2 @@
+ALTER TABLE guests_data
+  ADD COLUMN saved22 INTEGER NOT NULL;
