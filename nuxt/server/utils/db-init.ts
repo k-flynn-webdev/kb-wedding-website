@@ -1,32 +1,31 @@
+import { Kysely, SqliteDialect } from "kysely";
 import sqlite from "better-sqlite3";
 import fs from "fs";
-import { Kysely, SqliteDialect } from "kysely";
 
 import { type GuestData } from "@/interfaces";
 
 const config = useRuntimeConfig();
 
+const DB_STRING = ":: DB";
 const dbFileName = "db.sqlite";
 const schemaFileName = "schema-01.sql";
 
-const DB_SCHEMA = config.isDev
-  ? `../database/${schemaFileName}`
-  : `/app/database/${schemaFileName}`;
+const DB_SCHEMA = `server/db/schema/${schemaFileName}`;
+
 const DB_FILE_PATH = config.isDev
   ? `../database/${dbFileName}`
   : `/app/database/${dbFileName}`;
 
 const sqliteDatabaseStart = () => {
   const hasDBFile = fs.existsSync(DB_FILE_PATH);
-  const hasDBSchema = fs.existsSync(DB_SCHEMA);
 
-  console.log("dbFileName", dbFileName);
-  console.log("schemaFileName", schemaFileName);
-
-  console.log(hasDBFile ? "DB FILE EXISTS" : "DB FILE CREATED");
-  console.log(DB_FILE_PATH);
-
-  console.log("hasDBSchema", hasDBSchema);
+  console.log(`${DB_STRING} - File name : ${dbFileName}`);
+  console.log(`${DB_STRING} - Schema    : ${schemaFileName}`);
+  console.log(
+    hasDBFile
+      ? `${DB_STRING} - File EXISTS ${DB_FILE_PATH}`
+      : `${DB_STRING} - File CREATED ${DB_FILE_PATH}`
+  );
 
   const dbFile = sqlite(DB_FILE_PATH);
   console.log("dbFile", dbFile);
