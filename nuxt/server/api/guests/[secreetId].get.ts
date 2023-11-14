@@ -1,9 +1,9 @@
+import { gateAPISecretId } from "@/helpers/utils";
+
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
 
-  if (event?.context?.params?.id !== config.secretId) {
-    throw createError("DENIED");
-  }
+  gateAPISecretId(event);
 
   try {
     return await db.selectFrom("guests_data").selectAll().execute();

@@ -30,6 +30,8 @@ const sqliteDatabaseStart = () => {
   );
 
   const dbFile = sqlite(DB_FILE_PATH);
+
+  // todo figure this out??? why it makes my db not readable??
   // dbFile.pragma("journal_mode = WAL");
 
   if (!hasDBFile) {
