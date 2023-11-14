@@ -5,8 +5,6 @@ const CUSTOM_ALPHA = "1234567890abcdefghjkmnpqrstuvwxyz";
 const nanoid = customAlphabet(CUSTOM_ALPHA, 8);
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig();
-
   gateAPISecretId(event);
 
   const BASE_GUEST = {
