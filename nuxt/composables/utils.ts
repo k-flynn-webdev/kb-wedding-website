@@ -12,7 +12,7 @@ export const performAction = async (loadingRef: Ref, cb: Function) => {
 	the "callback" and the time it will wait to emit the event
 */
 export function debounceAction(cb: Function, timeout = 300) {
-  let timer;
+  let timer: any | null;
 
   return (...args) => {
     clearTimeout(timer);
@@ -28,7 +28,7 @@ export function preDebounceAction(
   cb: Function,
   timeout = 300
 ) {
-  let timer;
+  let timer: any | null;
 
   return (...args) => {
     preCB();
