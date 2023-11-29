@@ -1,4 +1,9 @@
 server {
+    server_name bel-kev.co.uk;
+    return 301 $scheme://www.bel-kev.co.uk$request_uri;
+}
+
+server {
         listen 80;
         listen [::]:80;
 

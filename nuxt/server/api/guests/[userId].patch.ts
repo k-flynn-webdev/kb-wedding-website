@@ -11,7 +11,7 @@ const NEW_LINE = "********************************************************";
 
 const logFunction = (data: any) => {
   console.log(NEW_LINE);
-  console.log(`ID: ${data.id}`);
+  console.log(`ID: ${data.userId}`);
   console.log(`Name: ${data.first_name} ${data.last_name}`);
   logKeys.forEach((key) => {
     console.log(`${key}: ${data[key]}`);
@@ -30,13 +30,17 @@ export default defineEventHandler(async (event: any) => {
     updated_at: Date.now(),
   };
 
-  logFunction({ id: event?.context?.params?.id, ...body, ...allowedEdit });
+  logFunction({
+    userId: event?.context?.params?.userId,
+    ...body,
+    ...allowedEdit,
+  });
 
   try {
     const result = await db
       .updateTable("guests_data")
       .set({ ...allowedEdit })
-      .where("id", "=", event?.context?.params?.id)
+      .where("id", "=", event?.context?.params?.userId)
       .executeTakeFirst();
 
     if (!result.numUpdatedRows) throw "No row updated";
@@ -44,7 +48,7 @@ export default defineEventHandler(async (event: any) => {
     return await db
       .selectFrom("guests_data")
       .selectAll()
-      .where("id", "=", event?.context?.params?.id)
+      .where("id", "=", event?.context?.params?.userId)
       .execute();
   } catch (e) {
     console.error(e);

@@ -1,14 +1,11 @@
+import { gateAPISecretId } from "@/helpers/utils";
 import { customAlphabet } from "nanoid";
 const CUSTOM_ALPHA = "1234567890abcdefghjkmnpqrstuvwxyz";
 
 const nanoid = customAlphabet(CUSTOM_ALPHA, 8);
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig();
-
-  if (event?.context?.params?.id !== config.secretId) {
-    throw createError("DENIED");
-  }
+  gateAPISecretId(event);
 
   const BASE_GUEST = {
     attending: 0,
@@ -436,10 +433,6 @@ export default defineEventHandler(async (event) => {
       family_id: "ovidjulia",
     },
   ];
-
-  // const createId = (idx: string) => {
-  //   return (parseInt(idx) + Date.now()).toString();
-  // };
 
   const DATA = [...DATA_KEV, ...DATA_BEL];
 
