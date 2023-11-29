@@ -1,4 +1,4 @@
-import { checkpointDatabase } from "@/server/urils/db-chechkpont.ts";
+import { checkpointDatabase } from "@/server/utils/db-checkpoint.ts";
 import { gateAPISecretId } from "@/helpers/utils";
 
 export default defineEventHandler(async (event) => {
