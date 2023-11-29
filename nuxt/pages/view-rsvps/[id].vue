@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import JsonCSV from "vue-json-csv";
 import { useRoute } from "#vue-router";
-import { transformGuestAPI } from "@/helpers/transforms";
 import { type GuestData } from "@/interfaces";
 
 definePageMeta({
@@ -49,6 +48,18 @@ const getAllRVPS = async () => {
   });
 };
 
+const displayItemData = (item: any, label: string) => {
+  if (["created_at", "updated_at"].includes(label)) {
+    return getDate(item[label]);
+  }
+
+  if (["attending", "high_chair"].includes(label)) {
+    return !!item[label];
+  }
+
+  return item[label];
+};
+
 onBeforeMount(async () => {
   await nextTick();
   await getAllRVPS();
@@ -93,11 +104,7 @@ onBeforeMount(async () => {
             :key="label"
             v-for="label in tableLabels"
           >
-            {{
-              ["created_at", "updated_at"].includes(label)
-                ? getDate(guest[label])
-                : guest[label]
-            }}
+            {{ displayItemData(guest, label) }}
           </td>
         </tr>
       </template>

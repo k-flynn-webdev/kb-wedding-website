@@ -31,9 +31,15 @@ const handleSubmit = async () => {
   pending.value = true;
   hasError.value = null;
 
+  const dataRes = {
+    ...props.guest,
+  };
+
+  dataRes.attending = props.guest.attending === "true" ? true : false;
+
   const { data, error } = await useFetch(`/api/guests/${props.guest.id}`, {
     method: "PATCH",
-    body: { ...props.guest },
+    body: dataRes,
     transform: transformGuestAPI,
   });
 
@@ -65,19 +71,21 @@ const performUpdate = preDebounceAction(
       <label class="cursor-pointer label row p-0 mb-4">
         <span>Attending?</span>
 
-        <span class="grow text-right mr-1">
-          {{
-            props.guest.attending
-              ? "Yes, love to be there"
-              : "No I cant make it"
-          }}
-        </span>
-        <input
-          type="checkbox"
-          class="toggle toggle-success"
+        <select
+          class="select col mb-0"
           v-model="props.guest.attending"
           @change="handleSubmit"
-        />
+        >
+          <option
+            value=""
+            disabled
+            selected
+          >
+            Please select
+          </option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
       </label>
 
       <div v-if="props.guest.attending">
