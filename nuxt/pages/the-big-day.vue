@@ -83,8 +83,17 @@ definePageMeta({
       <p>
         If you would like to contribute to our honeymoon and new life as a
         couple in creating a family, a wishing well will be present at the venue
-        on the day. Alternatively for those digitally minded, check back later
-        for a link.
+        on the day. Alternatively for those digitally minded...
+
+        <br />
+
+        <NuxtLink
+          target="_blank"
+          class="link"
+          to="https://www.marriagegiftlist.com/D4ZG4P"
+        >
+          Our gift list link
+        </NuxtLink>
       </p>
     </div>
   </div>
