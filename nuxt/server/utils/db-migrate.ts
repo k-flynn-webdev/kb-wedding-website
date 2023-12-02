@@ -11,7 +11,7 @@ const PRE_EXEC = (version: number) =>
 const MIGRATION_COMPLETE = (version: number) =>
   console.log(`MIGRATION COMPLETE ${version}`);
 
-export const migrateDatabase = (db: Database) => async () => {
+export const migrateDatabase = async (db: Database) => {
   const loadUserVersion = (): number =>
     db.prepare(`PRAGMA "user_version"`).get().user_version;
 
@@ -19,7 +19,7 @@ export const migrateDatabase = (db: Database) => async () => {
 
   console.log(":: DB - PRAGMA      : " + version);
 
-  switch (version) {
+  switch (version as number) {
     case 0: {
       db.exec(/* SQL */ `
         ${PRE_EXEC(1)}

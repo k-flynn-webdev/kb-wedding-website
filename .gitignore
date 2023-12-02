@@ -1,5 +1,7 @@
 # Ignore DB SQL files
 *.sqlite
+*.sqlite-shm
+*.sqlite-wal
 # *.sql
 
 # Nuxt dev/build outputs
