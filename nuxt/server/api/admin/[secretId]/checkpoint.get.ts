@@ -1,13 +1,11 @@
-import { checkpointDatabase } from "@/server/utils/db-checkpoint.ts";
+import { checkpointDatabase } from "@/server/utils/db-checkpoint";
 import { gateAPISecretId } from "@/helpers/utils";
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig();
-
   gateAPISecretId(event);
 
   try {
-    await checkpointDatabase(db);
+    await checkpointDatabase(sqliteDatabase);
 
     return true;
   } catch (e) {

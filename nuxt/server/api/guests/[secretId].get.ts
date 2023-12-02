@@ -1,8 +1,6 @@
 import { gateAPISecretId } from "@/helpers/utils";
 
 export default defineEventHandler(async (event) => {
-  const config = useRuntimeConfig();
-
   gateAPISecretId(event);
 
   try {
