@@ -2,6 +2,8 @@ CORS: https://stackoverflow.com/questions/76198151/nuxt-3-how-to-implement-cors
 nginx needs to serve static assets!! not the app!!
 Start making a user admin panel???? lock it down!!!
 
+BUG:: DB checkpoint doesn't work???
+
 Add DB restore and check it
 
 server {
