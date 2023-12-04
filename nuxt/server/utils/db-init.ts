@@ -17,6 +17,10 @@ const DB_FILE_PATH = config.isDev
   ? `../database/${dbFileName}`
   : `/app/database/${dbFileName}`;
 
+export const initDBFile = () => {
+  return sqlite(DB_FILE_PATH);
+};
+
 const sqliteDatabaseStart = () => {
   const hasDBFile = fs.existsSync(DB_FILE_PATH);
 
@@ -29,7 +33,7 @@ const sqliteDatabaseStart = () => {
       : `${DB_STRING} - File CREATED: ${DB_FILE_PATH}`
   );
 
-  const dbFile = sqlite(DB_FILE_PATH);
+  const dbFile = initDBFile();
 
   // todo figure this out??? why it makes my db not readable??
   dbFile.pragma("journal_mode = WAL");
