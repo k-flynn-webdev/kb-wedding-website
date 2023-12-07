@@ -6,7 +6,7 @@ export const backupDatabase = async (db: Database) => {
   const db_backup_name = `${newDate.toISOString().split("T")[0]}-backup.sqlite`;
 
   try {
-    await db.backup("../" + db_backup_name);
+    await db.backup("../database/backup/" + db_backup_name);
 
     console.log(`:: DB - BACKUP : ${db_backup_name}`);
   } catch (e) {
