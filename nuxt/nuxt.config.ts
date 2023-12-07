@@ -1,5 +1,7 @@
 import vsharp from "vite-plugin-vsharp";
 
+console.log(process.env);
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -31,9 +33,13 @@ export default defineNuxtConfig({
     infoLogPath: "../log_folder",
   },
   runtimeConfig: {
-    isDev: process.env.NUXT_IS_DEV ?? true,
+    isDev: Boolean(process.env.NUXT_IS_DEV ?? true),
     dbPath: "",
     secretId: "4897",
+    admin: {
+      user: "4897",
+      password: "4897",
+    },
     public: {
       // apiBase: process.env.NUXT_PUBLIC_API_BASE ?? "default value",
     },
