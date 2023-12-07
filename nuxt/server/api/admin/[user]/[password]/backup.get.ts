@@ -1,8 +1,8 @@
 import { backupDatabase } from "@/server/utils/db-backup";
-import { gateAPISecretId } from "@/helpers/utils";
+import { gateAPIAdminPassword } from "@/helpers/utils";
 
 export default defineEventHandler(async (event) => {
-  gateAPISecretId(event);
+  gateAPIAdminPassword(event);
 
   try {
     await backupDatabase(sqliteDatabase);

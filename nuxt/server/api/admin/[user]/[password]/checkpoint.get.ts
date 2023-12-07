@@ -1,8 +1,9 @@
 import { checkpointDatabase } from "@/server/utils/db-checkpoint";
-import { gateAPISecretId } from "@/helpers/utils";
+import { gateAPIAdminPassword } from "@/helpers/utils";
 
+// todo this feature is broken for now ><!
 export default defineEventHandler(async (event) => {
-  gateAPISecretId(event);
+  gateAPIAdminPassword(event);
 
   try {
     await checkpointDatabase(sqliteDatabase);

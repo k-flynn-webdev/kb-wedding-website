@@ -10,14 +10,25 @@ export const readLocaFile = (filePath: string) => {
   });
 };
 
-export const gateAPISecretId = (event: H3Event) => {
+export const gateAPIAdminPassword = (event: H3Event) => {
   const config = useRuntimeConfig();
 
-  if (!config.secretId) {
-    throw createError("Missing Admin Id");
+  const { user, password } = config.admin;
+
+  if (!user) {
+    throw createError("Missing User");
   }
 
-  if (event?.context?.params?.secretId !== config.secretId) {
-    throw createError("DENIED");
+  if (!password) {
+    throw createError("Missing User Password");
   }
+
+  if (
+    event?.context?.params?.user === user &&
+    event?.context?.params?.password === password
+  ) {
+    return true;
+  }
+
+  throw createError("Incorrect User Password");
 };

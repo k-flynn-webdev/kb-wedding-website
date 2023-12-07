@@ -37,7 +37,7 @@ export default defineNuxtConfig({
     dbPath: "",
     secretId: "4897",
     admin: {
-      user: "4897",
+      user: "admin",
       password: "4897",
     },
     public: {

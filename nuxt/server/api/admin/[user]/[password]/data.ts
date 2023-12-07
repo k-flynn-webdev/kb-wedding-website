@@ -1,7 +1,7 @@
-import { gateAPISecretId } from "@/helpers/utils";
+import { gateAPIAdminPassword } from "@/helpers/utils";
 
 export default defineEventHandler(async (event) => {
-  gateAPISecretId(event);
+  gateAPIAdminPassword(event);
 
   try {
     return await db.selectFrom("guests_data").selectAll().execute();

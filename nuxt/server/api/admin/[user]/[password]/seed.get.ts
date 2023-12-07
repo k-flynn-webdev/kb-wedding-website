@@ -1,11 +1,11 @@
-import { gateAPISecretId } from "@/helpers/utils";
+import { gateAPIAdminPassword } from "@/helpers/utils";
 import { customAlphabet } from "nanoid";
 const CUSTOM_ALPHA = "1234567890abcdefghjkmnpqrstuvwxyz";
 
 const nanoid = customAlphabet(CUSTOM_ALPHA, 8);
 
 export default defineEventHandler(async (event) => {
-  gateAPISecretId(event);
+  gateAPIAdminPassword(event);
 
   const BASE_GUEST = {
     attending: 0,
