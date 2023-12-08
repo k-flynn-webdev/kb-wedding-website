@@ -22,10 +22,11 @@ export const auth = lucia({
 });
 
 const runtimeConfig = useRuntimeConfig();
+const { githubClientId, githubClientSecret } = runtimeConfig?.oauth?.github;
 
 export const githubAuth = github(auth, {
-  clientId: runtimeConfig.githubClientId,
-  clientSecret: runtimeConfig.githubClientSecret,
+  clientId: githubClientId,
+  clientSecret: githubClientSecret,
 });
 
 export type Auth = typeof auth;

@@ -39,11 +39,15 @@ export default defineNuxtConfig({
       user: "admin",
       password: "4897",
     },
+    oauth: {
+      github: {
+        githubClientId: "",
+        githubClientSecret: "",
+      },
+    },
     public: {
       // apiBase: process.env.NUXT_PUBLIC_API_BASE ?? "default value",
     },
-    githubClientId: "",
-    githubClientSecret: "",
   },
   routeRules: {
     // Homepage pre-rendered at build time
