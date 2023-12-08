@@ -16,5 +16,6 @@ export default defineEventHandler(async (event) => {
   await auth.invalidateSession(session.sessionId);
   // delete session cookie
   authRequest.setSession(null);
+  // todo ensure all cookies cleanup up?
   return sendRedirect(event, "/");
 });

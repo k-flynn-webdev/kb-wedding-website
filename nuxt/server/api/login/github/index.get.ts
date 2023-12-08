@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
 
   setCookie(event, "github_oauth_state", state, {
     httpOnly: true,
-    secure: false,
+    secure: !process.dev,
     path: "/",
     maxAge: 60 * 60,
   });
