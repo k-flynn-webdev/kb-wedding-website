@@ -2,8 +2,8 @@
 
 <template>
   <div class="main">
-    <MobileNav />
-    <TopNavbar />
+    <NavMobile />
+    <NavDesktop />
 
     <HeroImage />
 
