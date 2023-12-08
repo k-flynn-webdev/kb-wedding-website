@@ -41,8 +41,8 @@ export default defineNuxtConfig({
     },
     oauth: {
       github: {
-        githubClientId: "",
-        githubClientSecret: "",
+        githubClientId: process.env.NUXT_GITHUB_CLIENT_ID,
+        githubClientSecret: process.env.NUXT_GITHUB_CLIENT_SECRET,
       },
     },
     public: {
