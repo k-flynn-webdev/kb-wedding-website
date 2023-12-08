@@ -2,8 +2,6 @@ import type { Database } from "better-sqlite3";
 import { readLocaFile } from "@/helpers/utils";
 
 const migration_01 = "server/db/migrations/001-migrate.sql";
-const migration_02 = "server/db/migrations/002-migrate.sql";
-const migration_03 = "server/db/migrations/003-migrate.sql";
 
 const POST_EXEC = "COMMIT;";
 const PRE_EXEC = (version: number) =>
@@ -19,30 +17,32 @@ export const migrateDatabase = async (db: Database) => {
 
   console.log(":: DB - PRAGMA      : " + version);
 
-  switch (version as number) {
-    case 0: {
-      db.exec(/* SQL */ `
-        ${PRE_EXEC(1)}
-        ${await readLocaFile(migration_01)}
-        ${POST_EXEC}
-      `);
-      MIGRATION_COMPLETE(version);
-    }
-    case 1: {
-      db.exec(/* SQL */ `
-        ${PRE_EXEC(2)}
-        ${await readLocaFile(migration_02)}
-        ${POST_EXEC}
-      `);
-      MIGRATION_COMPLETE(version);
-    }
-    case 2: {
-      db.exec(/* SQL */ `
-        ${PRE_EXEC(3)}
-        ${await readLocaFile(migration_03)}
-        ${POST_EXEC}
-      `);
-      MIGRATION_COMPLETE(version);
-    }
+  switch (
+    version as number
+    // case 0: {
+    //   db.exec(/* SQL */ `
+    //     ${PRE_EXEC(1)}
+    //     ${await readLocaFile(migration_01)}
+    //     ${POST_EXEC}
+    //   `);
+    //   MIGRATION_COMPLETE(version);
+    // }
+    // case 1: {
+    //   db.exec(/* SQL */ `
+    //     ${PRE_EXEC(2)}
+    //     ${await readLocaFile(migration_02)}
+    //     ${POST_EXEC}
+    //   `);
+    //   MIGRATION_COMPLETE(version);
+    // }
+    // case 2: {
+    //   db.exec(/* SQL */ `
+    //     ${PRE_EXEC(3)}
+    //     ${await readLocaFile(migration_03)}
+    //     ${POST_EXEC}
+    //   `);
+    //   MIGRATION_COMPLETE(version);
+    // }
+  ) {
   }
 };

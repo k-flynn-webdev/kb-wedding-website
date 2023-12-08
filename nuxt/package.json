@@ -23,11 +23,12 @@
     "vite-plugin-vsharp": "^1.5.4"
   },
   "dependencies": {
-    "@lucia-auth/adapter-sqlite": "latest",
+    "@lucia-auth/adapter-sqlite": "^2.0.1",
+    "@lucia-auth/oauth": "^3.5.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "better-sqlite3": "^8.4.0",
     "kysely": "^0.25.0",
-    "lucia": "latest",
+    "lucia": "^2.7.4",
     "vue-json-csv": "^2.1.0"
   },
   "overrides": {

@@ -1,8 +1,13 @@
 import { Kysely, SqliteDialect } from "kysely";
 import sqlite from "better-sqlite3";
 import fs from "fs";
-import { type GuestData } from "@/interfaces";
 import { migrateDatabase } from "@/server/utils/db-migrate";
+import type {
+  UserTable,
+  SessionTable,
+  KeyTable,
+  GuestData,
+} from "@/interfaces";
 
 const config = useRuntimeConfig();
 
@@ -62,6 +67,9 @@ export const db = new Kysely<Database>({
 });
 
 type Database = {
+  user: UserTable;
+  user_session: SessionTable;
+  user_key: KeyTable;
   guests_data: GuestData;
 };
 
