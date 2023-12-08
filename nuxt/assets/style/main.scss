@@ -111,7 +111,7 @@ select.select {
   display: block;
 }
 
-.main-inner .link {
+.layout-content .link {
   color: $blush-tint;
 }
 
@@ -301,7 +301,7 @@ table.list-data {
   line-height: calc($text-max-size * ($size * 1.05));
 }
 
-.main-inner {
+.layout-content {
   padding: 0.66rem;
   min-height: calc(100vh - 4rem);
 

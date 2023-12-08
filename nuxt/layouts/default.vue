@@ -7,7 +7,7 @@
 
     <HeroImage />
 
-    <div class="main-inner">
+    <div class="layout-content">
       <slot />
     </div>
 
