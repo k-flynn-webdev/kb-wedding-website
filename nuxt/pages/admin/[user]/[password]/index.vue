@@ -15,12 +15,8 @@ const isPending = ref(false);
 const isError = ref(null as any);
 const dataTable = ref(null as any);
 
-// local db columns
-
 const getApiData = async () => {
   const { data, error } = await callDbAction("data");
-
-  console.log(data.value);
 
   dataTable.value = data.value?.sort(function (a, b) {
     return b.updated_at - a.updated_at;

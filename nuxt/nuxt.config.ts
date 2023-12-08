@@ -1,7 +1,5 @@
 import vsharp from "vite-plugin-vsharp";
 
-console.log(process.env);
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
