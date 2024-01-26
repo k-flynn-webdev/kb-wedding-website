@@ -78,9 +78,9 @@ const handleClick = () => {
       </NuxtLink>
 
       <NuxtLink
-        to="/rsvp"
+        to="https://photos.app.goo.gl/ViGee8sYC8vhJxkK7"
         class="link"
-        >RSVP
+        >Photos
       </NuxtLink>
 
       <NuxtLink
