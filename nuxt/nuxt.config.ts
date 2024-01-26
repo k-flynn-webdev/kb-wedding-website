@@ -47,5 +47,6 @@ export default defineNuxtConfig({
     "/view-rsvps/**": { ssr: false },
     // Add cors headers on API routes
     "/api/**": { cors: true },
+    "/photos": { redirect: "https://photos.app.goo.gl/ViGee8sYC8vhJxkK7" },
   },
 });
