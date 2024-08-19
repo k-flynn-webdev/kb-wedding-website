@@ -14,7 +14,7 @@ definePageMeta({
       </NuxtLink>
 
       <NuxtLink
-        to="https://photos.app.goo.gl/ViGee8sYC8vhJxkK7"
+        to="/photos"
         class="link"
         >Photos
       </NuxtLink>
