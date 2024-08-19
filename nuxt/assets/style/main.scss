@@ -607,3 +607,16 @@ table.list-data {
     text-align-last: justify;
   }
 }
+
+button.image.photo {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+  max-width: 15rem;
+  width: 66%;
+  border: rgba(255, 255, 255, 0.8) 1px solid;
+
+  img {
+    width: 100%;
+  }
+}
