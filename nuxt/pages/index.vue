@@ -51,10 +51,7 @@ definePageMeta({
   </div>
 
   <div class="bottom-nav">
-    <NuxtLink
-      to="https://photos.app.goo.gl/ViGee8sYC8vhJxkK7"
-      target="_blank"
-    >
+    <NuxtLink to="/photos">
       <button class="btn rsvp">Photos</button>
     </NuxtLink>
   </div>
