@@ -15,6 +15,8 @@ const links = [
     "Social Album",
     "social.jpeg",
   ],
+  ["https://youtu.be/atN7YaTXnps", "Short Video", "video-short.jpeg"],
+  ["https://youtu.be/5eTkgeq82zk", "Long Video", "video-long.jpeg"],
 ];
 </script>
 
