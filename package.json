@@ -13,6 +13,7 @@
   },
   "type": "module",
   "scripts": {
+    "generate": "cd ./nuxt; npm run generate;",
     "docker": "docker compose rm -f; docker compose -f docker-compose.yml  up --build -d  --force-recreate",
     "test:unit": "npm run test:api:unit && npm run test:client:unit",
     "test:api:unit": "cd ./api && npm run test:unit",

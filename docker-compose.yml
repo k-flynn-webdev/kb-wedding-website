@@ -1,15 +1,15 @@
 version: "3"
 
 services:
-  bk-log-folder:
-    build: ./log_folder
-    volumes:
-      - logdata:/app/log_folder
+  # bk-log-folder:
+  #   build: ./log_folder
+  #   volumes:
+  #     - logdata:/app/log_folder
 
-  bk-database:
-    build: ./database
-    volumes:
-      - dbdata:/app/database
+  # bk-database:
+  #   build: ./database
+  #   volumes:
+  #     - dbdata:/app/database
 
   bk-nuxt:
     build:
@@ -21,13 +21,18 @@ services:
       - shared-network
     tmpfs:
       - /tmp
-    volumes:
-      - logdata:/app/log_folder
-      - dbdata:/app/database
+    labels:
+      - traefik.enable=true
+      - "traefik.http.routers.<unique_router_name>.rule=Host(`coolify.io`) && PathPrefix(`/`)"
+      - traefik.http.routers.<unique_router_name>.entryPoints=http
+
+    # volumes:
+    # - logdata:/app/log_folder
+    # - dbdata:/app/database
     environment:
       - NUXT_PORT=3000
-    depends_on:
-      - bk-database
+    # depends_on:
+    # - bk-database
 
 volumes:
   logdata:
