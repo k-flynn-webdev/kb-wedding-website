@@ -23,8 +23,8 @@ services:
       - /tmp
     labels:
       - traefik.enable=true
-      - traefik.http.routers.<unique_router_name>.entryPoints=http
-      # - "traefik.http.routers.<unique_router_name>.rule=Host(`coolify.io`) && PathPrefix(`/`)"
+      - traefik.http.routers.unique_router_wedding.entryPoints=http
+      - "traefik.http.routers.unique_router_wedding.rule=Host(`wedding.kubedev.co.uk`) && PathPrefix(`/`)"
 
     # volumes:
     # - logdata:/app/log_folder
